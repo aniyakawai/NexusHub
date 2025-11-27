@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, Type } from "@google/genai";
 import { AGENTS } from "../constants";
 import { SearchResponse } from "../types";
@@ -12,8 +13,6 @@ export const findMatchingAgents = async (query: string): Promise<SearchResponse 
   }
 
   try {
-    // Flatten the localized object to English for the AI context to save tokens and maintain consistency
-    // The AI can understand the Chinese query and map it to English descriptions easily.
     const agentsContext = JSON.stringify(AGENTS.map(a => ({
       id: a.id,
       name: a.name.en,
@@ -28,11 +27,14 @@ export const findMatchingAgents = async (query: string): Promise<SearchResponse 
       
       Available Agents Database: ${agentsContext}
       
-      Task: Analyze the user's query and identify the top 1-3 most relevant agents from the database. 
-      Return a JSON object with 'recommendedAgentIds' (array of strings) and a short 'reasoning' (string) explaining why these were chosen.
-      If no agents are relevant, return an empty array.
+      Task: Act as a helpful "Concierge" for the Nexus Agent Hub. 
+      1. Analyze the user's query. If it's a greeting or general chat, reply naturally.
+      2. If the user asks for help or tools, identify the top 1-3 most relevant agents from the database.
       
-      Important: The reasoning should be in the same language as the User Query (if Chinese, reply in Chinese).`,
+      Return a JSON object with:
+      - 'chatResponse' (string): A helpful, conversational response to the user. If recommending agents, mention why they fit briefly. Answer in the SAME language as the User Query (Chinese or English).
+      - 'recommendedAgentIds' (array of strings): List of matching agent IDs. Empty if none relevant.
+      `,
       config: {
         responseMimeType: "application/json",
         responseSchema: {
@@ -43,12 +45,12 @@ export const findMatchingAgents = async (query: string): Promise<SearchResponse 
               items: { type: Type.STRING },
               description: "List of matching agent IDs"
             },
-            reasoning: {
+            chatResponse: {
               type: Type.STRING,
-              description: "Brief explanation of the recommendation in the user's language"
+              description: "Conversational response in the user's language"
             }
           },
-          required: ["recommendedAgentIds", "reasoning"]
+          required: ["recommendedAgentIds", "chatResponse"]
         }
       }
     });

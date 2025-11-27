@@ -1,22 +1,24 @@
+
 import React, { useState, useMemo, useEffect } from 'react';
 import { Hero } from './components/Hero';
 import { SmartSearch } from './components/SmartSearch';
 import { AgentCard } from './components/AgentCard';
 import { Pricing } from './components/Pricing';
 import { Enterprise } from './components/Enterprise';
+import { About } from './components/About';
 import { Navbar } from './components/Navbar';
-import { Industry, Agent, SearchResponse, Language, Theme, View } from './types';
+import { Industry, SearchResponse, Language, Theme, View } from './types';
 import { AGENTS } from './constants';
 import { translations } from './translations';
-import { LayoutGrid, Cpu, Globe, Scale, Stethoscope, ShoppingBag, Factory, Palette, Database, TrendingUp } from 'lucide-react';
+import { LayoutGrid, Globe, Scale, Stethoscope, ShoppingBag, Factory, Palette, Database, TrendingUp } from 'lucide-react';
 
 const App: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<Industry>(Industry.ALL);
   const [aiRecommendations, setAiRecommendations] = useState<SearchResponse | null>(null);
   
-  // App State
+  // App State - Default to ZH (Chinese)
   const [theme, setTheme] = useState<Theme>('dark');
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLang] = useState<Language>('zh');
   const [currentView, setCurrentView] = useState<View>('home');
 
   // Handle Theme Effect
@@ -47,7 +49,9 @@ const App: React.FC = () => {
 
   const handleSearchResults = (results: SearchResponse | null) => {
     setAiRecommendations(results);
-    if (results) setSelectedIndustry(Industry.ALL);
+    if (results && results.recommendedAgentIds.length > 0) {
+      setSelectedIndustry(Industry.ALL);
+    }
   };
 
   const getIndustryIcon = (ind: Industry) => {
@@ -71,41 +75,31 @@ const App: React.FC = () => {
         <Hero lang={lang} />
         <SmartSearch onSearchResults={handleSearchResults} lang={lang} />
 
-        {/* AI Reasoning Display */}
-        {aiRecommendations && (
-          <div className="mb-8 bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-500/30 p-4 rounded-xl max-w-2xl mx-auto text-center">
-            <p className="text-primary-800 dark:text-primary-300 text-sm">
-              <span className="font-semibold block mb-1">{t.search.suggestion}:</span>
-              "{aiRecommendations.reasoning}"
-            </p>
-            <button 
-              onClick={() => setAiRecommendations(null)}
-              className="mt-2 text-xs text-gray-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-white underline"
-            >
-              {t.search.clear}
-            </button>
-          </div>
-        )}
-
-        {/* Industry Tabs */}
-        {!aiRecommendations && (
-          <div className="flex overflow-x-auto pb-4 mb-8 gap-2 no-scrollbar justify-start md:justify-center px-4">
-            {Object.values(Industry).map((ind) => (
+        {/* Industry Tabs - Only show if no AI search active, or show anyway? User requested "results below". */}
+        <div className="flex overflow-x-auto pb-4 mb-8 gap-2 no-scrollbar justify-start md:justify-center px-4">
+          {Object.values(Industry).map((ind) => {
+             // Translate the industry label
+             const label = translations[lang].industries[ind as keyof typeof translations['en']['industries']] || ind;
+             
+             return (
               <button
                 key={ind}
-                onClick={() => setSelectedIndustry(ind)}
+                onClick={() => {
+                  setSelectedIndustry(ind);
+                  setAiRecommendations(null); // Clear AI filter when manual filter is clicked
+                }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap border ${
-                  selectedIndustry === ind
+                  selectedIndustry === ind && !aiRecommendations
                     ? 'bg-gray-900 dark:bg-white text-white dark:text-slate-900 border-transparent shadow-lg transform scale-105'
                     : 'bg-white dark:bg-slate-900 text-gray-600 dark:text-slate-400 border-gray-200 dark:border-slate-800 hover:border-gray-300 dark:hover:border-slate-600'
                 }`}
               >
                 {ind === Industry.ALL ? <LayoutGrid className="w-4 h-4" /> : getIndustryIcon(ind)}
-                {ind}
+                {label}
               </button>
-            ))}
-          </div>
-        )}
+            );
+          })}
+        </div>
 
         {/* Grid Area */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,7 +111,7 @@ const App: React.FC = () => {
             </div>
           ) : (
             <div className="text-center py-20 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-gray-300 dark:border-slate-800">
-              <Cpu className="w-12 h-12 text-gray-400 dark:text-slate-600 mx-auto mb-4" />
+              <Globe className="w-12 h-12 text-gray-400 dark:text-slate-600 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 dark:text-slate-300">{t.common.noResults}</h3>
               <p className="text-gray-500 dark:text-slate-500">{t.common.tryAdjusting}</p>
             </div>
@@ -142,6 +136,7 @@ const App: React.FC = () => {
         {currentView === 'home' && renderHome()}
         {currentView === 'pricing' && <Pricing lang={lang} />}
         {currentView === 'enterprise' && <Enterprise lang={lang} />}
+        {currentView === 'about' && <About lang={lang} />}
       </main>
 
       {/* Footer */}

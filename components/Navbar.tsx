@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Command, Moon, Sun, Languages } from 'lucide-react';
 import { Theme, Language, View } from '../types';
@@ -49,9 +50,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <NavItem view="home" label={t.home} />
           <NavItem view="enterprise" label={t.enterprise} />
           <NavItem view="pricing" label={t.pricing} />
-          <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
-            {t.docs}
-          </a>
+          <NavItem view="about" label={t.about} />
         </div>
 
         <div className="flex items-center gap-3">

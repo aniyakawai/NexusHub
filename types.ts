@@ -1,3 +1,4 @@
+
 export enum Industry {
   ALL = 'All',
   FINANCE = 'Finance',
@@ -22,7 +23,7 @@ export interface Agent {
   industry: Industry;
   capabilities: LocalizedString[];
   imageUrl: string;
-  redirectUrl: string; // Empty string means coming soon
+  redirectUrl: string;
   stats: {
     users: string;
     rating: number;
@@ -31,9 +32,9 @@ export interface Agent {
 
 export interface SearchResponse {
   recommendedAgentIds: string[];
-  reasoning: string;
+  chatResponse: string; // New conversational response
 }
 
 export type Language = 'en' | 'zh';
 export type Theme = 'light' | 'dark';
-export type View = 'home' | 'enterprise' | 'pricing';
+export type View = 'home' | 'enterprise' | 'pricing' | 'about';

@@ -1,4 +1,3 @@
-import { Language } from './types';
 
 export const translations = {
   en: {
@@ -7,25 +6,27 @@ export const translations = {
       enterprise: 'Enterprise',
       pricing: 'Pricing',
       login: 'Login',
-      home: 'Hub'
+      home: 'Hub',
+      about: 'About Us'
     },
     hero: {
       tag: 'Enterprise Agent Ecosystem',
       title: 'Next-Gen Intelligence for Every Industry',
-      subtitle: 'Discover specialized autonomous agents designed to elevate your business operations. From finance to creative, find the perfect digital workforce.',
+      subtitle: 'Discover specialized autonomous agents designed to elevate your business operations.',
     },
     search: {
-      placeholder: "Ask AI: 'I need an agent for tax audits...'",
-      button: 'Search',
+      placeholder: "Ask me anything (e.g., 'Find an agent for tax audits' or 'How are you?')",
+      button: 'Send',
       poweredBy: 'Powered by Gemini 2.5 Flash',
-      clear: 'Clear Search',
-      suggestion: 'AI Suggestion'
+      clear: 'Clear Chat',
+      suggestion: 'AI Suggestion',
+      thinking: 'Thinking...'
     },
     common: {
       users: 'Active',
       launch: 'Launch',
       noResults: 'No agents found',
-      tryAdjusting: 'Try adjusting your filters or search query.'
+      tryAdjusting: 'Try asking the AI for help or adjust filters.'
     },
     pricing: {
       title: 'Simple, Transparent Pricing',
@@ -59,6 +60,25 @@ export const translations = {
         { title: 'Global Scale', desc: 'Deployed on edge networks ensuring low-latency agent responses anywhere in the world.' }
       ],
       trustedBy: 'Trusted by industry leaders'
+    },
+    about: {
+      title: 'Empowering the Future of Work',
+      missionTitle: 'Our Mission',
+      missionDesc: 'To democratize access to enterprise-grade artificial intelligence, enabling businesses of all sizes to automate complex workflows with ease and security.',
+      teamTitle: 'Our Team',
+      historyTitle: 'Our History',
+      historyDesc: 'Founded in 2024, Nexus Agent Hub began with a simple idea: AI agents should be as easy to hire as human contractors. Today, we serve thousands of enterprises globally.',
+    },
+    industries: {
+      'All': 'All',
+      'Finance': 'Finance',
+      'Healthcare': 'Healthcare',
+      'Retail': 'Retail',
+      'Legal': 'Legal',
+      'Manufacturing': 'Manufacturing',
+      'Creative': 'Creative',
+      'Data': 'Data',
+      'Sales': 'Sales'
     }
   },
   zh: {
@@ -67,7 +87,8 @@ export const translations = {
       enterprise: '企业版',
       pricing: '定价',
       login: '登录',
-      home: '中枢'
+      home: '中枢',
+      about: '关于我们'
     },
     hero: {
       tag: '企业级智能体生态',
@@ -75,17 +96,18 @@ export const translations = {
       subtitle: '探索专为提升业务运营而设计的自动化智能体。从金融到创意领域，为您找到完美的数字员工。',
     },
     search: {
-      placeholder: "询问AI：'我需要一个帮我处理税务审计的智能体...'",
-      button: '搜索',
+      placeholder: "问我任何问题（例如：'帮我找个审计助手' 或 '你好'）",
+      button: '发送',
       poweredBy: '由 Gemini 2.5 Flash 驱动',
-      clear: '清除搜索',
-      suggestion: 'AI 推荐理由'
+      clear: '清空对话',
+      suggestion: 'AI 推荐理由',
+      thinking: '思考中...'
     },
     common: {
       users: '活跃用户',
       launch: '启动',
       noResults: '未找到智能体',
-      tryAdjusting: '请尝试调整筛选条件或搜索关键词。'
+      tryAdjusting: '请尝试让 AI 帮您寻找，或调整筛选条件。'
     },
     pricing: {
       title: '简单透明的定价',
@@ -119,6 +141,25 @@ export const translations = {
         { title: '全球规模', desc: '部署在边缘网络上，确保全球范围内智能体响应的低延迟。' }
       ],
       trustedBy: '深受行业领袖信赖'
+    },
+    about: {
+      title: '赋能未来的工作方式',
+      missionTitle: '我们的使命',
+      missionDesc: '致力于让企业级人工智能触手可及，帮助各种规模的企业轻松、安全地实现复杂工作流的自动化。',
+      teamTitle: '我们的团队',
+      historyTitle: '发展历程',
+      historyDesc: 'Nexus Agent Hub 成立于 2024 年，始于一个简单的理念：雇佣 AI 智能体应该像雇佣人类员工一样简单。如今，我们服务于全球数千家企业。',
+    },
+    industries: {
+      'All': '全部',
+      'Finance': '金融',
+      'Healthcare': '医疗',
+      'Retail': '零售',
+      'Legal': '法律',
+      'Manufacturing': '制造',
+      'Creative': '创意',
+      'Data': '数据',
+      'Sales': '销售'
     }
   }
 };
