@@ -11,10 +11,11 @@ interface NavbarProps {
   toggleLang: () => void;
   currentView: View;
   setCurrentView: (view: View) => void;
+  onLoginClick: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ 
-  theme, toggleTheme, lang, toggleLang, currentView, setCurrentView 
+  theme, toggleTheme, lang, toggleLang, currentView, setCurrentView, onLoginClick 
 }) => {
   const t = translations[lang].nav;
 
@@ -72,7 +73,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
-          <button className="hidden sm:block bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-md">
+          <button 
+            onClick={onLoginClick}
+            className="hidden sm:block bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-md"
+          >
             {t.login}
           </button>
         </div>

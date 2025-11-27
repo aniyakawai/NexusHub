@@ -1,3 +1,4 @@
+
 import { Agent, Industry } from './types';
 
 export const AGENTS: Agent[] = [
@@ -170,5 +171,22 @@ export const AGENTS: Agent[] = [
     imageUrl: 'https://picsum.photos/400/300?random=10',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/83d82ab124d51794',
     stats: { users: '9k+', rating: 4.7 },
+  },
+  {
+    id: 'chat-test-11',
+    name: { en: 'Chat Interface Test', zh: '对话页面测试智能体' },
+    description: { 
+      en: 'Internal test agent for next-gen conversational interface with voice and image support.', 
+      zh: '下一代对话界面测试智能体，支持语音输入和图片上传功能测试。' 
+    },
+    industry: Industry.ALL,
+    capabilities: [
+      { en: 'Voice', zh: '语音输入' }, 
+      { en: 'Vision', zh: '图片分析' }, 
+      { en: 'Chat', zh: '多轮对话' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=11',
+    redirectUrl: '?view=chat', // URL Param routing for new tab
+    stats: { users: 'Beta', rating: 5.0 },
   },
 ];

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Agent, Language, Industry } from '../types';
+import { Agent, Language } from '../types';
 import { ExternalLink, Star, Users, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { translations } from '../translations';
@@ -8,6 +8,7 @@ import { translations } from '../translations';
 interface AgentCardProps {
   agent: Agent;
   lang: Language;
+  onNavigate: (path: string) => void;
 }
 
 export const AgentCard: React.FC<AgentCardProps> = ({ agent, lang }) => {
@@ -15,9 +16,9 @@ export const AgentCard: React.FC<AgentCardProps> = ({ agent, lang }) => {
   const isAvailable = agent.redirectUrl && agent.redirectUrl.length > 0;
 
   const handleRedirect = () => {
-    if (isAvailable) {
-      window.open(agent.redirectUrl, '_blank');
-    }
+    if (!isAvailable) return;
+    // Always open in new tab, even for internal 'chat' view which now uses query params
+    window.open(agent.redirectUrl, '_blank');
   };
 
   // Safe translation lookup for industry
@@ -31,7 +32,7 @@ export const AgentCard: React.FC<AgentCardProps> = ({ agent, lang }) => {
       className={`group relative bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-800 overflow-hidden shadow-sm transition-all duration-300 ${isAvailable ? 'hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-primary-900/20' : 'opacity-80'}`}
     >
       {/* Image Header */}
-      <div className="h-40 overflow-hidden relative">
+      <div className="h-40 overflow-hidden relative cursor-pointer" onClick={handleRedirect}>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent z-10 opacity-60" />
         <img 
           src={agent.imageUrl} 
@@ -46,7 +47,10 @@ export const AgentCard: React.FC<AgentCardProps> = ({ agent, lang }) => {
       {/* Content */}
       <div className="p-5">
         <div className="flex justify-between items-start mb-2">
-          <h3 className={`text-lg font-bold text-gray-900 dark:text-white transition-colors ${isAvailable ? 'group-hover:text-primary-600 dark:group-hover:text-primary-400' : ''}`}>
+          <h3 
+            className={`text-lg font-bold text-gray-900 dark:text-white transition-colors cursor-pointer ${isAvailable ? 'group-hover:text-primary-600 dark:group-hover:text-primary-400' : ''}`}
+            onClick={handleRedirect}
+          >
             {agent.name[lang]}
           </h3>
           {isAvailable && (

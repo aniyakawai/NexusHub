@@ -37,4 +37,4 @@ export interface SearchResponse {
 
 export type Language = 'en' | 'zh';
 export type Theme = 'light' | 'dark';
-export type View = 'home' | 'enterprise' | 'pricing' | 'about';
+export type View = 'home' | 'enterprise' | 'pricing' | 'about' | 'chat';

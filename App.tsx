@@ -7,19 +7,23 @@ import { Pricing } from './components/Pricing';
 import { Enterprise } from './components/Enterprise';
 import { About } from './components/About';
 import { Navbar } from './components/Navbar';
-import { Industry, SearchResponse, Language, Theme, View } from './types';
+import { Login } from './components/Login';
+import { BackToTop } from './components/BackToTop';
+import { ChatInterface } from './components/ChatInterface';
+import { Industry, Language, Theme, View } from './types';
 import { AGENTS } from './constants';
 import { translations } from './translations';
 import { LayoutGrid, Globe, Scale, Stethoscope, ShoppingBag, Factory, Palette, Database, TrendingUp } from 'lucide-react';
 
 const App: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<Industry>(Industry.ALL);
-  const [aiRecommendations, setAiRecommendations] = useState<SearchResponse | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   
   // App State - Default to ZH (Chinese)
   const [theme, setTheme] = useState<Theme>('dark');
   const [lang, setLang] = useState<Language>('zh');
   const [currentView, setCurrentView] = useState<View>('home');
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   // Handle Theme Effect
   useEffect(() => {
@@ -31,6 +35,15 @@ const App: React.FC = () => {
     }
   }, [theme]);
 
+  // Handle Routing via URL Query Params (for New Tab support)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const viewParam = params.get('view');
+    if (viewParam === 'chat') {
+      setCurrentView('chat');
+    }
+  }, []);
+
   const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   const toggleLang = () => setLang(prev => prev === 'en' ? 'zh' : 'en');
 
@@ -38,21 +51,23 @@ const App: React.FC = () => {
   const filteredAgents = useMemo(() => {
     let agents = AGENTS;
 
-    if (aiRecommendations && aiRecommendations.recommendedAgentIds.length > 0) {
-      agents = agents.filter(a => aiRecommendations.recommendedAgentIds.includes(a.id));
-    } else if (selectedIndustry !== Industry.ALL) {
+    // Filter by Search Query
+    if (searchQuery.trim()) {
+      const lowerQuery = searchQuery.toLowerCase();
+      agents = agents.filter(a => 
+        a.name[lang].toLowerCase().includes(lowerQuery) ||
+        a.description[lang].toLowerCase().includes(lowerQuery) ||
+        a.capabilities.some(c => c[lang].toLowerCase().includes(lowerQuery))
+      );
+    }
+
+    // Filter by Industry
+    if (selectedIndustry !== Industry.ALL) {
       agents = agents.filter(a => a.industry === selectedIndustry);
     }
 
     return agents;
-  }, [selectedIndustry, aiRecommendations]);
-
-  const handleSearchResults = (results: SearchResponse | null) => {
-    setAiRecommendations(results);
-    if (results && results.recommendedAgentIds.length > 0) {
-      setSelectedIndustry(Industry.ALL);
-    }
-  };
+  }, [selectedIndustry, searchQuery, lang]);
 
   const getIndustryIcon = (ind: Industry) => {
     switch (ind) {
@@ -68,14 +83,22 @@ const App: React.FC = () => {
     }
   };
 
+  const handleNavigate = (path: string) => {
+    // Legacy support for internal navigation if needed, 
+    // but now most agents open in new tab via AgentCard logic.
+    if (path === '/chat') {
+      setCurrentView('chat');
+    }
+  };
+
   const renderHome = () => {
     const t = translations[lang];
     return (
       <>
         <Hero lang={lang} />
-        <SmartSearch onSearchResults={handleSearchResults} lang={lang} />
+        <SmartSearch onSearch={setSearchQuery} lang={lang} />
 
-        {/* Industry Tabs - Only show if no AI search active, or show anyway? User requested "results below". */}
+        {/* Industry Tabs */}
         <div className="flex overflow-x-auto pb-4 mb-8 gap-2 no-scrollbar justify-start md:justify-center px-4">
           {Object.values(Industry).map((ind) => {
              // Translate the industry label
@@ -84,12 +107,9 @@ const App: React.FC = () => {
              return (
               <button
                 key={ind}
-                onClick={() => {
-                  setSelectedIndustry(ind);
-                  setAiRecommendations(null); // Clear AI filter when manual filter is clicked
-                }}
+                onClick={() => setSelectedIndustry(ind)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap border ${
-                  selectedIndustry === ind && !aiRecommendations
+                  selectedIndustry === ind
                     ? 'bg-gray-900 dark:bg-white text-white dark:text-slate-900 border-transparent shadow-lg transform scale-105'
                     : 'bg-white dark:bg-slate-900 text-gray-600 dark:text-slate-400 border-gray-200 dark:border-slate-800 hover:border-gray-300 dark:hover:border-slate-600'
                 }`}
@@ -106,7 +126,12 @@ const App: React.FC = () => {
           {filteredAgents.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredAgents.map((agent) => (
-                <AgentCard key={agent.id} agent={agent} lang={lang} />
+                <AgentCard 
+                  key={agent.id} 
+                  agent={agent} 
+                  lang={lang} 
+                  onNavigate={handleNavigate}
+                />
               ))}
             </div>
           ) : (
@@ -122,32 +147,42 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300">
-      <Navbar 
-        theme={theme} 
-        toggleTheme={toggleTheme}
-        lang={lang}
-        toggleLang={toggleLang}
-        currentView={currentView}
-        setCurrentView={setCurrentView}
-      />
+    <div className="min-h-screen transition-colors duration-300 bg-gray-50 dark:bg-slate-950">
+      {/* Conditionally render Navbar: Hide on Chat Interface */}
+      {currentView !== 'chat' && (
+        <Navbar 
+          theme={theme} 
+          toggleTheme={toggleTheme}
+          lang={lang}
+          toggleLang={toggleLang}
+          currentView={currentView}
+          setCurrentView={setCurrentView}
+          onLoginClick={() => setIsLoginOpen(true)}
+        />
+      )}
 
-      <main className="pb-20">
+      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} lang={lang} />
+      <BackToTop />
+
+      <main className={currentView === 'chat' ? 'h-screen overflow-hidden' : 'pb-20'}>
         {currentView === 'home' && renderHome()}
         {currentView === 'pricing' && <Pricing lang={lang} />}
         {currentView === 'enterprise' && <Enterprise lang={lang} />}
         {currentView === 'about' && <About lang={lang} />}
+        {currentView === 'chat' && <ChatInterface lang={lang} onBack={() => window.location.href = '/'} />}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-200 dark:border-slate-800 py-12 bg-gray-50 dark:bg-slate-950 text-gray-500 dark:text-slate-400 text-center text-sm transition-colors duration-300">
-        <p>© 2024 Nexus Intelligent Systems. All rights reserved.</p>
-        <div className="mt-4 flex justify-center gap-6">
-          <a href="#" className="hover:text-primary-600 dark:hover:text-white transition-colors">Privacy</a>
-          <a href="#" className="hover:text-primary-600 dark:hover:text-white transition-colors">Terms</a>
-          <a href="#" className="hover:text-primary-600 dark:hover:text-white transition-colors">Contact</a>
-        </div>
-      </footer>
+      {/* Footer - Hide on chat view */}
+      {currentView !== 'chat' && (
+        <footer className="border-t border-gray-200 dark:border-slate-800 py-12 bg-gray-50 dark:bg-slate-950 text-gray-500 dark:text-slate-400 text-center text-sm transition-colors duration-300">
+          <p>© 2024 Nexus Intelligent Systems. All rights reserved.</p>
+          <div className="mt-4 flex justify-center gap-6">
+            <a href="#" className="hover:text-primary-600 dark:hover:text-white transition-colors">Privacy</a>
+            <a href="#" className="hover:text-primary-600 dark:hover:text-white transition-colors">Terms</a>
+            <a href="#" className="hover:text-primary-600 dark:hover:text-white transition-colors">Contact</a>
+          </div>
+        </footer>
+      )}
     </div>
   );
 };
