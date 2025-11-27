@@ -1,0 +1,174 @@
+import { Agent, Industry } from './types';
+
+export const AGENTS: Agent[] = [
+  {
+    id: 'prod-01',
+    name: { en: 'Product Q&A Assistant', zh: '产品问答助手' },
+    description: { 
+      en: 'Instant answers regarding product specs, usage, and troubleshooting.', 
+      zh: '快速回答关于产品规格、使用方法和故障排除的问题。' 
+    },
+    industry: Industry.RETAIL,
+    capabilities: [
+      { en: 'Spec Lookup', zh: '规格查询' }, 
+      { en: 'Usage Guide', zh: '使用指南' }, 
+      { en: 'Q&A', zh: '智能问答' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=1',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/bbc13cf6aec47f00',
+    stats: { users: '12k+', rating: 4.8 },
+  },
+  {
+    id: 'maint-02',
+    name: { en: 'Maintenance Expert', zh: '维修问答专家' },
+    description: { 
+      en: 'Guidance for equipment repair, maintenance schedules, and error code analysis.', 
+      zh: '提供设备维修指导、维护计划建议及错误代码分析。' 
+    },
+    industry: Industry.MANUFACTURING,
+    capabilities: [
+      { en: 'Diagnostics', zh: '故障诊断' }, 
+      { en: 'Manuals', zh: '维修手册' }, 
+      { en: 'Safety', zh: '安全规范' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=2',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/ada723f8dc1a946b',
+    stats: { users: '5k+', rating: 4.9 },
+  },
+  {
+    id: 'boss-03',
+    name: { en: 'Chairman Avatar', zh: '董事长分身' },
+    description: { 
+      en: 'Digital twin of company leadership for strategic communication and culture dissemination.', 
+      zh: '公司领导层的数字分身，用于战略沟通和企业文化传播。' 
+    },
+    industry: Industry.ALL,
+    capabilities: [
+      { en: 'Strategy', zh: '战略解读' }, 
+      { en: 'Culture', zh: '文化传播' }, 
+      { en: 'Simulation', zh: '对话模拟' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=3',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/c05dbca46dcafa22',
+    stats: { users: '20k+', rating: 5.0 },
+  },
+  {
+    id: 'data-04',
+    name: { en: 'Comprehensive Data Report', zh: '长数据汇报生成' },
+    description: { 
+      en: 'Generates deep-dive analytical reports from massive datasets automatically.', 
+      zh: '自动从海量数据集中生成深度的分析汇报文档。' 
+    },
+    industry: Industry.DATA,
+    capabilities: [
+      { en: 'Deep Analysis', zh: '深度分析' }, 
+      { en: 'Reporting', zh: '报告生成' }, 
+      { en: 'Trending', zh: '趋势预测' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=4',
+    redirectUrl: '', // Not online yet
+    stats: { users: 'Waiting', rating: 0 },
+  },
+  {
+    id: 'data-05',
+    name: { en: 'Daily Data Brief', zh: '每日数据汇报' },
+    description: { 
+      en: 'Automated daily business intelligence summaries pushed directly to stakeholders.', 
+      zh: '自动化的每日商业智能摘要，直接推送给相关负责人。' 
+    },
+    industry: Industry.DATA,
+    capabilities: [
+      { en: 'BI Summary', zh: 'BI摘要' }, 
+      { en: 'KPI Tracking', zh: 'KPI追踪' }, 
+      { en: 'Automation', zh: '自动化' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=5',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/0a3e7388a9a2e7f4?is_at_all=',
+    stats: { users: '8k+', rating: 4.7 },
+  },
+  {
+    id: 'data-06',
+    name: { en: 'Instant Data Query', zh: '及时问数' },
+    description: { 
+      en: 'Real-time natural language interface for database querying.', 
+      zh: '基于自然语言的实时数据库查询接口，即问即答。' 
+    },
+    industry: Industry.DATA,
+    capabilities: [
+      { en: 'SQL Gen', zh: 'SQL生成' }, 
+      { en: 'Real-time', zh: '实时查询' }, 
+      { en: 'Visualization', zh: '可视化' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=6',
+    redirectUrl: '', // Not online yet
+    stats: { users: 'Waiting', rating: 0 },
+  },
+  {
+    id: 'legal-07',
+    name: { en: 'Contract Reviewer', zh: '合同审核助手' },
+    description: { 
+      en: 'AI-powered risk assessment and clause analysis for legal contracts.', 
+      zh: 'AI驱动的合同风险评估和条款分析助手。' 
+    },
+    industry: Industry.LEGAL,
+    capabilities: [
+      { en: 'Risk Check', zh: '风险排查' }, 
+      { en: 'Clause Analysis', zh: '条款分析' }, 
+      { en: 'Compliance', zh: '合规检查' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=7',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/4fc872b48f7ee4ab',
+    stats: { users: '3k+', rating: 4.9 },
+  },
+  {
+    id: 'trade-08',
+    name: { en: 'Trade Doc Analyzer', zh: '外贸单据阅读' },
+    description: { 
+      en: 'Intelligent extraction and verification of foreign trade documentation.', 
+      zh: '对外贸单据进行智能提取、校验和归档。' 
+    },
+    industry: Industry.FINANCE, // Or Sales/Trade
+    capabilities: [
+      { en: 'OCR', zh: '单据识别' }, 
+      { en: 'Verification', zh: '数据校验' }, 
+      { en: 'Cross-border', zh: '跨境贸易' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=8',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/e1b7d8e28e72c079',
+    stats: { users: '6k+', rating: 4.6 },
+  },
+  {
+    id: 'create-09',
+    name: { en: 'Tech & Market Gen', zh: '技术营销方案生成' },
+    description: { 
+      en: 'Multimodal generation for technical proposals and marketing strategies.', 
+      zh: '用于技术方案和营销策略的多模态内容生成与策划。' 
+    },
+    industry: Industry.CREATIVE,
+    capabilities: [
+      { en: 'Proposal Gen', zh: '方案撰写' }, 
+      { en: 'Multimodal', zh: '多模态' }, 
+      { en: 'Marketing', zh: '营销策划' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=9',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/30bdefbd6cf90cce',
+    stats: { users: '15k+', rating: 4.8 },
+  },
+  {
+    id: 'data-10',
+    name: { en: 'Web Data Analyst', zh: '网上数据收集分析' },
+    description: { 
+      en: 'Automated crawler and analyzer for public web data and market intelligence.', 
+      zh: '针对公开网络数据和市场情报的自动采集与分析工具。' 
+    },
+    industry: Industry.DATA,
+    capabilities: [
+      { en: 'Crawling', zh: '数据采集' }, 
+      { en: 'Analysis', zh: '情报分析' }, 
+      { en: 'Monitoring', zh: '舆情监控' }
+    ],
+    imageUrl: 'https://picsum.photos/400/300?random=10',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/83d82ab124d51794',
+    stats: { users: '9k+', rating: 4.7 },
+  },
+];
