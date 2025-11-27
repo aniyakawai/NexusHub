@@ -4,7 +4,6 @@ import { SmartSearch } from './components/SmartSearch';
 import { AgentCard } from './components/AgentCard';
 import { Pricing } from './components/Pricing';
 import { Enterprise } from './components/Enterprise';
-import { About } from './components/About';
 import { Navbar } from './components/Navbar';
 import { Industry, Agent, SearchResponse, Language, Theme, View } from './types';
 import { AGENTS } from './constants';
@@ -48,9 +47,7 @@ const App: React.FC = () => {
 
   const handleSearchResults = (results: SearchResponse | null) => {
     setAiRecommendations(results);
-    if (results && results.recommendedAgentIds.length > 0) {
-        setSelectedIndustry(Industry.ALL);
-    }
+    if (results) setSelectedIndustry(Industry.ALL);
   };
 
   const getIndustryIcon = (ind: Industry) => {
@@ -69,12 +66,26 @@ const App: React.FC = () => {
 
   const renderHome = () => {
     const t = translations[lang];
-    const industryMap = translations[lang].industries;
-
     return (
       <>
         <Hero lang={lang} />
         <SmartSearch onSearchResults={handleSearchResults} lang={lang} />
+
+        {/* AI Reasoning Display */}
+        {aiRecommendations && (
+          <div className="mb-8 bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-500/30 p-4 rounded-xl max-w-2xl mx-auto text-center">
+            <p className="text-primary-800 dark:text-primary-300 text-sm">
+              <span className="font-semibold block mb-1">{t.search.suggestion}:</span>
+              "{aiRecommendations.reasoning}"
+            </p>
+            <button 
+              onClick={() => setAiRecommendations(null)}
+              className="mt-2 text-xs text-gray-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-white underline"
+            >
+              {t.search.clear}
+            </button>
+          </div>
+        )}
 
         {/* Industry Tabs */}
         {!aiRecommendations && (
@@ -90,7 +101,7 @@ const App: React.FC = () => {
                 }`}
               >
                 {ind === Industry.ALL ? <LayoutGrid className="w-4 h-4" /> : getIndustryIcon(ind)}
-                {industryMap[ind as keyof typeof industryMap] || ind}
+                {ind}
               </button>
             ))}
           </div>
@@ -131,7 +142,6 @@ const App: React.FC = () => {
         {currentView === 'home' && renderHome()}
         {currentView === 'pricing' && <Pricing lang={lang} />}
         {currentView === 'enterprise' && <Enterprise lang={lang} />}
-        {currentView === 'about' && <About lang={lang} />}
       </main>
 
       {/* Footer */}

@@ -6,7 +6,6 @@ export const translations = {
       docs: 'Documentation',
       enterprise: 'Enterprise',
       pricing: 'Pricing',
-      about: 'About Us',
       login: 'Login',
       home: 'Hub'
     },
@@ -16,29 +15,17 @@ export const translations = {
       subtitle: 'Discover specialized autonomous agents designed to elevate your business operations. From finance to creative, find the perfect digital workforce.',
     },
     search: {
-      placeholder: "Chat with Nexus AI or search for agents...",
-      button: 'Send',
+      placeholder: "Ask AI: 'I need an agent for tax audits...'",
+      button: 'Search',
       poweredBy: 'Powered by Gemini 2.5 Flash',
-      clear: 'Clear Conversation',
-      suggestion: 'AI Response',
-      thinking: 'Nexus AI is thinking...'
+      clear: 'Clear Search',
+      suggestion: 'AI Suggestion'
     },
     common: {
       users: 'Active',
       launch: 'Launch',
       noResults: 'No agents found',
-      tryAdjusting: 'Try adjusting your filters or ask the chatbot for help.'
-    },
-    industries: {
-      'All': 'All',
-      'Finance': 'Finance',
-      'Healthcare': 'Healthcare',
-      'Retail': 'Retail',
-      'Legal': 'Legal',
-      'Manufacturing': 'Manufacturing',
-      'Creative': 'Creative',
-      'Data': 'Data',
-      'Sales': 'Sales'
+      tryAdjusting: 'Try adjusting your filters or search query.'
     },
     pricing: {
       title: 'Simple, Transparent Pricing',
@@ -72,16 +59,6 @@ export const translations = {
         { title: 'Global Scale', desc: 'Deployed on edge networks ensuring low-latency agent responses anywhere in the world.' }
       ],
       trustedBy: 'Trusted by industry leaders'
-    },
-    about: {
-      title: 'Empowering the Future of Work',
-      subtitle: 'Nexus Agent Hub is the world\'s premier marketplace for enterprise-grade autonomous agents.',
-      missionTitle: 'Our Mission',
-      missionDesc: 'To democratize access to advanced artificial intelligence, enabling businesses of all sizes to automate complex workflows and unlock new levels of productivity.',
-      teamTitle: 'Our Team',
-      teamDesc: 'We are a diverse group of AI researchers, engineers, and industry veterans passionate about building the next generation of software.',
-      historyTitle: 'Our History',
-      historyDesc: 'Founded in 2024, Nexus began with a simple idea: AI agents should be as easy to deploy as installing an app.'
     }
   },
   zh: {
@@ -89,7 +66,6 @@ export const translations = {
       docs: '文档',
       enterprise: '企业版',
       pricing: '定价',
-      about: '关于我们',
       login: '登录',
       home: '中枢'
     },
@@ -99,29 +75,17 @@ export const translations = {
       subtitle: '探索专为提升业务运营而设计的自动化智能体。从金融到创意领域，为您找到完美的数字员工。',
     },
     search: {
-      placeholder: "与 Nexus AI 聊天或搜索智能体...",
-      button: '发送',
+      placeholder: "询问AI：'我需要一个帮我处理税务审计的智能体...'",
+      button: '搜索',
       poweredBy: '由 Gemini 2.5 Flash 驱动',
-      clear: '清除对话',
-      suggestion: 'AI 回复',
-      thinking: 'Nexus AI 正在思考...'
+      clear: '清除搜索',
+      suggestion: 'AI 推荐理由'
     },
     common: {
       users: '活跃用户',
       launch: '启动',
       noResults: '未找到智能体',
-      tryAdjusting: '请尝试调整筛选条件或向聊天机器人寻求帮助。'
-    },
-    industries: {
-      'All': '全部',
-      'Finance': '金融',
-      'Healthcare': '医疗',
-      'Retail': '零售',
-      'Legal': '法律',
-      'Manufacturing': '制造',
-      'Creative': '创意',
-      'Data': '数据',
-      'Sales': '销售'
+      tryAdjusting: '请尝试调整筛选条件或搜索关键词。'
     },
     pricing: {
       title: '简单透明的定价',
@@ -155,16 +119,6 @@ export const translations = {
         { title: '全球规模', desc: '部署在边缘网络上，确保全球范围内智能体响应的低延迟。' }
       ],
       trustedBy: '深受行业领袖信赖'
-    },
-    about: {
-      title: '赋能未来的工作方式',
-      subtitle: 'Nexus Agent Hub 是全球领先的企业级自主智能体市场。',
-      missionTitle: '我们的使命',
-      missionDesc: '致力于让先进的人工智能触手可及，帮助各种规模的企业实现复杂工作流的自动化，解锁全新的生产力水平。',
-      teamTitle: '我们的团队',
-      teamDesc: '我们由一群多元化的 AI 研究员、工程师和行业资深人士组成，热衷于构建下一代软件基础设施。',
-      historyTitle: '发展历程',
-      historyDesc: 'Nexus 成立于 2024 年，始于一个简单的理念：部署 AI 智能体应该像安装 App 一样简单。'
     }
   }
 };

@@ -31,9 +31,9 @@ export interface Agent {
 
 export interface SearchResponse {
   recommendedAgentIds: string[];
-  chatResponse: string; // The conversational answer from the AI
+  reasoning: string;
 }
 
 export type Language = 'en' | 'zh';
 export type Theme = 'light' | 'dark';
-export type View = 'home' | 'enterprise' | 'pricing' | 'about';
+export type View = 'home' | 'enterprise' | 'pricing';

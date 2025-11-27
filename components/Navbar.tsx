@@ -49,7 +49,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           <NavItem view="home" label={t.home} />
           <NavItem view="enterprise" label={t.enterprise} />
           <NavItem view="pricing" label={t.pricing} />
-          <NavItem view="about" label={t.about} />
+          <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+            {t.docs}
+          </a>
         </div>
 
         <div className="flex items-center gap-3">

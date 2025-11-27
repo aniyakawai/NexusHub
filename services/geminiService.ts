@@ -12,7 +12,8 @@ export const findMatchingAgents = async (query: string): Promise<SearchResponse 
   }
 
   try {
-    // Flatten the localized object to English for the AI context
+    // Flatten the localized object to English for the AI context to save tokens and maintain consistency
+    // The AI can understand the Chinese query and map it to English descriptions easily.
     const agentsContext = JSON.stringify(AGENTS.map(a => ({
       id: a.id,
       name: a.name.en,
@@ -23,21 +24,15 @@ export const findMatchingAgents = async (query: string): Promise<SearchResponse 
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
-      contents: `You are Nexus AI, an intelligent concierge for an Enterprise Agent Hub.
-      
-      User Query: "${query}"
+      contents: `User Query: "${query}"
       
       Available Agents Database: ${agentsContext}
       
-      Task: 
-      1. Act as a helpful chatbot. Answer the user's question naturally in the SAME language they used (English or Chinese).
-      2. If the user is asking for a specific tool, solution, or capability, look through the Agents Database.
-      3. Return a JSON object containing a 'chatResponse' (your conversational reply) and 'recommendedAgentIds' (list of matching IDs).
+      Task: Analyze the user's query and identify the top 1-3 most relevant agents from the database. 
+      Return a JSON object with 'recommendedAgentIds' (array of strings) and a short 'reasoning' (string) explaining why these were chosen.
+      If no agents are relevant, return an empty array.
       
-      Rules:
-      - If the user just says "Hi" or asks a general question (e.g., "What is AI?"), answer politely in 'chatResponse' and return an empty 'recommendedAgentIds' array.
-      - If the user asks for "finance tools" or "help with contracts", provide a helpful intro in 'chatResponse' (e.g., "I found some agents that can help with legal contracts...") and list the IDs.
-      - Keep 'chatResponse' concise but friendly.`,
+      Important: The reasoning should be in the same language as the User Query (if Chinese, reply in Chinese).`,
       config: {
         responseMimeType: "application/json",
         responseSchema: {
@@ -46,14 +41,14 @@ export const findMatchingAgents = async (query: string): Promise<SearchResponse 
             recommendedAgentIds: {
               type: Type.ARRAY,
               items: { type: Type.STRING },
-              description: "List of matching agent IDs if relevant, otherwise empty"
+              description: "List of matching agent IDs"
             },
-            chatResponse: {
+            reasoning: {
               type: Type.STRING,
-              description: "The conversational answer to the user"
+              description: "Brief explanation of the recommendation in the user's language"
             }
           },
-          required: ["recommendedAgentIds", "chatResponse"]
+          required: ["recommendedAgentIds", "reasoning"]
         }
       }
     });

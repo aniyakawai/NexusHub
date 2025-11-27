@@ -11,7 +11,6 @@ interface AgentCardProps {
 
 export const AgentCard: React.FC<AgentCardProps> = ({ agent, lang }) => {
   const t = translations[lang].common;
-  const industryLabel = translations[lang].industries[agent.industry as keyof typeof translations.en.industries] || agent.industry;
   const isAvailable = agent.redirectUrl && agent.redirectUrl.length > 0;
 
   const handleRedirect = () => {
@@ -36,7 +35,7 @@ export const AgentCard: React.FC<AgentCardProps> = ({ agent, lang }) => {
           className={`w-full h-full object-cover transition-transform duration-700 ${isAvailable ? 'group-hover:scale-105 saturate-50 group-hover:saturate-100' : 'grayscale'}`}
         />
         <div className="absolute top-3 right-3 z-20 bg-white/90 dark:bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-xs font-semibold text-gray-800 dark:text-slate-200 border border-gray-200 dark:border-slate-700 shadow-sm">
-          {industryLabel}
+          {agent.industry}
         </div>
       </div>
 
