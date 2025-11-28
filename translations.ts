@@ -152,6 +152,8 @@ export const translations = {
     },
     industries: {
       'All': '全部',
+      // --- 旧分类翻译 (暂时隐藏) ---
+      /*
       'Finance': '金融',
       'Healthcare': '医疗',
       'Retail': '零售',
@@ -160,6 +162,13 @@ export const translations = {
       'Creative': '创意',
       'Data': '数据',
       'Sales': '销售'
+      */
+    
+      // --- 新分类 (新增) ---
+      'smart_qa': '智能问答',           // 智能问答
+      'smart_data': '智能问数',         // 智能问数
+      'smart_audit': '智能审核',        // 智能审核
+      'smart_gen': '智能生成'           // 智能生成
     }
   }
 };
