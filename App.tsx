@@ -13,7 +13,7 @@ import { ChatInterface } from './components/ChatInterface';
 import { Industry, Language, Theme, View } from './types';
 import { AGENTS } from './constants';
 import { translations } from './translations';
-import { LayoutGrid, Globe, Scale, Stethoscope, ShoppingBag, Factory, Palette, Database, TrendingUp } from 'lucide-react';
+import { LayoutGrid, Globe, Scale, Stethoscope, ShoppingBag, Factory, Palette, Database, TrendingUp,MessageSquare, FileText, CheckCircle, Sparkles } from 'lucide-react';
 
 const App: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<Industry>(Industry.ALL);
@@ -71,6 +71,8 @@ const App: React.FC = () => {
 
   const getIndustryIcon = (ind: Industry) => {
     switch (ind) {
+      // --- 旧图标逻辑 (暂时隐藏) ---
+      /*
       case Industry.FINANCE: return <Scale className="w-4 h-4" />;
       case Industry.HEALTHCARE: return <Stethoscope className="w-4 h-4" />;
       case Industry.RETAIL: return <ShoppingBag className="w-4 h-4" />;
@@ -79,6 +81,14 @@ const App: React.FC = () => {
       case Industry.LEGAL: return <Scale className="w-4 h-4" />;
       case Industry.DATA: return <Database className="w-4 h-4" />;
       case Industry.SALES: return <TrendingUp className="w-4 h-4" />;
+      */
+
+      // --- 新图标逻辑 (新增) ---
+      case Industry.SMART_QA: return <MessageSquare className="w-4 h-4" />;
+      case Industry.SMART_DATA: return <Database className="w-4 h-4" />;
+      case Industry.SMART_AUDIT: return <CheckCircle className="w-4 h-4" />;
+      case Industry.SMART_GEN: return <Sparkles className="w-4 h-4" />;
+  
       default: return <Globe className="w-4 h-4" />;
     }
   };
