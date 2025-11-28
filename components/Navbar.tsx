@@ -49,9 +49,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         <div className="hidden md:flex items-center gap-8">
           <NavItem view="home" label={t.home} />
+          {/*
           <NavItem view="enterprise" label={t.enterprise} />
           <NavItem view="pricing" label={t.pricing} />
           <NavItem view="about" label={t.about} />
+          */}
         </div>
 
         <div className="flex items-center gap-3">
