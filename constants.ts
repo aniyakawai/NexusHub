@@ -107,8 +107,8 @@ export const AGENTS: Agent[] = [
       { en: 'Visualization', zh: '可视化' }
     ],
     imageUrl: 'https://picsum.photos/400/300?random=6',
-    redirectUrl: '', // Not online yet
-    stats: { users: 'Waiting', rating: 0 },
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/a746e2517c2c1945', // Not online yet
+    stats: { users: '10k+', rating: 4.8 },
   },
   {
     id: 'legal-07',
