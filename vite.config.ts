@@ -11,10 +11,12 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [react()],
       base: '/NexusHub/',
+      /*
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
       }
+      */
     };
 });
