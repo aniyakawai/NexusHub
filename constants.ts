@@ -94,7 +94,7 @@ export const AGENTS: Agent[] = [
   },
   {
     id: 'data-06',
-    name: { en: 'Instant Data Query', zh: '及时问数' },
+    name: { en: 'Instant Data Query', zh: '即时问数' },
     description: { 
       en: 'Real-time natural language interface for database querying.', 
       zh: '基于自然语言的实时数据库查询接口，即问即答。' 
