@@ -16,7 +16,7 @@ export const AGENTS: Agent[] = [
       { en: 'Usage Guide', zh: '使用指南' }, 
       { en: 'Q&A', zh: '智能问答' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=1',
+    imageUrl: '/NexusHub/agents/01.jpg',   //https://picsum.photos/400/300?random=1
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/bbc13cf6aec47f00',
     stats: { users: '12k+', rating: 4.8 },
   },
@@ -34,7 +34,7 @@ export const AGENTS: Agent[] = [
       { en: 'Manuals', zh: '维修手册' }, 
       { en: 'Safety', zh: '安全规范' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=2',
+    imageUrl: '/NexusHub/agents/02.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/ada723f8dc1a946b',
     stats: { users: '5k+', rating: 4.9 },
   },
@@ -52,7 +52,7 @@ export const AGENTS: Agent[] = [
       { en: 'Culture', zh: '文化传播' }, 
       { en: 'Simulation', zh: '对话模拟' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=3',
+    imageUrl: '/NexusHub/agents/03.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/c05dbca46dcafa22',
     stats: { users: '20k+', rating: 5.0 },
   },
@@ -70,7 +70,7 @@ export const AGENTS: Agent[] = [
       { en: 'Reporting', zh: '报告生成' }, 
       { en: 'Trending', zh: '趋势预测' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=4',
+    imageUrl: '/NexusHub/agents/04.jpg',
     redirectUrl: '', // Not online yet
     stats: { users: 'Waiting', rating: 0 },
   },
@@ -88,7 +88,7 @@ export const AGENTS: Agent[] = [
       { en: 'KPI Tracking', zh: 'KPI追踪' }, 
       { en: 'Automation', zh: '自动化' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=5',
+    imageUrl: '/NexusHub/agents/05.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/0a3e7388a9a2e7f4?is_at_all=',
     stats: { users: '8k+', rating: 4.7 },
   },
@@ -106,7 +106,7 @@ export const AGENTS: Agent[] = [
       { en: 'Real-time', zh: '实时查询' }, 
       { en: 'Visualization', zh: '可视化' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=6',
+    imageUrl: '/NexusHub/agents/06.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/a746e2517c2c1945', // Not online yet
     stats: { users: '10k+', rating: 4.8 },
   },
@@ -124,7 +124,7 @@ export const AGENTS: Agent[] = [
       { en: 'Clause Analysis', zh: '条款分析' }, 
       { en: 'Compliance', zh: '合规检查' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=7',
+    imageUrl: '/NexusHub/agents/07.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/4fc872b48f7ee4ab',
     stats: { users: '3k+', rating: 4.9 },
   },
@@ -142,7 +142,7 @@ export const AGENTS: Agent[] = [
       { en: 'Verification', zh: '数据校验' }, 
       { en: 'Cross-border', zh: '跨境贸易' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=8',
+    imageUrl: '/NexusHub/agents/08.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/e1b7d8e28e72c079',
     stats: { users: '6k+', rating: 4.6 },
   },
@@ -160,7 +160,7 @@ export const AGENTS: Agent[] = [
       { en: 'Multimodal', zh: '多模态' }, 
       { en: 'Marketing', zh: '营销策划' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=9',
+    imageUrl: '/NexusHub/agents/09.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/30bdefbd6cf90cce',
     stats: { users: '15k+', rating: 4.8 },
   },
@@ -178,7 +178,7 @@ export const AGENTS: Agent[] = [
       { en: 'Analysis', zh: '情报分析' }, 
       { en: 'Monitoring', zh: '舆情监控' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=10',
+    imageUrl: '/NexusHub/agents/10.jpg',
     redirectUrl: 'https://1015069scsc34.vicp.fun/chat/83d82ab124d51794',
     stats: { users: '9k+', rating: 4.7 },
   },
@@ -195,7 +195,7 @@ export const AGENTS: Agent[] = [
       { en: 'Vision', zh: '图片分析' }, 
       { en: 'Chat', zh: '多轮对话' }
     ],
-    imageUrl: 'https://picsum.photos/400/300?random=11',
+    imageUrl: '/NexusHub/agents/10.jpg',
     redirectUrl: '?view=chat', // URL Param routing for new tab
     stats: { users: 'Beta', rating: 5.0 },
   },

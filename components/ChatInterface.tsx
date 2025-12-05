@@ -1,12 +1,13 @@
-
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Mic, Image as ImageIcon, Plus, Menu, MessageSquare, Settings, HelpCircle, User, Bot, Sparkles } from 'lucide-react';
+import { Send, Mic, Plus, Menu, MessageSquare, Settings, HelpCircle, User, Sparkles, ArrowLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Language } from '../types';
 
 interface ChatInterfaceProps {
   lang: Language;
   onBack: () => void;
+  // 未来预留：这里以后需要接收当前选中的智能体信息
+  // agent?: Agent; 
 }
 
 interface Message {
@@ -19,7 +20,7 @@ interface Message {
 export const ChatInterface: React.FC<ChatInterfaceProps> = ({ lang, onBack }) => {
   const [input, setInput] = useState('');
   const [isSidebarOpen, setSidebarOpen] = useState(true);
-  const [messages, setMessages] = useState<Message[]>([]); // Start empty to show Greeting
+  const [messages, setMessages] = useState<Message[]>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -43,204 +44,198 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ lang, onBack }) =>
     setMessages(prev => [...prev, userMsg]);
     setInput('');
 
-    // Simulate AI Thinking
+    // 模拟 AI 回复 (未来这里对接 API)
     setTimeout(() => {
       const aiMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: lang === 'zh' ? '这是一个模拟回复。API接口已预留。我正在模仿 Gemini 的界面风格。' : 'This is a simulated response. API endpoints are reserved. I am mimicking the Gemini UI style.',
+        content: lang === 'zh' ? '接口对接准备就绪。界面风格已同步。' : 'API ready. UI style synchronized.',
         timestamp: new Date()
       };
       setMessages(prev => [...prev, aiMsg]);
-    }, 1200);
-  };
-
-  const handleVoiceInput = () => {
-    alert(lang === 'zh' ? '语音接口预留位置' : 'Voice API Placeholder');
-  };
-
-  const handleImageUpload = () => {
-    alert(lang === 'zh' ? '图片上传接口预留位置' : 'Image API Placeholder');
+    }, 1000);
   };
 
   return (
-    <div className="flex h-full bg-[#131314] text-[#e3e3e3] font-sans overflow-hidden">
-      {/* Sidebar - Gemini Style */}
+    // 1. 背景色改为与 App.tsx 一致的 Slate 色系，支持日/夜模式
+    <div className="flex h-full bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-gray-100 font-sans overflow-hidden transition-colors duration-300">
+      
+      {/* Sidebar */}
       <AnimatePresence>
         {isSidebarOpen && (
           <motion.div 
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: 280, opacity: 1 }}
             exit={{ width: 0, opacity: 0 }}
-            className="hidden md:flex flex-col h-full bg-[#1e1f20] p-4 flex-shrink-0"
+            className="hidden md:flex flex-col h-full bg-white dark:bg-slate-900 border-r border-gray-200 dark:border-slate-800 flex-shrink-0"
           >
-            <div className="mb-6 px-2">
-               <div className="flex items-center gap-2 text-xl font-medium text-white mb-6">
-                 <Menu className="w-6 h-6 cursor-pointer" onClick={() => setSidebarOpen(false)} />
+            <div className="p-4 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between">
+               <div className="flex items-center gap-2 font-bold text-lg text-primary-600 dark:text-primary-400">
+                 <Sparkles className="w-5 h-5" />
+                 <span>Nexus<span className="text-gray-500 font-light">Chat</span></span>
                </div>
-               <button 
-                onClick={() => setMessages([])}
-                className="flex items-center gap-3 bg-[#282a2c] hover:bg-[#37393b] text-[#e3e3e3] px-4 py-3 rounded-full text-sm font-medium transition-colors w-full"
-               >
-                 <Plus className="w-4 h-4" />
-                 {lang === 'zh' ? '发起新对话' : 'New chat'}
+               <button onClick={() => setSidebarOpen(false)} className="p-2 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg">
+                 <Menu className="w-5 h-5 text-gray-500" />
                </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto space-y-2 px-2">
-              <p className="text-xs font-medium text-gray-400 px-3 mb-2">{lang === 'zh' ? '近期' : 'Recent'}</p>
-              <div className="flex items-center gap-3 px-3 py-2 hover:bg-[#282a2c] rounded-full cursor-pointer transition-colors text-sm truncate">
-                <MessageSquare className="w-4 h-4 text-gray-400 shrink-0" />
-                <span className="truncate">{lang === 'zh' ? '你好 问好' : 'Greeting Hello'}</span>
-              </div>
-              <div className="flex items-center gap-3 px-3 py-2 hover:bg-[#282a2c] rounded-full cursor-pointer transition-colors text-sm truncate">
-                <MessageSquare className="w-4 h-4 text-gray-400 shrink-0" />
-                <span className="truncate">{lang === 'zh' ? '今天天气怎么样' : 'Video description task'}</span>
-              </div>
+            <div className="p-4">
+              <button 
+                onClick={() => setMessages([])}
+                className="flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white w-full py-2.5 rounded-lg text-sm font-medium transition-colors shadow-sm"
+              >
+                <Plus className="w-4 h-4" />
+                {lang === 'zh' ? '新对话' : 'New Chat'}
+              </button>
             </div>
 
-            <div className="mt-auto space-y-1 px-2">
-              <div className="flex items-center gap-3 px-3 py-2 hover:bg-[#282a2c] rounded-full cursor-pointer transition-colors text-sm">
-                <HelpCircle className="w-4 h-4 text-gray-400" />
-                <span>{lang === 'zh' ? '帮助' : 'Help'}</span>
-              </div>
-              <div className="flex items-center gap-3 px-3 py-2 hover:bg-[#282a2c] rounded-full cursor-pointer transition-colors text-sm">
-                <Settings className="w-4 h-4 text-gray-400" />
+            <div className="flex-1 overflow-y-auto px-2 space-y-1">
+              <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">{lang === 'zh' ? '历史记录' : 'History'}</p>
+              {/* 模拟历史记录 */}
+              {[1, 2].map((i) => (
+                <div key={i} className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors text-sm text-gray-600 dark:text-gray-300">
+                  <MessageSquare className="w-4 h-4 shrink-0" />
+                  <span className="truncate">测试对话记录 {i}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="p-4 border-t border-gray-200 dark:border-slate-800 space-y-1">
+              <div className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors text-sm text-gray-600 dark:text-gray-300">
+                <Settings className="w-4 h-4" />
                 <span>{lang === 'zh' ? '设置' : 'Settings'}</span>
               </div>
-              <div className="pt-4 border-t border-[#444746] mt-2 flex items-center gap-2 px-3">
-                 <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                 <span className="text-xs text-gray-400">Singapore</span>
+              <div className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors text-sm text-gray-600 dark:text-gray-300">
+                <HelpCircle className="w-4 h-4" />
+                <span>{lang === 'zh' ? '帮助' : 'Help'}</span>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col relative h-full max-w-full">
-        {/* Top Navbar */}
-        <div className="flex items-center justify-between p-4 bg-[#131314]">
+      {/* Main Chat Area */}
+      <div className="flex-1 flex flex-col h-full relative">
+        {/* Header */}
+        <div className="h-16 border-b border-gray-200 dark:border-slate-800 flex items-center justify-between px-4 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md sticky top-0 z-10">
           <div className="flex items-center gap-3">
              {!isSidebarOpen && (
-               <button onClick={() => setSidebarOpen(true)} className="p-2 hover:bg-[#282a2c] rounded-full transition-colors">
-                  <Menu className="w-5 h-5 text-gray-300" />
+               <button onClick={() => setSidebarOpen(true)} className="p-2 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                  <Menu className="w-5 h-5" />
                </button>
              )}
-             <span className="text-lg font-medium text-gray-200">MaxKB</span>
-          </div>
-          <div className="flex items-center gap-3">
-             <div className="bg-[#282a2c] px-3 py-1.5 rounded-lg text-xs font-medium text-gray-300 flex items-center gap-1">
-               <Sparkles className="w-3 h-3 text-yellow-500" />
-               Try MaxKB
-             </div>
-             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-xs font-bold border border-white/10">
-               U
-             </div>
+             {/* 返回按钮 */}
+             <button onClick={onBack} className="md:hidden p-2 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                <ArrowLeft className="w-5 h-5" />
+             </button>
+             <span className="font-medium">MaxKB Agent</span>
           </div>
         </div>
 
-        {/* Chat Area */}
-        <div className="flex-1 overflow-y-auto px-4 pb-4">
+        {/* Messages List */}
+        <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
           {messages.length === 0 ? (
-             <div className="h-full flex flex-col items-center justify-center -mt-20">
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-center space-y-2"
-                >
-                  <h1 className="text-5xl md:text-6xl font-medium bg-gradient-to-r from-blue-400 via-indigo-400 to-red-400 bg-clip-text text-transparent pb-2">
-                    {lang === 'zh' ? '你好, Nexus 用户' : 'Hello, Nexus User'}
-                  </h1>
-                  <h2 className="text-4xl md:text-5xl font-medium text-[#444746] dark:text-[#5e5e5e]">
-                     {lang === 'zh' ? '今天我可以帮您做什么？' : 'How can I help you today?'}
-                  </h2>
-                </motion.div>
-                
-                {/* Suggestion Chips */}
-                <div className="flex gap-4 mt-12 overflow-x-auto max-w-full px-4 no-scrollbar">
-                   {['Help write an email', 'Plan a trip', 'Code a react component', 'Analyze data'].map((item, i) => (
-                      <div key={i} className="bg-[#1e1f20] hover:bg-[#282a2c] text-gray-300 px-4 py-3 rounded-xl cursor-pointer transition-colors whitespace-nowrap text-sm font-medium">
-                         {item}
-                      </div>
-                   ))}
-                </div>
+             <div className="h-full flex flex-col items-center justify-center opacity-50">
+                <Sparkles className="w-16 h-16 text-primary-500 mb-4" />
+                <p className="text-xl font-medium">{lang === 'zh' ? '准备好开始了吗？' : 'Ready to start?'}</p>
              </div>
           ) : (
-            <div className="max-w-3xl mx-auto py-8 space-y-8">
-              {messages.map((msg) => (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  key={msg.id}
-                  className={`flex gap-4 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}
-                >
-                  {msg.role === 'assistant' ? (
-                     <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-red-500 flex items-center justify-center shrink-0 mt-1">
-                        <Sparkles className="w-4 h-4 text-white" />
-                     </div>
-                  ) : (
-                     <div className="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center shrink-0 mt-1">
-                        <User className="w-4 h-4 text-white" />
-                     </div>
-                  )}
-                  
-                  <div className={`flex-1 ${msg.role === 'user' ? 'text-right' : ''}`}>
-                    <div className={`inline-block text-[15px] leading-7 ${msg.role === 'user' ? '' : 'text-gray-200'}`}>
-                      {msg.content}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-              <div ref={messagesEndRef} />
-            </div>
+            messages.map((msg) => (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                key={msg.id}
+                className={`flex gap-4 max-w-4xl mx-auto ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}
+              >
+                {/* 头像 */}
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
+                  msg.role === 'assistant' 
+                    ? 'bg-primary-600 text-white' 
+                    : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-300'
+                }`}>
+                  {msg.role === 'assistant' ? <Sparkles className="w-4 h-4" /> : <User className="w-4 h-4" />}
+                </div>
+
+                {/* 消息气泡 */}
+                <div className={`px-4 py-2.5 rounded-2xl max-w-[80%] text-sm leading-6 shadow-sm ${
+                  msg.role === 'user'
+                    ? 'bg-primary-600 text-white rounded-br-none'
+                    : 'bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 text-gray-800 dark:text-gray-200 rounded-bl-none'
+                }`}>
+                  {msg.content}
+                </div>
+              </motion.div>
+            ))
           )}
+          <div ref={messagesEndRef} />
         </div>
 
-        {/* Floating Input Area - Gemini Style */}
-        <div className="p-4 bg-[#131314]">
-          <div className="max-w-3xl mx-auto relative bg-[#1e1f20] rounded-3xl transition-all border border-[#444746]/50 focus-within:bg-[#282a2c] focus-within:border-gray-500">
-             <div className="flex items-end p-2 gap-2">
-                <button className="p-2 text-gray-400 hover:bg-[#37393b] hover:text-white rounded-full transition-colors" onClick={handleImageUpload}>
-                   <Plus className="w-5 h-5" />
-                </button>
-                
-                <textarea
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
-                      handleSendMessage();
-                    }
-                  }}
-                  placeholder={lang === 'zh' ? "输入指令..." : "Enter a prompt here"}
-                  className="flex-1 bg-transparent border-none focus:ring-0 text-white placeholder-gray-400 resize-none max-h-32 min-h-[48px] py-3"
-                  rows={1}
-                />
+        {/* Input Area - 优化版 */}
+        <div className="p-4 bg-white dark:bg-slate-950 border-t border-gray-200 dark:border-slate-800">
+          <div className="max-w-4xl mx-auto flex items-end gap-3">
+             
+             {/* 输入框容器：包含左侧加号、中间输入框、右侧麦克风 */}
+             <div className="flex-1 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl flex items-end p-2 transition-colors focus-within:ring-2 focus-within:ring-primary-500/20 focus-within:border-primary-500">
+               
+               {/* 左侧上传按钮：图标改大，点击区域更舒适 */}
+               <button 
+                 className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-xl transition-colors shrink-0"
+                 title="上传文件 (预留)"
+               >
+                  <Plus className="w-6 h-6" /> {/* 图标从 w-5 改为 w-6 */}
+               </button>
 
-                <div className="flex items-center gap-1">
-                   {!input && (
-                      <button className="p-2 text-gray-400 hover:bg-[#37393b] hover:text-white rounded-full transition-colors" onClick={handleVoiceInput}>
-                         <Mic className="w-5 h-5" />
-                      </button>
-                   )}
-                   {input && (
-                      <button 
-                        onClick={handleSendMessage}
-                        className="p-2 bg-white text-gray-900 rounded-full hover:bg-gray-200 transition-colors"
-                      >
-                         <Send className="w-4 h-4" />
-                      </button>
-                   )}
-                </div>
+               {/* 中间输入框：行高调整，去掉多余纵向padding */}
+               <textarea 
+                 value={input}
+                 onChange={(e) => setInput(e.target.value)}
+                 onKeyDown={(e) => {
+                   if (e.key === 'Enter' && !e.shiftKey) {
+                     e.preventDefault();
+                     handleSendMessage();
+                   }
+                 }}
+                 placeholder={lang === 'zh' ? "输入消息..." : "Type a message..."}
+                 // min-h 改小，py 改小，实现“变窄”的效果
+                 className="flex-1 bg-transparent border-none focus:ring-0 resize-none py-2.5 px-2 min-h-[40px] max-h-32 text-sm text-gray-900 dark:text-white placeholder-gray-500 leading-relaxed"
+                 rows={1}
+                 // 自动调整高度的小技巧：根据内容行数变化
+                 style={{ height: 'auto', overflow: 'hidden' }}
+                 onInput={(e) => {
+                    const target = e.target as HTMLTextAreaElement;
+                    target.style.height = 'auto';
+                    target.style.height = target.scrollHeight + 'px';
+                 }}
+               />
+
+               {/* 右侧语音按钮：预留位置，一直显示 */}
+               <button 
+                 className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-xl transition-colors shrink-0"
+                 title="语音输入 (预留)"
+               >
+                  <Mic className="w-5 h-5" />
+               </button>
              </div>
+
+             {/* 独立的发送按钮：放在外面，更像现代 AI 聊天软件 */}
+             {/* 独立的发送按钮：增加 mb-1 让它视觉居中 */}
+             <button 
+               onClick={handleSendMessage}
+               disabled={!input.trim()}
+               className={`w-12 h-12 mb-2 flex items-center justify-center rounded-2xl transition-all shadow-sm shrink-0 ${
+                 input.trim() 
+                   ? 'bg-primary-600 hover:bg-primary-700 text-white cursor-pointer hover:shadow-md hover:scale-105 active:scale-95' 
+                   : 'bg-gray-200 dark:bg-slate-800 text-gray-400 cursor-not-allowed'
+               }`}
+             >
+                <Send className="w-5 h-5" />
+             </button>
+
           </div>
-          <p className="text-center text-[11px] text-gray-500 mt-3">
-             MaxKB may display inaccurate info, including about people, so double-check its responses.
+          <p className="text-center text-xs text-gray-400 mt-2">
+             AI generated content may be inaccurate.
           </p>
         </div>
-
       </div>
     </div>
   );
