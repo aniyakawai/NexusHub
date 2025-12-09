@@ -143,7 +143,7 @@ export const AGENTS: Agent[] = [
       { en: 'Cross-border', zh: '跨境贸易' }
     ],
     imageUrl: '/NexusHub/agents/08.jpg',
-    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/e1b7d8e28e72c079',
+    redirectUrl: 'https://1015069scsc34.vicp.fun/chat/696e40b9021cb8f7',
     stats: { users: '6k+', rating: 4.6 },
   },
   {
