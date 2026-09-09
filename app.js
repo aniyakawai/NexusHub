@@ -13,14 +13,7 @@
     currentView: 'home',    // home | workspace | help | admin | chat
     searchQuery: '',
     selectedIndustry: Industry.ALL,
-    currentUser: {
-      id: 'u-sales-01',
-      name: '销售员工',
-      role: 'employee',
-      roles: ['employee'],
-      departmentId: 'sales',
-      departmentName: '销售部'
-    },
+    currentUser: DEMO_ACCOUNTS[0],  // 默认演示账号（销售员工）
     isLoginOpen: false,
     searchResults: null     // 本地搜索结果缓存
   };
@@ -116,12 +109,26 @@
     // 登录弹窗文案
     dom.loginTitle = document.getElementById('loginTitle');
     dom.loginSubtitle = document.getElementById('loginSubtitle');
-    dom.loginEmailLabel = document.getElementById('loginEmailLabel');
+    dom.loginPhoneLabel = document.getElementById('loginPhoneLabel');
+    dom.loginCodeLabel = document.getElementById('loginCodeLabel');
+    dom.loginAccountLabel = document.getElementById('loginAccountLabel');
     dom.loginPasswordLabel = document.getElementById('loginPasswordLabel');
     dom.loginForgotLink = document.getElementById('loginForgotLink');
     dom.loginSubmitBtn = document.getElementById('loginSubmitBtn');
     dom.loginDividerOr = document.getElementById('loginDividerOr');
     dom.loginFooterText = document.getElementById('loginFooterText');
+    dom.demoAccountLabel = document.getElementById('demoAccountLabel');
+
+    // 登录 Tabs 与演示账号
+    dom.loginTabs = document.getElementById('loginTabs');
+    dom.demoAccountList = document.getElementById('demoAccountList');
+    dom.sendCodeBtn = document.getElementById('sendCodeBtn');
+    dom.passwordLoginBtn = document.getElementById('passwordLoginBtn');
+    dom.wechatLoginBtn = document.getElementById('wechatLoginBtn');
+    dom.wechatQrDemo = document.getElementById('wechatQrDemo');
+    dom.wechatHint = document.getElementById('wechatHint');
+    dom.phoneInput = document.getElementById('phoneInput');
+    dom.codeInput = document.getElementById('codeInput');
 
     // 页脚文案
     dom.footerCopyright = document.getElementById('footerCopyright');
@@ -257,12 +264,29 @@
   function renderLoginI18n() {
     dom.loginTitle.textContent = t('login.title');
     dom.loginSubtitle.textContent = t('login.subtitle');
-    dom.loginEmailLabel.textContent = t('login.email');
-    dom.loginPasswordLabel.textContent = t('login.password');
     dom.loginForgotLink.textContent = t('login.forgot');
     dom.loginSubmitBtn.textContent = t('login.btn');
-    dom.loginDividerOr.textContent = t('login.or');
+    dom.loginDividerOr.textContent = t('login.demoDivider');
     dom.loginFooterText.innerHTML = t('login.noAccount') + ' <a href="#">' + t('login.register') + '</a>';
+
+    // 登录方式 Tabs
+    if (dom.loginTabs) {
+      var tabLabels = { verify: t('login.tabVerify'), password: t('login.tabPassword'), wechat: t('login.tabWechat') };
+      dom.loginTabs.querySelectorAll('.login-tab').forEach(function (tb) {
+        if (tabLabels[tb.dataset.tab]) tb.textContent = tabLabels[tb.dataset.tab];
+      });
+    }
+    // 表单标签与按钮
+    if (dom.loginPhoneLabel) dom.loginPhoneLabel.textContent = t('login.phone');
+    if (dom.loginCodeLabel) dom.loginCodeLabel.textContent = t('login.code');
+    if (dom.loginAccountLabel) dom.loginAccountLabel.textContent = t('login.account');
+    if (dom.sendCodeBtn) dom.sendCodeBtn.textContent = t('login.sendCode');
+    if (dom.passwordLoginBtn) dom.passwordLoginBtn.textContent = t('login.btn');
+    if (dom.demoAccountLabel) dom.demoAccountLabel.textContent = t('login.demoLabel');
+    if (dom.wechatHint) dom.wechatHint.textContent = t('login.wechatHint');
+    if (dom.wechatLoginBtn && dom.wechatLoginBtn.lastChild) {
+      dom.wechatLoginBtn.lastChild.textContent = ' ' + t('login.wechatLogin');
+    }
   }
 
   function renderFooterI18n() {
@@ -699,9 +723,23 @@
   }
 
   // ========== 登录弹窗 ==========
+  function switchLoginTab(tabName) {
+    var tabs = dom.loginTabs ? dom.loginTabs.querySelectorAll('.login-tab') : [];
+    tabs.forEach(function (t) {
+      t.classList.toggle('active', t.dataset.tab === tabName);
+    });
+    ['panelVerifyCode', 'panelPassword', 'panelWechat'].forEach(function (id, i) {
+      var el = document.getElementById(id);
+      var names = ['verify', 'password', 'wechat'];
+      if (el) el.classList.toggle('active', names[i] === tabName);
+    });
+  }
+
   function openLogin() {
     state.isLoginOpen = true;
     dom.loginModal.classList.add('open');
+    renderDemoAccounts();
+    switchLoginTab('verify');
   }
 
   function closeLogin() {
@@ -709,15 +747,31 @@
     dom.loginModal.classList.remove('open');
   }
 
-  function mockEmployeeLogin() {
-    state.currentUser = {
-      id: 'u-sales-01',
-      name: '销售员工',
-      role: 'employee',
-      roles: ['employee'],
-      departmentId: 'sales',
-      departmentName: '销售部'
-    };
+  function renderDemoAccounts() {
+    if (!dom.demoAccountList) return;
+    dom.demoAccountList.innerHTML = DEMO_ACCOUNTS.map(function (acc) {
+      var adminClass = (acc.roles && acc.roles.indexOf('admin') !== -1) ? ' admin' : '';
+      var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+      return '<button class="demo-account-btn' + adminClass + '" data-id="' + acc.id + '">' +
+        '<span class="demo-account-avatar">' + acc.name.charAt(0) + '</span>' +
+        '<span class="demo-account-info"><strong>' + acc.name + '</strong>' +
+        '<span>' + t('login.demoRole') + ' · ' + acc.departmentName + '</span></span>' +
+        '<span class="demo-account-arrow">' + arrow + '</span>' +
+      '</button>';
+    }).join('');
+
+    dom.demoAccountList.querySelectorAll('.demo-account-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.dataset.id;
+        var acc = DEMO_ACCOUNTS.find(function (a) { return a.id === id; });
+        if (acc) loginAs(acc);
+      });
+    });
+  }
+
+  function loginAs(account) {
+    if (!account) return;
+    state.currentUser = account;
     closeLogin();
     renderUserState();
     renderAgents();
@@ -938,9 +992,41 @@
       dom.navLinks.classList.remove('open');
     });
 
-    // 登录按钮
+    // 登录按钮 —— 打开弹窗
     dom.navLoginBtn.addEventListener('click', openLogin);
-    dom.loginSubmitBtn.addEventListener('click', mockEmployeeLogin);
+
+    // Tabs 切换（验证码/密码/微信，纯展示 UI）
+    if (dom.loginTabs) {
+      dom.loginTabs.addEventListener('click', function (e) {
+        var tab = e.target.closest('.login-tab');
+        if (!tab) return;
+        switchLoginTab(tab.dataset.tab);
+      });
+    }
+
+    // 获取验证码 / 登录（纯展示，不真正对接服务）
+    if (dom.sendCodeBtn) {
+      dom.sendCodeBtn.addEventListener('click', function () {
+        var phone = dom.phoneInput && dom.phoneInput.value.trim();
+        if (!phone) { alert('请输入手机号'); return; }
+        alert('验证码已发送到 ' + phone + '（演示，未真实发送）');
+      });
+    }
+    if (dom.loginSubmitBtn) {
+      dom.loginSubmitBtn.addEventListener('click', function () {
+        alert('演示环境仅支持通过下方“演示账号”登录切换角色。');
+      });
+    }
+    if (dom.passwordLoginBtn) {
+      dom.passwordLoginBtn.addEventListener('click', function () {
+        alert('演示环境仅支持通过下方“演示账号”登录切换角色。');
+      });
+    }
+    if (dom.wechatLoginBtn) {
+      dom.wechatLoginBtn.addEventListener('click', function () {
+        alert('微信登录为演示功能，请使用下方“演示账号”快速体验。');
+      });
+    }
 
     // 通用页面跳转按钮
     document.addEventListener('click', function (e) {

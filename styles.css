@@ -1790,6 +1790,146 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .modal-footer-text a { font-weight: 620; color: var(--accent); }
 
+/* ================================================
+   登录方式 Tabs（国内风格：验证码/密码/微信）
+   ================================================ */
+.login-tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-default);
+  border-radius: var(--r-sm);
+  margin-bottom: 1rem;
+}
+.login-tab {
+  flex: 1;
+  padding: 0.5rem 0;
+  font-size: 0.84375rem;
+  font-weight: 550;
+  color: var(--text-secondary);
+  border: none;
+  background: transparent;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-smooth);
+}
+.login-tab:hover { color: var(--text-primary); }
+.login-tab.active {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 650;
+  box-shadow: var(--shadow-sm);
+}
+.login-panel { display: none; }
+.login-panel.active { display: block; animation: pageIn var(--dur-normal) var(--ease-out-expo) both; }
+
+/* 手机号 + 验证码同行 */
+.code-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.code-row .form-input { flex: 1; }
+.code-send-btn {
+  flex-shrink: 0;
+  padding: 0 0.9rem;
+  font-size: 0.84375rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid rgba(79,70,229,0.2);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-smooth);
+}
+.code-send-btn:hover { background: var(--accent); color: #fff; }
+
+/* 微信登录区 */
+.wechat-login { text-align: center; padding: 0.25rem 0 0.5rem; }
+.wechat-qr-demo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-xs);
+}
+.wechat-qr-demo svg { width: 72px; height: 72px; color: var(--text-muted); }
+.wechat-hint {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  margin-bottom: 0.875rem;
+}
+
+/* 演示账号区（真正的身份切换入口） */
+.demo-account-wrap { margin-top: -0.5rem; }
+.demo-account-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.625rem;
+  text-align: center;
+}
+.demo-account-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.demo-account-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.65rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border-default);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-smooth);
+  text-align: left;
+}
+.demo-account-btn:hover {
+  border-color: rgba(79,70,229,0.28);
+  background: var(--accent-bg);
+  transform: translateX(2px);
+}
+.demo-account-avatar {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: var(--r-full);
+  background: var(--accent-gradient);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.demo-account-info { flex: 1; min-width: 0; }
+.demo-account-info strong {
+  display: block;
+  font-size: 0.84375rem;
+  color: var(--text-primary);
+}
+.demo-account-info span {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+.demo-account-arrow {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.demo-account-arrow svg { width: 15px; height: 15px; }
+.demo-account-btn.admin .demo-account-avatar { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+
 
 /* ================================================
    聊天界面 ChatInterface — 高级质感

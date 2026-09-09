@@ -207,6 +207,50 @@ const AGENTS = [
   }
 ];
 
+// --- 演示账号（公开演示用，登录弹窗中列出供切换身份） ---
+const DEMO_ACCOUNTS = [
+  {
+    id: 'u-sales-01',
+    name: '销售员工',
+    role: 'employee',
+    roles: ['employee'],
+    departmentId: 'sales',
+    departmentName: '销售部'
+  },
+  {
+    id: 'u-service-01',
+    name: '服务员工',
+    role: 'employee',
+    roles: ['employee'],
+    departmentId: 'service',
+    departmentName: '服务部'
+  },
+  {
+    id: 'u-legal-01',
+    name: '法务员工',
+    role: 'employee',
+    roles: ['employee'],
+    departmentId: 'legal',
+    departmentName: '法务部'
+  },
+  {
+    id: 'u-mgmt-01',
+    name: '管理层',
+    role: 'employee',
+    roles: ['employee'],
+    departmentId: 'management',
+    departmentName: '管理层'
+  },
+  {
+    id: 'u-admin-01',
+    name: '系统管理员',
+    role: 'admin',
+    roles: ['admin', 'super_admin'],
+    departmentId: 'management',
+    departmentName: '管理部门'
+  }
+];
+
 // --- 翻译文案 (中英文) ---
 const translations = {
   zh: {
@@ -278,10 +322,15 @@ const translations = {
     },
     login: {
       title: '登录 NexusHub',
-      subtitle: '登录以解锁更多功能和更高配额',
-      email: '邮箱地址', password: '密码', forgot: '忘记密码？',
-      btn: '登录', or: '或', google: '使用 Google 登录', github: '使用 GitHub 登录',
-      noAccount: '还没有账户？', register: '立即注册'
+      subtitle: '选择演示账号即可快速体验不同权限',
+      tabVerify: '验证码', tabPassword: '密码', tabWechat: '微信',
+      phone: '手机号', code: '验证码', sendCode: '获取验证码',
+      account: '手机号 / 账号', password: '密码', forgot: '忘记密码？',
+      btn: '登录',
+      wechatHint: '使用微信扫一扫登录（演示）', wechatLogin: '微信扫码登录',
+      demoDivider: '或选择演示账号',
+      demoLabel: '快速体验不同角色权限', demoRole: '演示角色',
+      noAccount: '没有账号？', register: '立即注册'
     },
     chat: {
       placeholder: '输入消息...',
@@ -363,9 +412,14 @@ const translations = {
     },
     login: {
       title: 'Login to NexusHub',
-      subtitle: 'Sign in to unlock more features and higher quotas',
-      email: 'Email Address', password: 'Password', forgot: 'Forgot password?',
-      btn: 'Sign In', or: 'Or', google: 'Continue with Google', github: 'Continue with GitHub',
+      subtitle: 'Pick a demo account to experience different permissions',
+      tabVerify: 'SMS Code', tabPassword: 'Password', tabWechat: 'WeChat',
+      phone: 'Phone Number', code: 'Verification Code', sendCode: 'Get Code',
+      account: 'Phone / Account', password: 'Password', forgot: 'Forgot password?',
+      btn: 'Sign In',
+      wechatHint: 'Scan with WeChat to sign in (demo)', wechatLogin: 'WeChat Sign In',
+      demoDivider: 'Or choose a demo account',
+      demoLabel: 'Quickly try different role permissions', demoRole: 'Demo Role',
       noAccount: "Don't have an account?", register: 'Sign up now'
     },
     chat: {
