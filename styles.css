@@ -1876,16 +1876,19 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .demo-account-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
 }
 .demo-account-btn {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.625rem;
-  width: 100%;
-  padding: 0.65rem 0.875rem;
-  font-size: 0.875rem;
+  justify-content: center;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem 0.4rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   border: 1.5px solid var(--border-default);
   border-radius: var(--r-sm);
@@ -1893,21 +1896,21 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-primary);
   cursor: pointer;
   transition: all var(--dur-fast) var(--ease-smooth);
-  text-align: left;
+  text-align: center;
 }
 .demo-account-btn:hover {
   border-color: rgba(79,70,229,0.28);
   background: var(--accent-bg);
-  transform: translateX(2px);
+  transform: translateY(-2px);
 }
 .demo-account-avatar {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: var(--r-full);
   background: var(--accent-gradient);
   color: #fff;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -1916,16 +1919,24 @@ img { max-width: 100%; height: auto; display: block; }
 .demo-account-info { flex: 1; min-width: 0; }
 .demo-account-info strong {
   display: block;
-  font-size: 0.84375rem;
+  font-size: 0.8125rem;
   color: var(--text-primary);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .demo-account-info span {
-  font-size: 0.75rem;
+  display: block;
+  font-size: 0.6875rem;
   color: var(--text-tertiary);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .demo-account-arrow {
-  color: var(--text-muted);
-  flex-shrink: 0;
+  display: none;
 }
 .demo-account-arrow svg { width: 15px; height: 15px; }
 .demo-account-btn.admin .demo-account-avatar { background: linear-gradient(135deg, #f59e0b, #ef4444); }

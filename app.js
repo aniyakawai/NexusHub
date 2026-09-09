@@ -413,6 +413,8 @@
     var visibility = agent.visibility || 'company';
     var user = state.currentUser;
 
+    if (isAdminUser()) return true;  // 管理员可见全部智能体
+
     if (visibility === 'public') return true;
     if (!user) return false;
     if (visibility === 'company') return true;

@@ -218,28 +218,12 @@ const DEMO_ACCOUNTS = [
     departmentName: '销售部'
   },
   {
-    id: 'u-service-01',
-    name: '服务员工',
-    role: 'employee',
-    roles: ['employee'],
-    departmentId: 'service',
-    departmentName: '服务部'
-  },
-  {
     id: 'u-legal-01',
     name: '法务员工',
     role: 'employee',
     roles: ['employee'],
     departmentId: 'legal',
     departmentName: '法务部'
-  },
-  {
-    id: 'u-mgmt-01',
-    name: '管理层',
-    role: 'employee',
-    roles: ['employee'],
-    departmentId: 'management',
-    departmentName: '管理层'
   },
   {
     id: 'u-admin-01',
