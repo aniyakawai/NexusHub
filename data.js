@@ -205,7 +205,7 @@ const AGENTS = [
     rating: null,
     visibility: 'admin',
     departments: [],
-    link: '#contact',
+    link: '/chat',
     isCustom: true
   }
 ];

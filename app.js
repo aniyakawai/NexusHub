@@ -540,6 +540,10 @@
     if (agent.disabled) {
       return '<div class="agent-card' + customClass + disabledClass + '" aria-disabled="true">' + innerHtml + '</div>';
     }
+    if (agent.isCustom) {
+      // 定制专属Agent：站内跳转到聊天视图（由通用 data-view 点击处理路由）
+      return '<a href="#" data-view="chat" class="agent-card' + customClass + disabledClass + '">' + innerHtml + '</a>';
+    }
     return '<a href="' + agent.link + '" target="_blank" rel="noopener noreferrer" class="agent-card' + customClass + disabledClass + '">' + innerHtml + '</a>';
   }
 

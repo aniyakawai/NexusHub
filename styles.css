@@ -2011,6 +2011,28 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .chat-new-btn svg { width: 16px; height: 16px; flex-shrink: 0; stroke-width: 2; }
 
+.chat-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--border-default);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-smooth);
+  flex-shrink: 0;
+}
+.chat-back-btn svg { width: 18px; height: 18px; }
+.chat-back-btn:hover {
+  background: var(--accent-bg);
+  border-color: rgba(79,70,229,0.15);
+  color: var(--accent);
+}
+.chat-sidebar-header { gap: 0.625rem; }
+
 .chat-history-list { flex: 1; overflow-y: auto; padding: 0.625rem 0.875rem; }
 
 .chat-history-item {
