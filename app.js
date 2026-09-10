@@ -488,6 +488,8 @@
 
   function buildAgentCard(agent) {
     var customClass = agent.isCustom ? ' is-custom' : '';
+    var disabledClass = agent.disabled ? ' is-disabled' : '';
+    var disabledLabel = agent.disabled ? (state.lang === 'zh' ? '暂未开放' : 'Coming Soon') : '';
 
     // 评分星星
     var ratingHtml = agent.rating ?
@@ -507,9 +509,16 @@
     }).join('');
 
     // CTA 文案
-    var ctaText = agent.isCustom ? t('common.learnMore') : t('common.tryIt');
+    var ctaText;
+    if (agent.disabled) {
+      ctaText = disabledLabel;
+    } else if (agent.isCustom) {
+      ctaText = t('common.learnMore');
+    } else {
+      ctaText = t('common.tryIt');
+    }
 
-    return '<a href="' + agent.link + '" target="_blank" rel="noopener noreferrer" class="agent-card' + customClass + '">' +
+    var innerHtml =
       '<div class="agent-card-image-container">' +
         '<img src="' + agent.image + '" alt="' + agent.name[state.lang] + '" class="agent-card-image" loading="lazy"/>' +
       '</div>' +
@@ -526,8 +535,12 @@
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>' +
           '</span>' +
         '</div>' +
-      '</div>' +
-    '</a>';
+      '</div>';
+
+    if (agent.disabled) {
+      return '<div class="agent-card' + customClass + disabledClass + '" aria-disabled="true">' + innerHtml + '</div>';
+    }
+    return '<a href="' + agent.link + '" target="_blank" rel="noopener noreferrer" class="agent-card' + customClass + disabledClass + '">' + innerHtml + '</a>';
   }
 
   function formatNumber(num) {

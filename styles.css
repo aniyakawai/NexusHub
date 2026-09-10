@@ -1068,6 +1068,23 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: center;
 }
 
+/* 停用卡片：灰化、不可点击 */
+.agent-card.is-disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.55);
+  opacity: 0.78;
+}
+.agent-card.is-disabled:hover {
+  transform: none;
+  box-shadow: var(--shadow-xs);
+  border-color: var(--border-default);
+}
+.agent-card.is-disabled:hover::before { opacity: 0; }
+.agent-card.is-disabled .agent-card-body { transform: none; }
+.agent-card.is-disabled .agent-card-title { color: var(--text-muted); }
+.agent-card.is-disabled .agent-card-cta { color: var(--text-muted); }
+.agent-card.is-disabled .agent-card-cta svg { opacity: 0.5; }
+
 /* 卡片内容区 */
 .agent-card-body {
   padding: 1.25rem 1.25rem 1.125rem;

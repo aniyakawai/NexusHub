@@ -32,7 +32,7 @@ const AGENTS = [
     rating: 4.9,
     visibility: 'public',
     departments: [],
-    link: 'http://183.131.197.246:8080/chat?kb_id=a4b8c3d2-1e5f-4a7b-8c9d-0e1f2a3b4c5d'
+    link: 'http://183.131.197.246:8080/chat/bbc13cf6aec47f00'
   },
   {
     id: 'repair-qa',
@@ -49,7 +49,7 @@ const AGENTS = [
     rating: 4.7,
     visibility: 'department',
     departments: ['service', 'technology'],
-    link: 'http://183.131.197.246:8080/chat?kb_id=b5c9d4e3-2f6a-5b8c-9d0e-1f2a3b4c5d6e'
+    link: 'http://183.131.197.246:8080/chat/ada723f8dc1a946b'
   },
   {
     id: 'chairman-avatar',
@@ -66,7 +66,7 @@ const AGENTS = [
     rating: 4.8,
     visibility: 'admin',
     departments: ['management'],
-    link: 'http://183.131.197.246:8080/chat?kb_id=c6d0e5f4-3a7b-6c9d-0e1f-2a3b4c5d6e7f'
+    link: 'http://183.131.197.246:8080/chat/c05dbca46dcafa22'
   },
   {
     id: 'long-report',
@@ -83,7 +83,8 @@ const AGENTS = [
     rating: 4.9,
     visibility: 'company',
     departments: [],
-    link: 'http://183.131.197.246:8080/chat?kb_id=d7e1f6a5-4b8c-7d0e-1f2a3b4c5d6e7f'
+    disabled: true,
+    link: ''
   },
   {
     id: 'daily-briefing',
@@ -100,7 +101,7 @@ const AGENTS = [
     rating: 4.8,
     visibility: 'department',
     departments: ['sales', 'management'],
-    link: 'http://183.131.197.246:8080/chat?kb_id=e8f2a7b6-5c9d-8e1f-2a3b4c5d6e7f0a'
+    link: 'http://183.131.197.246:8080/chat/9fb8346abd655d6e'
   },
   {
     id: 'instant-query',
@@ -117,7 +118,7 @@ const AGENTS = [
     rating: 4.9,
     visibility: 'department',
     departments: ['sales', 'finance', 'management'],
-    link: 'http://183.131.197.246:8080/chat?kb_id=f9a3b8c7-6d0e-9f2a-3b4c5d6e7f0a1b'
+    link: 'http://183.131.197.246:8080/chat/a746e2517c2c1945'
   },
   {
     id: 'contract-audit',
@@ -134,7 +135,7 @@ const AGENTS = [
     rating: 4.7,
     visibility: 'department',
     departments: ['legal', 'finance', 'management'],
-    link: 'http://183.131.197.246:8080/chat?kb_id=0ab4c9d8-7e1f-0a3b-4c5d6e7f0a1b2c'
+    link: 'http://183.131.197.246:8080/chat/4fc872b48f7ee4ab'
   },
   {
     id: 'trade-docs',
@@ -151,7 +152,8 @@ const AGENTS = [
     rating: 4.6,
     visibility: 'department',
     departments: ['sales', 'finance'],
-    link: 'http://183.131.197.246:8080/chat?kb_id=1bc5d0e9-8f2a-1b4c-5d6e7f0a1b2c3d'
+    disabled: true,
+    link: ''
   },
   {
     id: 'marketing-gen',
@@ -168,7 +170,7 @@ const AGENTS = [
     rating: 4.8,
     visibility: 'department',
     departments: ['sales', 'marketing'],
-    link: 'http://183.131.197.246:8080/chat?kb_id=2cd6e1fa-9a3b-2c5d-6e7f0a1b2c3d4e'
+    link: 'http://183.131.197.246:8080/chat/30bdefbd6cf90cce'
   },
   {
     id: 'data-collector',
@@ -185,7 +187,8 @@ const AGENTS = [
     rating: 4.7,
     visibility: 'company',
     departments: [],
-    link: 'http://183.131.197.246:8080/chat?kb_id=3de7f2ab-0a4c-3d6e-7f0a1b2c3d4e5f'
+    disabled: true,
+    link: ''
   },
   {
     id: 'custom-agent',
