@@ -231,10 +231,14 @@
     var l = state.lang;
 
     // Navbar
-    var navItems = dom.navLinks.querySelectorAll('.navbar-link');
-    if (navItems[0]) navItems[0].textContent = t('nav.home');
-    if (navItems[1]) navItems[1].textContent = t('nav.workspace');
-    if (navItems[2]) navItems[2].textContent = t('nav.help');
+    var homeItem = dom.navLinks.querySelector('[data-view="home"]');
+    var workspaceItem = dom.navLinks.querySelector('[data-view="workspace"]');
+    var helpItem = dom.navLinks.querySelector('[data-view="help"]');
+    var manualLink = document.getElementById('navManualLink');
+    if (homeItem) homeItem.textContent = t('nav.home');
+    if (workspaceItem) workspaceItem.textContent = t('nav.workspace');
+    if (helpItem) helpItem.textContent = t('nav.help');
+    if (manualLink) manualLink.textContent = t('nav.manual');
     dom.navLoginBtn.textContent = state.currentUser ? state.currentUser.name : t('nav.login');
 
     // Hero
@@ -1000,8 +1004,10 @@
     dom.navLinks.addEventListener('click', function (e) {
       var target = e.target.closest('.navbar-link');
       if (!target) return;
-      e.preventDefault();
       var v = target.dataset.view;
+      // 外部链接（如"使用手册"）允许默认跳转新标签页
+      if (target.tagName === 'A') return;
+      e.preventDefault();
       if (target.dataset.nav === 'chat') {
         navigateTo('chat');
       } else if (v) {

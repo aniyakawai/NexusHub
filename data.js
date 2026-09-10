@@ -242,7 +242,7 @@ const DEMO_ACCOUNTS = [
 const translations = {
   zh: {
     nav: {
-      home: '首页', workspace: '我的工作台', help: '帮助', login: '登录'
+      home: '首页', workspace: '我的工作台', help: '帮助', manual: '使用手册', login: '登录'
     },
     hero: {
       tag: '企业智能体中枢',
@@ -332,7 +332,7 @@ const translations = {
   },
   en: {
     nav: {
-      home: 'Home', workspace: 'Workspace', help: 'Help', login: 'Login'
+      home: 'Home', workspace: 'Workspace', help: 'Help', manual: 'User Manual', login: 'Login'
     },
     hero: {
       tag: 'Enterprise Agent Hub',

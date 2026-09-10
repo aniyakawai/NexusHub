@@ -1,0 +1,1041 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="MaxKB 在线文档" name="description"/>
+<meta content="FIT2CLOUD" name="author"/>
+<link href="1panel_installtion.html" rel="canonical"/>
+<link href="online_installtion.html" rel="prev"/>
+<link href="aliyun.html" rel="next"/>
+<link href="../img/facio.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>1Panel Installation - MaxKB Documentation</title>
+<link href="../css/lightgallery.min.css" rel="stylesheet"/>
+<link href="../css/f2c-header.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet">
+<script src="../js/lightgallery.min.js"></script>
+<script src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/mega.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../css/print-site.css" rel="stylesheet"/>
+<link href="../css/print-site-material.css" rel="stylesheet"/>
+<link href="../css/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NG51348CBW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NG51348CBW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NG51348CBW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</link></head>
+<body data-md-color-accent="blue" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#1-1panel">Jump to</a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+<aside class="md-banner md-banner--warning">
+<div class="md-banner__inner md-grid md-typeset">
+
+              
+
+  You're not viewing the latest version.
+
+  <a href="../..">
+<strong>Click here to go to latest.</strong>
+</a>
+</div>
+<script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+</aside>
+</div>
+<header class="defaultscroll sticky" id="topnav">
+<svg aria-hidden="true" class="hidden-print" height="0" style="position: absolute; width: 0; height: 0;" version="1.1" width="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="mega-nav-icon-angle" viewbox="0 0 13 7">
+<polygon points="6.5,6.5 0.7,1.6 1.3,0.8 6.5,5.2 11.7,0.8 12.3,1.6 "></polygon>
+</symbol>
+<symbol id="mega-nav-icon-close" viewbox="0 0 13 15">
+<path d="M1.1 14L11.9 1M11.9 14L1.1 1" vector-effect="non-scaling-stroke"></path>
+</symbol>
+</defs>
+</svg>
+<div class="hidden-print mega-nav-sandbox">
+<div class="mega-nav-banner">
+<div class="container">
+<div class="mega-nav-banner-item">
+<a class="mega-nav-banner-logo" href="https://www.fit2cloud.com/"><img alt="FIT2CLOUD Logo" src="../img/logo/logo-light-FIT2CLOUD.svg"/></a>
+</div>
+<div class="mega-nav-banner-item">
+<p class="mega-nav-tagline">
+<span class="visible-xs text-muted">Learn About FIT2CLOUD's Open-Source Products</span>
+</p>
+<div class="mega-nav" id="#mega-nav">
+<button class="mega-nav-ctrl" id="mega-nav-ctrl" type="button">
+<div class="mega-nav-ctrl-items">
+<span class="mega-nav-icon-outline">
+<svg aria-hidden="true" class="mega-nav-icon mega-nav-icon-angle-right">
+<use xlink:href="#mega-nav-icon-angle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="visuallyhidden">Open</span>
+</span>
+</div>
+</button>
+<div aria-labelledby="mega-nav-ctrl" class="mega-nav-body-ct" id="mega-nav-body-ct" style="display: none;">
+<div class="mega-nav-body">
+<ul class="mega-nav-ul">
+<li><a href="https://cordys.cn/" target="_blank"><b>Cordys</b> - The New Generation of AI CRM System</a></li>
+<li><a href="https://1panel.cn/" target="_blank"><b>1Panel</b> - A Modern, Open-Source Linux Panel</a></li>
+<li><a href="https://jumpserver.org/" target="_blank"><b>JumpServer</b> - The Widely Popular Open-Source Bastion Host</a></li>
+<li><a href="https://maxkb.cn/" target="_blank"><b>MaxKB</b> - A Powerful and Easy-to-Use Enterprise Agent Platform</a></li>
+<li><a href="https://dataease.cn/" target="_blank"><b>DataEase</b> - An Open-Source BI Tool for Everyone</a></li>
+<li><a href="https://sqlbot.org/" target="_blank"><b>SQLBot</b> - An Intelligent Data Q&amp;A System Powered by Large Models</a></li>
+<li><a href="https://metersphere.io/" target="_blank"><b>MeterSphere</b> - A New Generation of Open-Source Continuous Testing Tool</a></li>
+<li><a href="https://halo.run/" target="_blank"><b>Halo</b> - A Powerful and Easy-to-Use Open-Source Website Builder</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MaxKB Documentation" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="MaxKB Documentation">
+<img alt="logo" src="../img/logo-white.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">MaxKB Documentation</span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">1Panel Installation</span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="blue" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Clear Current Content" class="md-search__icon md-icon" tabindex="-1" title="Clear Current Content" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">Initializing search engine</div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/1Panel-dev/MaxKB" title="Go to Repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+
+    MaxKB
+
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation Bar" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer"><a aria-label="MaxKB Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="MaxKB Documentation">
+<img alt="logo" src="../img/logo-white.png"/>
+</a>
+    MaxKB Documentation</label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/1Panel-dev/MaxKB" title="Go to Repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+
+    MaxKB
+
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+<span class="md-ellipsis">Product Introduction</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quick_start.html">
+<span class="md-ellipsis">Quick Start</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../changelog.html">
+<span class="md-ellipsis">Changelog</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system_arch.html">
+<span class="md-ellipsis">System Architecture</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">Installation &amp; Deployment</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation &amp; Deployment</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="offline_installtion.html">
+<span class="md-ellipsis">Offline Installation (Recommended for Production)</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="online_installtion.html">
+<span class="md-ellipsis">Online Installation</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">1Panel Installation</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="1panel_installtion.html">
+<span class="md-ellipsis">1Panel Installation</span>
+</a>
+<nav aria-label="Table of Contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc"><span class="md-nav__icon md-icon"></span>
+      Table of Contents</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-1panel">
+<span class="md-ellipsis">1 Install 1Panel</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-maxkb">
+<span class="md-ellipsis">2 Install MaxKB</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-maxkb">
+<span class="md-ellipsis">3 Access MaxKB</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="aliyun.html">
+<span class="md-ellipsis">Alibaba Cloud Installation</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="migrate.html">
+<span class="md-ellipsis">Migration Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="cli.html">
+<span class="md-ellipsis">Command Line Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="backup.html">
+<span class="md-ellipsis">Backup &amp; Restore</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">User Manual</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6"><span class="md-nav__icon md-icon"></span>
+            
+  
+    User Manual</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../user_manual/index/index.html">
+<span class="md-ellipsis">Home</span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_1"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Home</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+<span class="md-ellipsis">Model</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Model</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/model_summary.html">
+<span class="md-ellipsis">Model Overview</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2_2" id="__nav_6_2_2_label" tabindex="0">
+<span class="md-ellipsis">Model Integration</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_2_2"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Model Integration</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/bailian_model.html">
+<span class="md-ellipsis">Connecting Alibaba Cloud Bailian</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/anthropic_model.html">
+<span class="md-ellipsis">Connecting Anthropic</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/amazon_bedrock_model.html">
+<span class="md-ellipsis">Connecting Amazon Bedrock</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/azure_openai_model.html">
+<span class="md-ellipsis">Connecting Azure OpenAI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/deepseek_model.html">
+<span class="md-ellipsis">Connecting DeepSeek</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/gemini_model.html">
+<span class="md-ellipsis">Connecting Gemini</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/kimi_model.html">
+<span class="md-ellipsis">Connecting Kimi</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/openai_model.html">
+<span class="md-ellipsis">Connecting OpenAI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/1panel_ai_gateway_model.html">
+<span class="md-ellipsis">Connecting the 1Panel AI Gateway</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/Regolo_model.html">
+<span class="md-ellipsis">Connecting Regolo</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/siliconflow_model.html">
+<span class="md-ellipsis">Connecting SiliconFlow</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/tencentcloud_model.html">
+<span class="md-ellipsis">Connecting Tencent Cloud</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/hunyuan_model.html">
+<span class="md-ellipsis">Connecting Tencent Hunyuan</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/doubao_model.html">
+<span class="md-ellipsis">Connecting Volcano Engine</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/qianfan_model.html">
+<span class="md-ellipsis">Connecting Baidu Qianfan</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/spark_model.html">
+<span class="md-ellipsis">Connecting iFlytek Spark</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/zhipu_model.html">
+<span class="md-ellipsis">Connecting Zhipu AI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/local_model.html">
+<span class="md-ellipsis">Connecting a Local Model</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/ollama_model.html">
+<span class="md-ellipsis">Connecting Ollama</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/vllm_model.html">
+<span class="md-ellipsis">Connecting vLLM</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/X-Infer_model.html">
+<span class="md-ellipsis">Connecting Xorbits Inference</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/dockerai_model.html">
+<span class="md-ellipsis">Connecting Docker AI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/minimax.html">
+<span class="md-ellipsis">Connecting MiniMax</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/model/model_param.html">
+<span class="md-ellipsis">Model Operations</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+<span class="md-ellipsis">Tool</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Tool</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/tool/tool.html">
+<span class="md-ellipsis">Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/tool/tool_param.html">
+<span class="md-ellipsis">Tool Operations</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+<span class="md-ellipsis">Knowledge Base</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledge Base</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/dataset/dataset.html">
+<span class="md-ellipsis">Knowledge Base</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/dataset/doclist.html">
+<span class="md-ellipsis">Document</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/dataset/workflow.html">
+<span class="md-ellipsis">Workflow</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/dataset/problem.html">
+<span class="md-ellipsis">Question</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/dataset/word_tokenize.html">
+<span class="md-ellipsis">Custom Word Segmentation</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/dataset/hit-testing.html">
+<span class="md-ellipsis">Hit Testing</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+<span class="md-ellipsis">Agent</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/app/app.html">
+<span class="md-ellipsis">Agent Overview</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5_2" id="__nav_6_5_2_label" tabindex="0">
+<span class="md-ellipsis">Agent Creation</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_5_2"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Creation</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/app/simple_app.html">
+<span class="md-ellipsis">Simple Agent</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/app/workflow_app.html">
+<span class="md-ellipsis">Advanced Agent</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/app/app-view.html">
+<span class="md-ellipsis">Agent Overview</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/app/log.html">
+<span class="md-ellipsis">Chat Log</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/trigger/trigger.html">
+<span class="md-ellipsis">Trigger</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/user_community.html">
+<span class="md-ellipsis">User Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/authorization_resources.html">
+<span class="md-ellipsis">Resource Authorization</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/email.html">
+<span class="md-ellipsis">System Settings</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/Customlanguage.html">
+<span class="md-ellipsis">Custom Language Pack</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+<span class="md-ellipsis">X-Pack Features</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_11"><span class="md-nav__icon md-icon"></span>
+            
+  
+    X-Pack Features</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/user.html">
+<span class="md-ellipsis">User Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/workspace.html">
+<span class="md-ellipsis">Workspace</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/role.html">
+<span class="md-ellipsis">Role Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/resource_management.html">
+<span class="md-ellipsis">Resource Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/shared_resources.html">
+<span class="md-ellipsis">Shared Resources</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/chat_user.html">
+<span class="md-ellipsis">Chat User</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11_7" id="__nav_6_11_7_label" tabindex="0">
+<span class="md-ellipsis">Knowledge Base</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_11_7"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledge Base</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/feishu_doc.html">
+<span class="md-ellipsis">Feishu Document Knowledge Base</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/dataset_chatuser.html">
+<span class="md-ellipsis">Chat User</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11_8" id="__nav_6_11_8_label" tabindex="0">
+<span class="md-ellipsis">Agent</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_11_8"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/app_logo_settting.html">
+<span class="md-ellipsis">Display Settings</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/app_integrate.html">
+<span class="md-ellipsis">Third-Party Access</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/app_auth.html">
+<span class="md-ellipsis">Authentication</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/app_chatueser.html">
+<span class="md-ellipsis">Chat User</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11_9" id="__nav_6_11_9_label" tabindex="0">
+<span class="md-ellipsis">System Settings</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_11_9"><span class="md-nav__icon md-icon"></span>
+            
+  
+    System Settings</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/theme_settings.html">
+<span class="md-ellipsis">System Theme</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/login_auth.html">
+<span class="md-ellipsis">Login Authentication</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/operation_log.html">
+<span class="md-ellipsis">Operation Log</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/X-Pack/system_API.html">
+<span class="md-ellipsis">System API</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">FAQ</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7"><span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/install_configuration.html">
+<span class="md-ellipsis">Installation &amp; Deployment</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/system_management.html">
+<span class="md-ellipsis">System Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/function_library.html">
+<span class="md-ellipsis">Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/knowledge_base.html">
+<span class="md-ellipsis">Knowledge Base</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/apply_setting.html">
+<span class="md-ellipsis">Agent</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">Practice Guides</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Practice Guides</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/choose_model_dataset.html">
+<span class="md-ellipsis">Choosing a Model or Knowledge Base in the Q&amp;A Page</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/chat_to_API.html">
+<span class="md-ellipsis">Chatting via API Key</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/Offline_install_OllamaModel.html">
+<span class="md-ellipsis">Deploying LLM Models with Ollama Offline</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/GPU_runOllama.html">
+<span class="md-ellipsis">Running LLM Models with Ollama on GPU</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/wps_contract_review.html">
+<span class="md-ellipsis">Design and Implementation of the WPS Contract Review Assistant</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/maxkb_multimodal_workflow.html">
+<span class="md-ellipsis">Building MaxKB Multimodal Knowledge (Image, Audio, Video) with Knowledge Base Workflows</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/maxkb_In_halo.html">
+<span class="md-ellipsis">Integrating the MaxKB Assistant into Halo</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../faq/doc_segment.html">
+<span class="md-ellipsis">How to Segment Knowledge Base Documents Sensibly</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">MaxKB Skills</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9"><span class="md-nav__icon md-icon"></span>
+            
+  
+    MaxKB Skills</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Skills/MaxKB_Skills.html">
+<span class="md-ellipsis">
+
+    
+
+  
+
+    MaxKB Skills
+
+  
+
+
+
+    
+
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../user_manual/workbuddy_maxkb_skills.html">
+<span class="md-ellipsis">WorkBuddy + MaxKB Skills</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contact.html">
+<span class="md-ellipsis">Contact Us</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of Contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc"><span class="md-nav__icon md-icon"></span>
+      Table of Contents</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-1panel">
+<span class="md-ellipsis">1 Install 1Panel</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-maxkb">
+<span class="md-ellipsis">2 Install MaxKB</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-maxkb">
+<span class="md-ellipsis">3 Access MaxKB</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>1Panel Installation</h1>
+<h2 id="1-1panel">1 Install 1Panel<a class="headerlink" href="#1-1panel" title="Permanent link">¶</a></h2>
+<div class="admonition abstract">
+<p>For the installation, deployment, and basic feature introduction of 1Panel, please refer to <a href="https://1panel.cn/docs/">1Panel Official Documentation</a>. After completing the 1Panel installation and deployment, open a browser and visit the prompted URL to enter 1Panel; the interface is shown below.</p>
+</div>
+<p><img alt="1panel" src="../img/index/1panel.jpg"/></p>
+<h2 id="2-maxkb">2 Install MaxKB<a class="headerlink" href="#2-maxkb" title="Permanent link">¶</a></h2>
+<div class="admonition abstract">
+<p>Go to the app store application list and find the MaxKB application under the [AI/Large Model] category to install it.</p>
+</div>
+<p><img alt="1panel-maxkb" src="../img/index/1panel_maxkb.jpg"/> </p>
+<div class="admonition abstract">
+<p>Configure the MaxKB application parameters on the installation page:</p>
+<ul>
+<li>Name: the name of the MaxKB application you want to create.</li>
+<li>Version: select the MaxKB version.</li>
+<li>Port: the service port of the MaxKB application.</li>
+<li>Container Name: the name of the MaxKB application container.</li>
+<li>CPU Limit: the number of CPU cores that the MaxKB application can use.</li>
+<li>Memory Limit: the amount of memory available to the MaxKB application.</li>
+<li>External port access: The MaxKB application can be accessed using IP:PORT (the MaxKB application must check the external port access option).</li>
+</ul>
+</div>
+<p><img alt="maxkb-setting" src="../img/index/maxkb_setting.jpg"/></p>
+<div class="admonition abstract">
+<p>Click Confirm to start the installation. The page will automatically jump to the installed application list and wait for the MaxKB application status to become Started.</p>
+</div>
+<p><img alt="MaxKB Startup" src="../img/index/maxkb-start.jpg"/> </p>
+<h2 id="3-maxkb">3 Access MaxKB<a class="headerlink" href="#3-maxkb" title="Permanent link">¶</a></h2>
+<div class="admonition abstract">
+<p>After installation is complete, log in to MaxKB by visiting the following page in your browser:</p>
+<div class="highlight"><pre><span></span><code>Address: http://Target Server IP Address:Service Port (default 8080)     
+
+Username: admin    
+
+Password: MaxKB@123..</code></pre></div>
+<p>For security, admin is required to change the default password on first login. After changing the password, you can log in to the system again to use MaxKB.</p>
+</div>
+<p><img alt="Logged in" src="../img/index/login.jpg"/></p>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to Top</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">Copyright © 2014-2026 <a href="https://www.fit2cloud.com">FIT2CLOUD Information Technology Co., Ltd.</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">ICP License: 浙ICP备14038283号-9</a></div>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/1Panel-dev/MaxKB" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:support@fit2cloud.com" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+</a>
+<a class="md-social__link" href="tel://400-052-0755" rel="noopener" target="_blank" title="400-052-0755">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160.2 25c-7.9-18.9-28.5-28.9-48.1-23.6l-5.5 1.5C42 20.5-13.2 83.1 2.9 159.3 40 334.3 177.7 472 352.7 509.1 429 525.3 491.5 470 509.1 405.4l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2c-70.3-34.9-126.9-93.3-159.4-165l44.2-36c13.9-11.3 18.6-30.4 11.8-47z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.instant","navigation.tracking","navigation.indexes","navigation.top","search.suggest","search.highlight","search.share","header.autohide","content.tabs.link"],"search":"../assets/javascripts/workers/search.2c215733.min.js","tags":null,"translations":{"clipboard.copied":"Copied","clipboard.copy":"Copy","search.result.more.one":"1 more result on this page","search.result.more.other":"{{ count }} more results on this page","search.result.none":"No results found","search.result.one":"1 result for \"{{ query }}\"","search.result.other":"{{ count }} results for \"{{ query }}\"","search.result.placeholder":"Search","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike","warning":false}}</script>
+<script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../js/print-site.js"></script>
+<script>
+
+    var elements = document.getElementsByClassName("lightgallery");
+
+    for(var i=0; i<elements.length; i++) {
+
+       lightGallery(elements[i]);
+
+    }
+
+    </script>
+<script src="../lang-toggle.js?v=2"></script><script src="../../js/ai-widget.js"></script>
+</body>
+</html>

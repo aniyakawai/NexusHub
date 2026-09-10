@@ -1,0 +1,2872 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="MaxKB 在线文档" name="description"/>
+<meta content="FIT2CLOUD" name="author"/>
+<link href="changelog.html" rel="canonical"/>
+<link href="quick_start.html" rel="prev"/>
+<link href="system_arch.html" rel="next"/>
+<link href="img/facio.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Changelog - MaxKB Documentation</title>
+<link href="./css/lightgallery.min.css" rel="stylesheet"/>
+<link href="./css/f2c-header.css" rel="stylesheet" type="text/css"/>
+<link href="assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet">
+<link href="assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<script src="./js/lightgallery.min.js"></script>
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/mega.js"></script>
+
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="css/print-site.css" rel="stylesheet"/>
+<link href="css/print-site-material.css" rel="stylesheet"/>
+<link href="css/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NG51348CBW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NG51348CBW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NG51348CBW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</link></head>
+<body data-md-color-accent="blue" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#1">Jump to</a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+<aside class="md-banner md-banner--warning">
+<div class="md-banner__inner md-grid md-typeset">
+
+              
+
+  You're not viewing the latest version.
+
+  <a href="../.">
+<strong>Click here to go to latest.</strong>
+</a>
+</div>
+<script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+</aside>
+</div>
+<header class="defaultscroll sticky" id="topnav">
+<svg aria-hidden="true" class="hidden-print" height="0" style="position: absolute; width: 0; height: 0;" version="1.1" width="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="mega-nav-icon-angle" viewbox="0 0 13 7">
+<polygon points="6.5,6.5 0.7,1.6 1.3,0.8 6.5,5.2 11.7,0.8 12.3,1.6 "></polygon>
+</symbol>
+<symbol id="mega-nav-icon-close" viewbox="0 0 13 15">
+<path d="M1.1 14L11.9 1M11.9 14L1.1 1" vector-effect="non-scaling-stroke"></path>
+</symbol>
+</defs>
+</svg>
+<div class="hidden-print mega-nav-sandbox">
+<div class="mega-nav-banner">
+<div class="container">
+<div class="mega-nav-banner-item">
+<a class="mega-nav-banner-logo" href="https://www.fit2cloud.com/"><img alt="FIT2CLOUD Logo" src="./img/logo/logo-light-FIT2CLOUD.svg"/></a>
+</div>
+<div class="mega-nav-banner-item">
+<p class="mega-nav-tagline">
+<span class="visible-xs text-muted">Learn About FIT2CLOUD's Open-Source Products</span>
+</p>
+<div class="mega-nav" id="#mega-nav">
+<button class="mega-nav-ctrl" id="mega-nav-ctrl" type="button">
+<div class="mega-nav-ctrl-items">
+<span class="mega-nav-icon-outline">
+<svg aria-hidden="true" class="mega-nav-icon mega-nav-icon-angle-right">
+<use xlink:href="#mega-nav-icon-angle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="visuallyhidden">Open</span>
+</span>
+</div>
+</button>
+<div aria-labelledby="mega-nav-ctrl" class="mega-nav-body-ct" id="mega-nav-body-ct" style="display: none;">
+<div class="mega-nav-body">
+<ul class="mega-nav-ul">
+<li><a href="https://cordys.cn/" target="_blank"><b>Cordys</b> - The New Generation of AI CRM System</a></li>
+<li><a href="https://1panel.cn/" target="_blank"><b>1Panel</b> - A Modern, Open-Source Linux Panel</a></li>
+<li><a href="https://jumpserver.org/" target="_blank"><b>JumpServer</b> - The Widely Popular Open-Source Bastion Host</a></li>
+<li><a href="https://maxkb.cn/" target="_blank"><b>MaxKB</b> - A Powerful and Easy-to-Use Enterprise Agent Platform</a></li>
+<li><a href="https://dataease.cn/" target="_blank"><b>DataEase</b> - An Open-Source BI Tool for Everyone</a></li>
+<li><a href="https://sqlbot.org/" target="_blank"><b>SQLBot</b> - An Intelligent Data Q&amp;A System Powered by Large Models</a></li>
+<li><a href="https://metersphere.io/" target="_blank"><b>MeterSphere</b> - A New Generation of Open-Source Continuous Testing Tool</a></li>
+<li><a href="https://halo.run/" target="_blank"><b>Halo</b> - A Powerful and Easy-to-Use Open-Source Website Builder</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MaxKB Documentation" class="md-header__button md-logo" data-md-component="logo" href="index.html" title="MaxKB Documentation">
+<img alt="logo" src="img/logo-white.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">MaxKB Documentation</span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">Changelog</span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="blue" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Clear Current Content" class="md-search__icon md-icon" tabindex="-1" title="Clear Current Content" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">Initializing search engine</div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/1Panel-dev/MaxKB" title="Go to Repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+
+    MaxKB
+
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation Bar" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer"><a aria-label="MaxKB Documentation" class="md-nav__button md-logo" data-md-component="logo" href="index.html" title="MaxKB Documentation">
+<img alt="logo" src="img/logo-white.png"/>
+</a>
+    MaxKB Documentation</label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/1Panel-dev/MaxKB" title="Go to Repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+
+    MaxKB
+
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+<span class="md-ellipsis">Product Introduction</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="quick_start.html">
+<span class="md-ellipsis">Quick Start</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">Changelog</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="changelog.html">
+<span class="md-ellipsis">Changelog</span>
+</a>
+<nav aria-label="Table of Contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc"><span class="md-nav__icon md-icon"></span>
+      Table of Contents</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">1 Release Notes</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">2 Update Content</span>
+</a>
+<nav aria-label="2 Update Content" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2105-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.5-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2104-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.4-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2103-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.3-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2102-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.2-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2101-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.1-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2100-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.0-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v292">
+<span class="md-ellipsis">
+
+      
+
+        v2.9.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v291">
+<span class="md-ellipsis">
+
+      
+
+        v2.9.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v290">
+<span class="md-ellipsis">
+
+      
+
+        v2.9.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v281">
+<span class="md-ellipsis">
+
+      
+
+        v2.8.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v280">
+<span class="md-ellipsis">
+
+      
+
+        v2.8.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v271">
+<span class="md-ellipsis">
+
+      
+
+        v2.7.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v270">
+<span class="md-ellipsis">
+
+      
+
+        v2.7.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v261">
+<span class="md-ellipsis">
+
+      
+
+        v2.6.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v260">
+<span class="md-ellipsis">
+
+      
+
+        v2.6.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v250">
+<span class="md-ellipsis">
+
+      
+
+        v2.5.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v242">
+<span class="md-ellipsis">
+
+      
+
+        v2.4.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v241">
+<span class="md-ellipsis">
+
+      
+
+        v2.4.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v240">
+<span class="md-ellipsis">
+
+      
+
+        v2.4.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v231">
+<span class="md-ellipsis">
+
+      
+
+        v2.3.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v230">
+<span class="md-ellipsis">
+
+      
+
+        v2.3.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v221">
+<span class="md-ellipsis">
+
+      
+
+        v2.2.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v220">
+<span class="md-ellipsis">
+
+      
+
+        v2.2.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v212">
+<span class="md-ellipsis">
+
+      
+
+        v2.1.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v211">
+<span class="md-ellipsis">
+
+      
+
+        v2.1.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v210">
+<span class="md-ellipsis">
+
+      
+
+        v2.1.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v202">
+<span class="md-ellipsis">
+
+      
+
+        v2.0.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v201">
+<span class="md-ellipsis">
+
+      
+
+        v2.0.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v200">
+<span class="md-ellipsis">
+
+      
+
+        v2.0.0
+
+      
+
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="system_arch.html">
+<span class="md-ellipsis">System Architecture</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">Installation &amp; Deployment</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation &amp; Deployment</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="installation/offline_installtion.html">
+<span class="md-ellipsis">Offline Installation (Recommended for Production)</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="installation/online_installtion.html">
+<span class="md-ellipsis">Online Installation</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="installation/1panel_installtion.html">
+<span class="md-ellipsis">1Panel Installation</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="installation/aliyun.html">
+<span class="md-ellipsis">Alibaba Cloud Installation</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="installation/migrate.html">
+<span class="md-ellipsis">Migration Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="installation/cli.html">
+<span class="md-ellipsis">Command Line Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="installation/backup.html">
+<span class="md-ellipsis">Backup &amp; Restore</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">User Manual</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6"><span class="md-nav__icon md-icon"></span>
+            
+  
+    User Manual</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="user_manual/index/index.html">
+<span class="md-ellipsis">Home</span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_1"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Home</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+<span class="md-ellipsis">Model</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Model</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/model_summary.html">
+<span class="md-ellipsis">Model Overview</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2_2" id="__nav_6_2_2_label" tabindex="0">
+<span class="md-ellipsis">Model Integration</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_2_2"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Model Integration</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/bailian_model.html">
+<span class="md-ellipsis">Connecting Alibaba Cloud Bailian</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/anthropic_model.html">
+<span class="md-ellipsis">Connecting Anthropic</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/amazon_bedrock_model.html">
+<span class="md-ellipsis">Connecting Amazon Bedrock</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/azure_openai_model.html">
+<span class="md-ellipsis">Connecting Azure OpenAI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/deepseek_model.html">
+<span class="md-ellipsis">Connecting DeepSeek</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/gemini_model.html">
+<span class="md-ellipsis">Connecting Gemini</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/kimi_model.html">
+<span class="md-ellipsis">Connecting Kimi</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/openai_model.html">
+<span class="md-ellipsis">Connecting OpenAI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/1panel_ai_gateway_model.html">
+<span class="md-ellipsis">Connecting the 1Panel AI Gateway</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/Regolo_model.html">
+<span class="md-ellipsis">Connecting Regolo</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/siliconflow_model.html">
+<span class="md-ellipsis">Connecting SiliconFlow</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/tencentcloud_model.html">
+<span class="md-ellipsis">Connecting Tencent Cloud</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/hunyuan_model.html">
+<span class="md-ellipsis">Connecting Tencent Hunyuan</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/doubao_model.html">
+<span class="md-ellipsis">Connecting Volcano Engine</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/qianfan_model.html">
+<span class="md-ellipsis">Connecting Baidu Qianfan</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/spark_model.html">
+<span class="md-ellipsis">Connecting iFlytek Spark</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/zhipu_model.html">
+<span class="md-ellipsis">Connecting Zhipu AI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/local_model.html">
+<span class="md-ellipsis">Connecting a Local Model</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/ollama_model.html">
+<span class="md-ellipsis">Connecting Ollama</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/vllm_model.html">
+<span class="md-ellipsis">Connecting vLLM</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/X-Infer_model.html">
+<span class="md-ellipsis">Connecting Xorbits Inference</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/dockerai_model.html">
+<span class="md-ellipsis">Connecting Docker AI</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/minimax.html">
+<span class="md-ellipsis">Connecting MiniMax</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/model/model_param.html">
+<span class="md-ellipsis">Model Operations</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+<span class="md-ellipsis">Tool</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Tool</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/tool/tool.html">
+<span class="md-ellipsis">Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/tool/tool_param.html">
+<span class="md-ellipsis">Tool Operations</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+<span class="md-ellipsis">Knowledge Base</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledge Base</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/dataset/dataset.html">
+<span class="md-ellipsis">Knowledge Base</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/dataset/doclist.html">
+<span class="md-ellipsis">Document</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/dataset/workflow.html">
+<span class="md-ellipsis">Workflow</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/dataset/problem.html">
+<span class="md-ellipsis">Question</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/dataset/word_tokenize.html">
+<span class="md-ellipsis">Custom Word Segmentation</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/dataset/hit-testing.html">
+<span class="md-ellipsis">Hit Testing</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+<span class="md-ellipsis">Agent</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/app/app.html">
+<span class="md-ellipsis">Agent Overview</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5_2" id="__nav_6_5_2_label" tabindex="0">
+<span class="md-ellipsis">Agent Creation</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_5_2"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Creation</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/app/simple_app.html">
+<span class="md-ellipsis">Simple Agent</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/app/workflow_app.html">
+<span class="md-ellipsis">Advanced Agent</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/app/app-view.html">
+<span class="md-ellipsis">Agent Overview</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/app/log.html">
+<span class="md-ellipsis">Chat Log</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/trigger/trigger.html">
+<span class="md-ellipsis">Trigger</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/user_community.html">
+<span class="md-ellipsis">User Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/authorization_resources.html">
+<span class="md-ellipsis">Resource Authorization</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/email.html">
+<span class="md-ellipsis">System Settings</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/Customlanguage.html">
+<span class="md-ellipsis">Custom Language Pack</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+<span class="md-ellipsis">X-Pack Features</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_11"><span class="md-nav__icon md-icon"></span>
+            
+  
+    X-Pack Features</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/user.html">
+<span class="md-ellipsis">User Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/workspace.html">
+<span class="md-ellipsis">Workspace</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/role.html">
+<span class="md-ellipsis">Role Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/resource_management.html">
+<span class="md-ellipsis">Resource Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/shared_resources.html">
+<span class="md-ellipsis">Shared Resources</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/chat_user.html">
+<span class="md-ellipsis">Chat User</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11_7" id="__nav_6_11_7_label" tabindex="0">
+<span class="md-ellipsis">Knowledge Base</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_11_7"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledge Base</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/feishu_doc.html">
+<span class="md-ellipsis">Feishu Document Knowledge Base</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/dataset_chatuser.html">
+<span class="md-ellipsis">Chat User</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11_8" id="__nav_6_11_8_label" tabindex="0">
+<span class="md-ellipsis">Agent</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_11_8"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/app_logo_settting.html">
+<span class="md-ellipsis">Display Settings</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/app_integrate.html">
+<span class="md-ellipsis">Third-Party Access</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/app_auth.html">
+<span class="md-ellipsis">Authentication</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/app_chatueser.html">
+<span class="md-ellipsis">Chat User</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11_9" id="__nav_6_11_9_label" tabindex="0">
+<span class="md-ellipsis">System Settings</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_11_9"><span class="md-nav__icon md-icon"></span>
+            
+  
+    System Settings</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/theme_settings.html">
+<span class="md-ellipsis">System Theme</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/login_auth.html">
+<span class="md-ellipsis">Login Authentication</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/operation_log.html">
+<span class="md-ellipsis">Operation Log</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/X-Pack/system_API.html">
+<span class="md-ellipsis">System API</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">FAQ</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7"><span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/install_configuration.html">
+<span class="md-ellipsis">Installation &amp; Deployment</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/system_management.html">
+<span class="md-ellipsis">System Management</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/function_library.html">
+<span class="md-ellipsis">Tool</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/knowledge_base.html">
+<span class="md-ellipsis">Knowledge Base</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/apply_setting.html">
+<span class="md-ellipsis">Agent</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">Practice Guides</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8"><span class="md-nav__icon md-icon"></span>
+            
+  
+    Practice Guides</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/choose_model_dataset.html">
+<span class="md-ellipsis">Choosing a Model or Knowledge Base in the Q&amp;A Page</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/chat_to_API.html">
+<span class="md-ellipsis">Chatting via API Key</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/Offline_install_OllamaModel.html">
+<span class="md-ellipsis">Deploying LLM Models with Ollama Offline</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/GPU_runOllama.html">
+<span class="md-ellipsis">Running LLM Models with Ollama on GPU</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/wps_contract_review.html">
+<span class="md-ellipsis">Design and Implementation of the WPS Contract Review Assistant</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/maxkb_multimodal_workflow.html">
+<span class="md-ellipsis">Building MaxKB Multimodal Knowledge (Image, Audio, Video) with Knowledge Base Workflows</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/maxkb_In_halo.html">
+<span class="md-ellipsis">Integrating the MaxKB Assistant into Halo</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faq/doc_segment.html">
+<span class="md-ellipsis">How to Segment Knowledge Base Documents Sensibly</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">MaxKB Skills</span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9"><span class="md-nav__icon md-icon"></span>
+            
+  
+    MaxKB Skills</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="Skills/MaxKB_Skills.html">
+<span class="md-ellipsis">
+
+    
+
+  
+
+    MaxKB Skills
+
+  
+
+
+
+    
+
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_manual/workbuddy_maxkb_skills.html">
+<span class="md-ellipsis">WorkBuddy + MaxKB Skills</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="contact.html">
+<span class="md-ellipsis">Contact Us</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of Contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc"><span class="md-nav__icon md-icon"></span>
+      Table of Contents</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">1 Release Notes</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">2 Update Content</span>
+</a>
+<nav aria-label="2 Update Content" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2105-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.5-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2104-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.4-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2103-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.3-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2102-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.2-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2101-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.1-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2100-lts">
+<span class="md-ellipsis">
+
+      
+
+        v2.10.0-lts
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v292">
+<span class="md-ellipsis">
+
+      
+
+        v2.9.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v291">
+<span class="md-ellipsis">
+
+      
+
+        v2.9.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v290">
+<span class="md-ellipsis">
+
+      
+
+        v2.9.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v281">
+<span class="md-ellipsis">
+
+      
+
+        v2.8.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v280">
+<span class="md-ellipsis">
+
+      
+
+        v2.8.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v271">
+<span class="md-ellipsis">
+
+      
+
+        v2.7.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v270">
+<span class="md-ellipsis">
+
+      
+
+        v2.7.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v261">
+<span class="md-ellipsis">
+
+      
+
+        v2.6.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v260">
+<span class="md-ellipsis">
+
+      
+
+        v2.6.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v250">
+<span class="md-ellipsis">
+
+      
+
+        v2.5.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v242">
+<span class="md-ellipsis">
+
+      
+
+        v2.4.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v241">
+<span class="md-ellipsis">
+
+      
+
+        v2.4.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v240">
+<span class="md-ellipsis">
+
+      
+
+        v2.4.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v231">
+<span class="md-ellipsis">
+
+      
+
+        v2.3.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v230">
+<span class="md-ellipsis">
+
+      
+
+        v2.3.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v221">
+<span class="md-ellipsis">
+
+      
+
+        v2.2.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v220">
+<span class="md-ellipsis">
+
+      
+
+        v2.2.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v212">
+<span class="md-ellipsis">
+
+      
+
+        v2.1.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v211">
+<span class="md-ellipsis">
+
+      
+
+        v2.1.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v210">
+<span class="md-ellipsis">
+
+      
+
+        v2.1.0
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v202">
+<span class="md-ellipsis">
+
+      
+
+        v2.0.2
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v201">
+<span class="md-ellipsis">
+
+      
+
+        v2.0.1
+
+      
+
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v200">
+<span class="md-ellipsis">
+
+      
+
+        v2.0.0
+
+      
+
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Changelog</h1>
+<h2 id="1">1 Release Notes<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<div class="admonition abstract">
+<p><strong>Version Description:</strong> Like other excellent open-source projects, MaxKB will keep releasing a new feature version every month; when an urgent or serious Bug is encountered in a feature version, a minor Bug-fix version will be released promptly.<br/>
+<strong>The MaxKB version numbering convention is:</strong> v Major.Feature.Bug-fix version, for example:</p>
+<ul>
+<li>v2.0.1 is a bug-fix release after v2.0.0</li>
+<li>v2.1.0 is a feature release after v2.0.0</li>
+</ul>
+</div>
+<h2 id="2">2 Update Content<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<h3 id="v2105-lts">v2.10.5-lts<a class="headerlink" href="#v2105-lts" title="Permanent link">¶</a></h3>
+<p>August 6, 2026</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the issue where the chat share link endpoint lacked owner checks, allowing chat tokens to share other users' conversation content.</li>
+<li>Security Vulnerability: Fixed the unauthorized access issue where regular users could obtain workspace user information of other workspaces through API interfaces. (#6576)</li>
+<li>Security Vulnerability: Fixed the unauthorized access issue where the API key of any user could be used to delete any file.</li>
+<li>Security Vulnerability: Fixed the issue where regular users could obtain sensitive information such as other users' email addresses through API interfaces. (#6577)</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Knowledge Base: Fixed an issue where images returned by the Knowledge Base failed to load during chat;</li>
+<li>Knowledge Base: fixed the issue where, when uploading a PDF document, if the title and body content in the document have the same content, the paragraph content is incorrect (#6543)</li>
+<li>Knowledge Base: fixed the issue where the "Allow preview in knowledge source" option was incorrectly displayed in the document import dialog of the Web knowledge base;</li>
+<li>Agent: fixed the issue where copied conversation content was truncated when the content was long (#6568).</li>
+<li>Agent: fixed the issue where images in the AI reply could not be accessed when the agent was embedded in a third party.</li>
+<li>Agent: fixed the issue where images generated by the agent's image generation node could not be accessed.</li>
+<li>Agent: fixed the issue where an error prompt popped up after agent debugging, making it impossible to view the execution details.</li>
+<li>Agent: fixed the issue where a simple agent could retrieve using unpublished knowledge base retrieval configurations (#6519).</li>
+<li>Agent: fixed the issue where loading failed after extracting images from a file in the file content extraction node.</li>
+<li>Agent: fixed the issue where agent trigger task execution failed.</li>
+<li>Agent: fixed the issue where the output content of the workflow tool node in the agent was not written to the conversation log.</li>
+<li>Agent: fixed the issue where the agent's opening message failed to pass user parameters using the sendMessage method, losing the user's question.</li>
+<li>Agent: fixed the issue where users without permission failed to preview or download files in the knowledge source of the Q&amp;A interface.</li>
+<li>Agent: fixed the issue where, when multiple files were uploaded in an agent conversation, downloading the files from the conversation log prompted that some files had no permission.</li>
+<li>Agent: fixed the issue where, when clearing conversation logs, some data was not cleared, causing incorrect active user statistics in the overview.</li>
+<li>Role (X-Pack): fixed the issue where some features lacked permission bit control;</li>
+<li>Shared Resources (X-Pack): Fixed the issue where system administrators were redirected to the wrong page when clicking "Upload Document" in a shared knowledge base.</li>
+<li>Shared Resources (X-Pack): Fixed the issue where Hit Testing could be accessed for shared knowledge bases within a workspace.</li>
+</ul>
+</div>
+<h3 id="v2104-lts">v2.10.4-lts<a class="headerlink" href="#v2104-lts" title="Permanent link">¶</a></h3>
+<p>July 16, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Agent: fixed the issue where, after adding a vision model to the image understanding node of an advanced agent, it was not displayed in the model list in real time (#6402).</li>
+<li>Agent: fixed the issue where, after deleting the LLM configured in a simple agent, the prompt information during conversation was incorrect.</li>
+<li>Agent: fixed the issue where the agent failed to call a shared model and prompted "Model does not exist".</li>
+<li>Knowledge Base: fixed the issue where, when a Word document table has no blank line before the following content, the segmented text was mistakenly identified as table content (#6396);</li>
+<li>Knowledge Base: fixed the issue where dragging segments would contaminate all paragraph position data across documents (#6373);</li>
+<li>Home: Fixed the issue where the ranking details page could find, via name search, agents that the current user has no permission to access;</li>
+<li>Trigger: fixed the issue where tasks were displayed repeatedly in the task details of the scheduled trigger list;</li>
+<li>Trigger: fixed the issue where, in trigger scenarios, the default values of the Advanced Agent user input parameters were not passed and the parameters were empty (#6320);</li>
+<li>Trigger: fixed the issue where the trigger reported an error when passing parameters when the Agent user input contained a switch-type parameter;</li>
+<li>User Management: fixed the issue where the get-all-users API only returned the first 200 users, making it impossible to retrieve all users (#6375).</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Vulnerability: Fixed the issue where resources could be accessed anonymously due to a system file permission vulnerability;</li>
+<li>Vulnerability: Fixed the IDOR vulnerability in admin-side chat records, resolving the issues of application path authentication bypass and reading chat records across applications;</li>
+<li>Vulnerability: Added a dedicated authorization verification mechanism for agent and workflow tool scheduling;</li>
+<li>Vulnerability: Fixed the issue where UpdateStoreTool lacked host verification when fetching external app store URLs;</li>
+<li>Vulnerability: Fixed the issue where users could obtain or modify unauthorized document and segment data across knowledge bases beyond their permissions;</li>
+<li>Vulnerability: Fixed the issue where expired agent API keys could still be used on the /chat/api/mcp interface;</li>
+<li>Vulnerability: Fixed the horizontal privilege escalation vulnerability caused by a defect in MCP tool authorization;</li>
+<li>Vulnerability: Fixed the issue where the home page ranking leaked the application ID, which could lead to malicious calls to other users' application nodes;</li>
+<li>Vulnerability: Fixed the issue where model parameter forms could be viewed or modified across workspaces beyond permissions;</li>
+<li>Vulnerability: Fixed the prompt injection vulnerability, mitigating the risk of agent command execution;</li>
+<li>Vulnerability: Improved the internal IP verification mechanism of the web document import/sync crawler, fixing the SSRF security risk.</li>
+</ul>
+</div>
+<h3 id="v2103-lts">v2.10.3-lts<a class="headerlink" href="#v2103-lts" title="Permanent link">¶</a></h3>
+<p>July 3, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Knowledge Base: Added a visual display of file upload progress, and files that fail to upload can be re-uploaded with one click;</li>
+<li>Agent: The cleanup policy for agent chat logs supports batch configuration (#6213);</li>
+<li>Agent (X-Pack): WeCom bot integration supports voice input.</li>
+<li>Agent: optimized the copy on the overview page and unified the visual style to be consistent with the Home page.</li>
+<li>Role Permissions (X-Pack): added a Home page viewing permission configuration item for Regular Users and Workspace Administrators.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Agent (X-Pack): fixed the issue where multiple agents connected to WeCom at the same time shared the same chat_session_id, causing a 500 error in the conversation (#6325).</li>
+<li>Agent: fixed the issue where the interface parameter variables in an advanced agent could not be assigned correctly during debugging (#6271).</li>
+<li>Agent (X-Pack): fixed the UI issue where, after enabling the disclaimer, the mobile input box obscured the Like and Dislike buttons (#6249).</li>
+<li>Agent: fixed the issue where the visibility control conditions of user-input external parameters did not take effect.</li>
+<li>Q&amp;A Page: Fixed an issue where the style of video content in replies was rendered abnormally on mobile scenarios;</li>
+<li>Knowledge Base: fixed the issue where uploading and parsing a PDF document containing special characters reported an error;</li>
+<li>Knowledge Base: fixed the issue where, when the knowledge base contained video files, the export operation did not synchronize and export the video resources;</li>
+<li>Knowledge Base: fixed the issue where regular users had no permission to read the tool list when operating the MCP call node of the workflow knowledge base;</li>
+<li>Knowledge Base: fixed the issue where, after importing the knowledge base workflow, tools in the loop body did not generate associated references, causing the tool node to become invalid and unusable;</li>
+<li>Knowledge Base: fixed the issue where the segment preview page occasionally displayed duplicate segment content after document upload was completed;</li>
+<li>Model: fixed the issue where the Qwen3-VL-Reranker-8B rerank model under the vLLM provider reported an error when called in the multi-path recall node (#6321);</li>
+<li>System Settings (X-Pack): Fixed an issue where, after configuring a custom Logo, refreshing the page would briefly flash the default MaxKB Logo (#6295).</li>
+</ul>
+</div>
+<h3 id="v2102-lts">v2.10.2-lts<a class="headerlink" href="#v2102-lts" title="Permanent link">¶</a></h3>
+<p>June 18, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Q&amp;A Page: Adjusted the voice input logic to append text (#6212);</li>
+<li>Q&amp;A Page: Added a clear-input-content function after entering content in the input box (#6212);</li>
+<li>Q&amp;A Page: When switching to session 2 while session 1 is generating a reply, users can ask questions normally;</li>
+<li>Agent: Files submitted in forms can be downloaded within the chat log (#5271);</li>
+<li>Agent: In the html_rander tag of the Advanced Agent opening statement, the sendMessage method supports passing through the interface and user input parameters;</li>
+<li>Agent: The action menu of the tool node in the Advanced Agent adds a display of the tool source information;</li>
+<li>Agent (X-Pack): added a session sharing permission control configuration feature to Display Settings.</li>
+<li>Agent (X-Pack): when an application is connected to a third party, entering "/new" automatically starts a new session.</li>
+<li>Knowledge Base: The document list supports manually adjusting column widths;</li>
+<li>Knowledge Base: Added a creator field to the document list; newly uploaded documents record the document creator (#5240);</li>
+<li>Knowledge Base: When exporting a Knowledge Base, users can choose whether to export the original files, with two options (#6137);</li>
+<li>Knowledge Base: optimized the tag management pagination logic to avoid front-end loading lag caused by excessive data for a single tag;</li>
+<li>Model: the Gemini provider adds support for the Imagen image generation model (#5234);</li>
+<li>Model: the Gemini provider adds support for the VEO video generation model (#5234);</li>
+<li>Model: updated the model provider dropdown list to the latest models;</li>
+<li>Permission management: users who only have permission to view tools are not allowed to open the tool's edit page;</li>
+<li>Workspace (X-Pack): Optimized lazy loading performance of the workspace list.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Q&amp;A Page: Fixed an issue where the node execution progress display was not controlled by the "Execution Details" display toggle;</li>
+<li>Q&amp;A Page: Node execution progress is not displayed when the AI response is paused, and the progress is shown again after clicking Continue;</li>
+<li>Agent (X-Pack): fixed the issue where PDF files in the knowledge source could not be previewed when chatting in third-party applications (#6202).</li>
+<li>Tool: The name input box lacks a required marker when creating a new MCP tool;</li>
+<li>Knowledge Base: fixed the issue where, after upgrading from v2.3.1 to v2.10.1, downloading the original document of docx type resulted in file corruption (#6238);</li>
+<li>Knowledge Base: fixed the issue where the write to knowledge base node reported an error during workflow knowledge base debugging;</li>
+<li>Model: fixed the issue where adding the qwen3-tts-flash model from the Alibaba Bailian provider reported an error (#6236);</li>
+<li>Login Settings: fixed the issue where community version users could bypass the verification code to complete login (#6214).</li>
+</ul>
+</div>
+<h3 id="v2101-lts">v2.10.1-lts<a class="headerlink" href="#v2101-lts" title="Permanent link">¶</a></h3>
+<p>June 10, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Knowledge Base: fixed the issue where the template content was displayed incorrectly when downloading the QA pair template;</li>
+<li>Agent: fixed the issue where an agent with user input parameters could not send questions during debugging.</li>
+<li>Agent: fixed the issue where, when a switch parameter with a default value of false was set as an external parameter, asking a question directly in a conversation while keeping the default value reported a required-field error.</li>
+<li>Agent: fixed the issue where clicking the "More Parameters" button during debugging / conversation affected the state of external switch parameters.</li>
+<li>Agent: fixed the issue where the Skill execution directory could be cleared in concurrent scenarios (#6185).</li>
+<li>Agent: fixed the issue where the variables referenced in the system prompts of the image understanding and video understanding nodes were not parsed (#6180).</li>
+<li>Tool: Fixed the issue where using pymysql in Python scripts reported a missing dependency (#6182).</li>
+</ul>
+</div>
+<h3 id="v2100-lts">v2.10.0-lts<a class="headerlink" href="#v2100-lts" title="Permanent link">¶</a></h3>
+<p>June 4, 2026</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the Post-Auth RCE vulnerability in MaxKB caused by an MCP permission bypass.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>System: Added a statistics feature for the workspace home page;</li>
+<li>System: Internationalization supports custom extended language packs (#5120);</li>
+<li>Knowledge Base: Knowledge Base supports custom terminology libraries (#5031);</li>
+<li>Agent: the agent's AI chat node supports multimodal input (#5276).</li>
+<li>Agent: User input in the Advanced Agent adds support for external parameter setting and show/hide setting.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Q&amp;A Page: User input parameters are no longer displayed when creating a new session (#5298);</li>
+<li>Agent: The Q&amp;A page shows the name of the node currently executing when the AI answers (#5092);</li>
+<li>Agent: Added a show/hide setting for the parameters of the form collection node;</li>
+<li>Agent: added the "List of Results Satisfying Direct Answer" parameter to the output parameters of the multi-path retrieval node.</li>
+<li>Knowledge Base: the action buttons are pinned to the upper right corner in the document segmentation preview after uploading a document (#965);</li>
+<li>Knowledge Base: the display style of segment content in the document segmentation preview after uploading a document is optimized to Markdown format;</li>
+<li>Model: the MiniMax provider adds support for text-to-image, text-to-video, and image-to-video models;</li>
+<li>Model: The Alibaba Bailian provider now supports multimodal embedding models (#5142);</li>
+<li>Model: The Alibaba Bailian provider supports the Wan2.7 image-to-video model (#5232);</li>
+<li>Model: the rerank models of all providers support model parameter settings;</li>
+<li>Role Management (X-Pack): control the creation and copy permissions of Agents with different permission bits (#5284).</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Knowledge Base: fixed the issue where documents could not be uploaded without workflow permissions in the workflow knowledge base (#5296);</li>
+<li>Agent: fixed the issue of abnormal mobile mode, floating widget mode, and share style when embedded in a third party (#6130).</li>
+<li>Agent: fixed the issue where, when a conversation generated multiple ECharts charts, all charts were overwritten by the first chart after refreshing.</li>
+<li>Agent: fixed the issue where, when a file was uploaded during an advanced agent conversation, the uploaded file was no longer displayed after the conversation interface was refreshed (#5253).</li>
+<li>Agent: fixed the issue where, after exporting historical conversation logs, the chat user only showed the Username field and not the full-name field, making user matching inconvenient.</li>
+<li>Shared Knowledge Base (X-Pack): Fixed the issue where importing to create a shared knowledge base resulted in an empty import (#5274).</li>
+<li>User Management: fixed the validation error when changing the password of a user in System Management (#5301);</li>
+<li>System Login (X-Pack): Fixed an issue where no Operation Log was generated when third-party users logged in to the system.</li>
+</ul>
+</div>
+<h3 id="v292">v2.9.2<a class="headerlink" href="#v292" title="Permanent link">¶</a></h3>
+<p>May 20, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Agent: fixed the issue where content was displayed repeatedly in the execution details of the image understanding and video understanding nodes (#5269).</li>
+<li>Agent: fixed the issue where using the doubao-seedance-2-0-260128 model to generate video took a long time and caused an error (#5260).</li>
+<li>System: Fixed an issue where an error occurred when switching the internationalization language.</li>
+</ul>
+</div>
+<h3 id="v291">v2.9.1<a class="headerlink" href="#v291" title="Permanent link">¶</a></h3>
+<p>May 14, 2026</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the high-risk security vulnerability where the MaxKB reset_password interface transmitted passwords in plaintext. (#CVE-2026-45413)</li>
+<li>Security Vulnerability: Fixed the authenticated SSRF risk caused by missing validation of callback URLs in the workflow template import/update process. (#CVE-2026-45412)</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Agent: fixed the issue where, in an agent with an infinite loop, after the number of loops exceeded the maximum limit, the reply information was cleared and a network error was displayed.</li>
+<li>Agent: fixed the issue where, when calling an agent with an infinite loop node via API, the interface returned no information and reported a readtime out error when stream=false.</li>
+<li>Agent: fixed the issue where image generation failed after adding parameters to the Gemini image generation model (#5233).</li>
+<li>Agent: fixed the error in the copy description of the image understanding node, and the issue that the last-frame image of the image-to-video node should be set as optional.</li>
+<li>Agent: fixed the issue where creating an agent failed when importing one from the template center (#5231).</li>
+<li>Agent: fixed the issue where, after unchecking an associated knowledge base in the knowledge base retrieval node, selecting another knowledge base and saving still retained the unchecked knowledge base.</li>
+<li>Agent: fixed the issue where, when multi-path retrieval used a rerank model, the associated agent was not shown in the model's depended-on resources list (#5249).</li>
+<li>Agent: fixed the issue where holding Ctrl + clicking the agent panel did not open a new tab when entering the agent page.</li>
+<li>Tool: Fixed the issue where the startup parameters of newly created tools had to be manually saved before the default values could be used;</li>
+<li>Workspace: Fixed the issue where users not displayed could not be searched when adding members in workspaces with many users;</li>
+<li>Resource Management: Fixed an issue where resources could not be searched by creator.</li>
+<li>Shared Resources: Fixed the issue where resources could not be searched by creator.</li>
+</ul>
+</div>
+<h3 id="v290">v2.9.0<a class="headerlink" href="#v290" title="Permanent link">¶</a></h3>
+<p>May 7, 2026</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the vulnerability where the Webhook Trigger endpoint lacked authentication, allowing unauthenticated requests to bypass authorization and trigger arbitrary tasks.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Agent: added a long-term memory feature that generates memories by conversation rounds and time periods and injects them into prompts through variable references, improving the personalization and continuity of conversations.</li>
+<li>Agent: Nodes in the Advanced Agent workflow support enable/disable, so you can debug and temporarily bypass the flow logic without deleting nodes;</li>
+<li>Agent: added the ability to view associated resources, including dependent resources and depended-on resources (#4859, #4872).</li>
+<li>Knowledge Base: Added the ability to view related resources, supporting bidirectional tracing of dependencies and dependents;</li>
+<li>Tool: Added related resource viewing, supporting bidirectional tracing of dependency and dependent relationships;</li>
+<li>Tool: Nodes in workflow tools support enable/disable, so you can debug and temporarily mask process logic without deleting nodes;</li>
+<li>Model: added support for integrating MiniMax large language models and text-to-speech models (#4876);</li>
+<li>Model: Alibaba Cloud Bailian now supports the MiniMax Speech voice model integration (#4950).</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Agent: New support for a tree selector component in the user input and form collection nodes (#4903);</li>
+<li>Agent: the variable assignment node supports explicitly assigning a variable to empty (null) (#4964, #5107).</li>
+<li>Agent: The judge node of the Advanced Agent adds regular expression and wildcard matching modes (#4975);</li>
+<li>Agent: The Advanced Agent and workflow orchestration canvas nodes support batch copy-paste to and from each other;</li>
+<li>Agent: nodes in a loop body support batch copy and paste across loop bodies (#5128).</li>
+<li>Agent: The "Publish" permission of the Advanced Agent is split out from the edit permission and can be authorized independently;</li>
+<li>Agent: added hint guidance for the variable parameter format of built-in nodes.</li>
+<li>Model: the model selection box displays only the supplier icon and model name, streamlining the interface display;</li>
+<li>Model: all model providers support custom API Base URLs, adapting to private deployment scenarios;</li>
+<li>Model: automatically syncs to all associated referenced resources after model parameter changes (#5134);</li>
+<li>Tool: ZIP packages uploaded for Skills tools can be downloaded;</li>
+<li>System: Optimized the browser lag caused by too many file directories;</li>
+<li>System: Optimized the front-end lag when adding a large number of members to a role.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Agent: fixed the issue where subsequent nodes had no output after a loop body nested a sub-agent node (#5197).</li>
+<li>Agent: fixed the issue where refreshing the page during a simple agent's streaming reply caused the Q&amp;A records to be lost (#5156).</li>
+<li>Agent: fixed the issue where searching the agent list by creator was invalid (#5177).</li>
+<li>Agent: fixed the issue where an agent in an unpublished state could create triggers (#5146).</li>
+<li>Agent: fixed the issue where the workflow tool icon in a skill tool was displayed abnormally.</li>
+<li>Agent: fixed the issue where deleting the associated knowledge base configuration in the knowledge base retrieval node did not take effect (#5173).</li>
+<li>Model: fixed the abnormal parameter configuration issue of the Volcano Engine image generation model (#5089);</li>
+<li>Model: fixed the error with the Volcano Engine multimodal embedding model and supports custom model parameters;</li>
+<li>Model: fixed the issue where the model Base URL was displayed in the wrong position;</li>
+<li>Model: fixed the occasional NaN error in rerank models.</li>
+</ul>
+</div>
+<h3 id="v281">v2.8.1<a class="headerlink" href="#v281" title="Permanent link">¶</a></h3>
+<p>April 17, 2026</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the permission bypass and SSRF security issues in the OSS file service URL retrieval interface, and strengthened application permission validation, DNS resolution validation, and URL parsing consistency to prevent unauthorized access and internal network request forgery.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Model: fixed the issue where setting the ending frame caused an error when using the wan model from the Alibaba Cloud Bailian provider for image-to-video (#5111);</li>
+<li>Model: fixed the issue where the image quantity setting in the parameter configuration of the Volcano Engine image generation model did not take effect (#5089);</li>
+<li>Knowledge Base: fixed the issue where adjusting the document order after document segment migration would result in a wrong document order (#5106);</li>
+<li>Knowledge Base: fixed the issue where, during intelligent segmentation, the segmentation rules did not exclude # comments in code blocks, causing abnormal segmentation;</li>
+<li>Agent: fixed the issue where, after enabling the thinking process on the AI Chat node and configuring an agent in a skill, calling the model skill in a conversation reported an error.</li>
+<li>API Documentation: fixed the issue of the missing sync_type parameter in the Web knowledge base synchronization interface documentation;</li>
+</ul>
+</div>
+<h3 id="v280">v2.8.0<a class="headerlink" href="#v280" title="Permanent link">¶</a></h3>
+<p>April 10, 2026</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the SSRF vulnerability that bypassed the sandbox connect() hook via socket.sendto()+MSG_FASTOPEN, preventing access to internal restricted services (#CVE-2026-39418).</li>
+<li>Security Vulnerability: Fixed the remote code execution vulnerability that achieved sandbox escape by clearing environment variables via env -i LD_PRELOAD (#CVE-2026-39420).</li>
+<li>Security Vulnerability: Fixed the sandbox bypass vulnerability that bypassed sandbox result verification via sys.exit(0) to spoof results (#CVE-2026-39419).</li>
+<li>Security Vulnerability: Fixed the critical remote code execution vulnerability that achieved sandbox escape via ctypes and the unhooked SYS_pkey_mprotect (#CVE-2026-39421).</li>
+<li>Security Vulnerability: Fixed the remote code execution vulnerability where missing validation of MCP server configuration allowed Shell commands to be injected through malicious configuration (#CVE-2026-39417).</li>
+<li>Security Vulnerability: Fixed the general stored cross-site scripting (XSS) vulnerability and strengthened user input security validation in all scenarios (#CVE-2026-39422).</li>
+<li>Security Vulnerability: Fixed the stored cross-site scripting (XSS) vulnerability in iframe_render caused by unfiltered user input (#CVE-2026-39426).</li>
+<li>Security Vulnerability: Fixed the stored cross-site scripting (XSS) vulnerability in Markdown rendering caused by html_rander not filtering HTML tags (#CVE-2026-39425).</li>
+<li>Security Vulnerability: Fixed the stored cross-site scripting (XSS) vulnerability where the echarts_rander component injected malicious code via Eval (#CVE-2026-39423).</li>
+<li>Security Vulnerability: Fixed the CSV injection vulnerability caused by unescaped special characters when exporting app chat to CSV (a CVE-2025-4546 variant) (#CVE-2026-39424).</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Tool: Added workflow-type tools;</li>
+<li>Tool: Supports automatic Python code generation;</li>
+<li>Tool: Supports batch selection, then moving items to other folders or performing batch deletion;</li>
+<li>Model: The Baidu Qianfan provider now supports the Rerank Model (#4927);</li>
+<li>System: Unified the fields that display usernames to instead display users' names;</li>
+<li>Knowledge Base: Supports importing and exporting all metadata of a Knowledge Base;</li>
+<li>Knowledge Base: Supports batch selection, after which items can be moved to other folders or batch deleted;</li>
+<li>Agent: supports selecting a model and a knowledge base during conversation.</li>
+<li>Agent: supports batch selection, then moving the items to other folders or performing batch deletion.</li>
+<li>Agent: The "Image Understanding" and "Video Understanding" nodes in the Advanced Agent add a thinking process switch setting;</li>
+<li>Agent: The "Variable Aggregation" node in the Advanced Agent supports aggregating into a dict type variable (#4904);</li>
+<li>Agent: optimized the split expression component of the "Variable Split" node in the advanced agent (#4961).</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Model: fixed the issue where there was no error message when using the Alibaba Bailian rerank model when Tokens were exceeded or the balance was insufficient (#4928);</li>
+<li>Model (X-Pack): fixed the issue where clicking a shared model as a Regular User reported a no-permission error;</li>
+<li>Role (X-Pack): fixed the issue where other permissions were automatically selected when granting the "About" permission to a custom Regular User (#4954);</li>
+<li>Agent: fixed the issue where user questions reported an error when the vLLM model, a system prompt, and a skill MCP tool were configured in the AI Chat node.</li>
+<li>Agent: fixed the issue where the vLLM model was incompatible with the thinking process field (reasoning).</li>
+<li>Agent: fixed the issue where retrieval results were incorrect when using the document label retrieval node (#4942).</li>
+<li>Agent: fixed the issue where the collapsed state of loop nodes in advanced orchestration was not saved (#4996).</li>
+<li>Agent: fixed the issue where, in a multi-turn conversation, if the image understanding node did not receive an image midway and then received one again, asking a question reported an error (#4999).</li>
+<li>Agent: fixed the issue where a blank screen appeared when rendering with ECharts (#4966).</li>
+<li>Agent (X-Pack): fixed the issue where images sent as questions in WeCom could not be opened after being downloaded from the MaxKB conversation log.</li>
+<li>Agent (X-Pack): fixed the issue where authentication was not performed during conversation after a sub-application in an advanced agent enabled authentication.</li>
+<li>Knowledge Base: fixed the issue where the description "Allow preview in knowledge source" in the Web site knowledge base was inaccurate;</li>
+<li>Resource Management (X-Pack): Fixed an issue where user roles were not displayed when authorizing resources in Resource Management.</li>
+</ul>
+</div>
+<h3 id="v271">v2.7.1<a class="headerlink" href="#v271" title="Permanent link">¶</a></h3>
+<p>March 20, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Model: fixed the issue where using the Ollama provider's Embedding model reported an error;</li>
+<li>Installation &amp; Deployment: Fixed the issue where dependency package versions were incompatible with some older machines, causing errors during upgrades.</li>
+<li>Agent: fixed the issue where the tool call data in the execution details had no display style.</li>
+</ul>
+</div>
+<h3 id="v270">v2.7.0<a class="headerlink" href="#v270" title="Permanent link">¶</a></h3>
+<p>March 19, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Tool: Added Skills management capabilities;</li>
+<li>Agent: supports autonomously calling Skills.</li>
+<li>Knowledge Base: Optimized the Tag Management feature;</li>
+<li>Q&amp;A Page: Conversation records support sharing;</li>
+<li>Login Authentication (X-Pack): supports configuring the login method.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Model: added support for the Gemini provider's image generation model;</li>
+<li>Model: added support for the SiliconFlow provider's vision model;</li>
+<li>Agent: added a search/locate node feature to the workflow orchestration page of an advanced agent.</li>
+<li>Agent: added model search support to the model selection dropdown.</li>
+<li>Agent: in the dialog for selecting knowledge bases, tools, and agents, hovering the mouse over a resource displays more information about the resource.</li>
+<li>Agent: in the condition node of an advanced agent, the condition supports the "not equal to" option.</li>
+<li>Knowledge Base: Added a "Tag" column to the document list, and supports adding tags to documents in the tag column;</li>
+<li>Trigger: scheduled triggers now support configuration via Cron expressions;</li>
+<li>Q&amp;A Page: Optimized the UI style of tool calls.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Model: fixed the issue where adding the Volcano Engine image generation model reported an error;</li>
+<li>Knowledge Base: fixed the issue where documents were not exported in segment order when exporting;</li>
+<li>Agent: fixed the issue where, when embedded in a third party and full-screen embedding was selected, the popup was not fully displayed when the user gave a Like/Dislike on the AI reply.</li>
+<li>Agent: fixed the issue where the AI node was not fully executed but was shown as completed in the execution details.</li>
+<li>Agent: fixed the issue where conversations could still be conducted when the same application was called via API Keys from different applications.</li>
+<li>Agent: fixed the issue where the question optimization node did not work.</li>
+<li>Agent: fixed the issue where, after moving a file in a simple agent, the AI model and the associated knowledge base in the settings were cleared.</li>
+<li>Agent (X-Pack): fixed the issue where output content was not formatted with Markdown when chatting in the Feishu client.</li>
+<li>Q&amp;A Page: Fixed an issue where the style was displayed incorrectly when there was form-collected content during a conversation;</li>
+<li>Q&amp;A Page: Fixed an issue where the conversation content was not internationalized when users gave a thumbs-up/thumbs-down feedback after the AI reply content;</li>
+<li>Q&amp;A Page (X-Pack): Fixed an issue where chat users created by third parties could not change their password after logging into the application using account login.</li>
+</ul>
+</div>
+<h3 id="v261">v2.6.1<a class="headerlink" href="#v261" title="Permanent link">¶</a></h3>
+<p>February 10, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Agent: fixed the issue where executing a tool reported an error in some cases in the agent's workflow.</li>
+<li>Agent: fixed the issue where the history of the AI Chat node was retrieved incorrectly when parallel nodes existed in the agent's workflow.</li>
+<li>Agent: fixed the issue where the frontend reported an error when the AI replied after a question, because the data stream returned by the backend was too large.</li>
+<li>Knowledge Base: fixed the issue where, after selecting intelligent segmentation when uploading a document, the segmentation identifiers using blank lines and carriage returns did not take effect.</li>
+</ul>
+</div>
+<h3 id="v260">v2.6.0<a class="headerlink" href="#v260" title="Permanent link">¶</a></h3>
+<p>February 5, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Tool: Added trigger capabilities;</li>
+<li>Agent: added trigger capability.</li>
+<li>Agent: added the "IP Address" and "Source" attributes to the conversation log list.</li>
+<li>Agent: the conversation log supports separately setting the cleanup policy for uploaded files.</li>
+<li>Knowledge Base: Supports conversion to Workflow Knowledge Base;</li>
+<li>Knowledge Base: Added support for batch export of documents in the document list;</li>
+<li>Trigger: Workspace Administrators now support the trigger management feature;</li>
+<li>Agent (X-Pack): the agent's API Key supports setting a validity period.</li>
+<li>Shared Tools (X-Pack): Added the feature to view the execution records of tools.</li>
+<li>System API Key (X-Pack): supports setting a validity period.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>System: Optimized internationalization copy and parts of the UI;</li>
+<li>Model: The video models and speech recognition models of Alibaba Cloud Bailian support the input of the "API URL" parameter;</li>
+<li>Model: The Volcano Engine provider's Embedding Model supports connecting multimodal Embedding Models;</li>
+<li>Model: The Volcano Engine provider's speech recognition model supports the recording-file speech recognition connection method;</li>
+<li>Model: the model parameters of the OpenAI provider's image generation model support setting a "Return Type" parameter such as response_format=b64_json;</li>
+<li>Agent: the "Go to Chat" button has been moved to the agent panel.</li>
+<li>Agent: The default value for the date type parameter of user input now includes a "Now" setting, so that the parameter dynamically fetches the current time in the Q&amp;A page.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Model: fixed the issue where the slm Chinese-English speech recognition model of iFlytek Spark could not convert speech into text;</li>
+<li>Model: fixed the issue where editing the iFlytek Spark IAT model reported an error;</li>
+<li>Agent: fixed the issue where the "Citation Segment Count" and "Segment Title + Content" fields were missing when exporting conversation logs.</li>
+<li>Agent: fixed the issue where the tool invocation process was not displayed when the AI model called a tool in a skill and the tool had no input parameters.</li>
+<li>Agent: fixed the issue where the AI reply content was garbled when the sub-application in a loop body also had loop nodes.</li>
+<li>Agent: fixed the issue where the AI reply content did not automatically scroll to the bottom during agent debugging.</li>
+<li>Folders: Fixed the issue where users with only folder view permission could still create subfolders;</li>
+<li>Login Authentication (X-Pack): fixed the issue where the login failure count for displaying the verification code could not be set to 0.</li>
+</ul>
+</div>
+<h3 id="v250">v2.5.0<a class="headerlink" href="#v250" title="Permanent link">¶</a></h3>
+<p>January 8, 2026</p>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Tool: Added JSON text box and slider components to the component types in the Add Parameter dialog;</li>
+<li>Resources: Added a 'View Associated Resources' feature for knowledge base, tool, and model resources.</li>
+<li>Agent: the "Application" module has been upgraded to the "Agent" module.</li>
+<li>Agent: All AI capability nodes in the Advanced Agent add exception branch output;</li>
+<li>Agent: the conversation log details support displaying the feedback information filled in by the user.</li>
+<li>Agent: the user input parameter components in the basic information node support multi-line text box, single-line single-choice, and single-line multi-choice components.</li>
+<li>Agent: Input parameters in the custom tool node support the boolean type;</li>
+<li>Knowledge Base: Added import/export workflow functionality for Workflow Knowledge Bases;</li>
+<li>Knowledge Base: The document import process for Workflow Knowledge Bases now supports cancellation;</li>
+<li>Folders: Supports sorting by name, creation time, and custom drag order;</li>
+<li>Q&amp;A Page: Users can fill in feedback information when submitting feedback;</li>
+<li>Template Center: Provides agent and knowledge base workflow templates, covering typical application scenarios;</li>
+<li>User Management: supports default resource permission settings when creating a user;</li>
+<li>User Management (X-Pack): supports adding roles in batch and deleting users in batch;</li>
+<li>System Settings: Login settings support default role assignment for third-party users and a login-failure lockout mechanism (X-Pack).</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>System: Optimized the system UI;</li>
+<li>Agent: The Start Node in the Advanced Agent adds the chat user group {{global.chat_user_group}};</li>
+<li>Knowledge Base: optimized the hit testing API to a POST request;</li>
+<li>Folders: Folders support authorization by user role;</li>
+<li>API Key: system API Keys have been optimized to be isolated per user;</li>
+<li>Q&amp;A Page: Removed the limit of viewing only 20 chat history records;</li>
+<li>Q&amp;A Page: The last question can be edited and re-asked;</li>
+<li>Q&amp;A Page (X-Pack): Third-party chat users can all log out after logging into the Q&amp;A page.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Tool: Fixed the issue where emails sent via the SMTP protocol were mistakenly blocked;</li>
+<li>Agent: fixed the issue where the scrollbar of the tool dropdown in the MCP node could not scroll.</li>
+<li>Agent: fixed the style issue where the execution details of the MCP call and the tool node went off the screen.</li>
+<li>Agent: fixed the issue where a sub-agent could not receive video files from the parent agent.</li>
+<li>Knowledge Base: fixed the style issue where the video component in the segment details would exceed the segment details area;</li>
+<li>Knowledge Base: fixed the issue where all videos would automatically play when opening the segment details page;</li>
+<li>Security Vulnerability: Fixed the issue where uploading files could cause XSS vulnerabilities.</li>
+<li>Security Vulnerability: Fixed the issue where Python code in the Tool module could load dynamic link libraries to bypass security restrictions.</li>
+<li>Security Vulnerability: Fixed the RCE issue that could be caused by pickle deserializing untrusted objects in Celery.</li>
+</ul>
+</div>
+<h3 id="v242">v2.4.2<a class="headerlink" href="#v242" title="Permanent link">¶</a></h3>
+<p>December 18, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed an issue where clicking [Go to Chat] on the workflow orchestration page jumped to an incorrect path when the system's secondary path had been modified.</li>
+<li>Application: Fixed the issue where referenced variables could not be deselected in the tool node of advanced orchestration applications;</li>
+<li>Application: Fixed the issue where the workflow was not interrupted after a node error in the loop body;</li>
+<li>Application: Fixed an issue where the node order in the Add Component dialog was inconsistent with the node order in the loop body.</li>
+<li>Application (X-Pack): Fixed the issue where the login page was redirected when chat users logged in by scanning a WeCom QR code;</li>
+<li>Tool: Fixed the issue where data source tools lacked the parameters set during debugging;</li>
+<li>Tool: Fixed the issue where IPv6-mapped IPv4 addresses were not blocked;</li>
+<li>Knowledge Base: fixed the issue where, when returning from the segment details page to the document list page, the previous page was not remembered;</li>
+<li>Knowledge Base: fixed the issue where, in the designated reply node of the workflow knowledge base, inputting a global variable caused parsing to fail;</li>
+<li>Knowledge Base: Removed the conversation history feature from image understanding, video understanding, and AI chat nodes in Workflow Knowledge Bases;</li>
+<li>Knowledge Base: fixed the issue where, when creating a new embedding model in the knowledge base creation interface, the newly created embedding model was not displayed in the embedding model list;</li>
+<li>Resource list: Fixed an issue where the resource list displayed incorrectly after moving a resource into a folder under the root directory of applications/knowledge bases/tools.</li>
+<li>API Documentation: fixed the issue of incorrect parameter types in the document segmentation API.</li>
+</ul>
+</div>
+<h3 id="v241">v2.4.1<a class="headerlink" href="#v241" title="Permanent link">¶</a></h3>
+<p>December 12, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed an issue where the "Submit" button could not be clicked when the Form Collection node was executed.</li>
+<li>Application: Fixed the issue where retrieval results were incorrect when the tag value was None in the document tag retrieval node;</li>
+<li>Application: Fixed the issue where the Input parameter was not fully output when AI models called MCP;</li>
+<li>Knowledge Base: Fixed an issue where image understanding in Knowledge Base workflows failed to execute;</li>
+<li>Knowledge Base: fixed the issue where files containing images uploaded in zip format could not be written into the knowledge base;</li>
+<li>Knowledge Base: fixed the case-sensitivity issue of the custom file format input in the local file of the data source node;</li>
+<li>Tool: Fixed the issue where the tool editor reported console errors in some cases;</li>
+<li>Model: fixed the issue where adding a local rerank model caused a cache_dir error.</li>
+</ul>
+</div>
+<h3 id="v240">v2.4.0<a class="headerlink" href="#v240" title="Permanent link">¶</a></h3>
+<p>December 11, 2025</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the permission bypass issue caused by overwritten system files (<a href="https://github.com/1Panel-dev/MaxKB/security/advisories/GHSA-5xx2-3q9w-jpgf">CVE-2025-66446</a>).</li>
+<li>Security Vulnerability: Fixed the permission bypass issue that occurred under specific concurrency conditions (<a href="https://github.com/1Panel-dev/MaxKB/security/advisories/GHSA-f9qm-2pxq-fx6c">CVE-2025-66419</a>).</li>
+</ul>
+<p>We would like to thank GitHub users (<a href="https://github.com/yck99">@yck99</a>), (<a href="http://github.com/NikoCat233">@NikoCat233</a>) (<a href="https://github.com/Threonine">@Threonine</a>) for discovering and promptly reporting the above vulnerabilities to the MaxKB open-source community.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Tool: Added support for data source tools;</li>
+<li>Model: added support for the Docker AI model provider;</li>
+<li>Knowledge Base: Added support for Workflow Knowledge Bases;</li>
+<li>Login Authentication (X-Pack): supports SAML2 single sign-on.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Application: Added a "URL address" method to the upload methods in the File Upload Settings feature.</li>
+<li>Application: Added ranking statistics for "User Tokens Consumed" and "User Question Count" to the monitoring statistics on the Overview page.</li>
+<li>Application: The generated prompt of the AI Chat node in Advanced apps no longer carries the application name and description.</li>
+<li>Application: Supports outputting the request parameter when AI models call MCP tools;</li>
+<li>Tool: Importing supports three types: tool, MCP, and data source;</li>
+<li>Tool: The tool store entry was moved to the tool list;</li>
+<li>Tool: Removed system built-in tools; built-in tools were moved to the tool store;</li>
+<li>Tool: Tools in the tool store are divided into two types: Tool and Data Source;</li>
+<li>Model: the AWS provider adds the vision model and rerank model;</li>
+<li>Model: the vision models of the OpenAI, Ollama, vLLM, Xinference, and Zhipu AI providers support video understanding;</li>
+<li>Resource Authorization: When authorizing applications, knowledge bases, tools, and models to users by resource, supports filtering users by role.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed the issue where the execution time of the loop node was displayed incorrectly in execution details;</li>
+<li>Application: Fixed the issue where retrieval results were incorrect when the variable value was empty in the document tag retrieval node;</li>
+<li>Model: fixed the issue where the qwen-image model from the Alibaba Cloud Bailian provider reported an error during generation;</li>
+<li>Model: fixed the issue where adding the gpt-5-codex model from the Azure OpenAI provider reported an error;</li>
+<li>Model: fixed the issue of incorrect parameter settings for some vLLM models;</li>
+<li>Role: fixed the issue where the "About" permission granted to Workspace Administrator and Regular User roles did not take effect;</li>
+<li>Knowledge Base: fixed the issue where, after replacing the original document, the downloaded original document could not be opened;</li>
+<li>Q&amp;A Page: Fixed an issue where the retrieval results of the knowledge base retrieval node within the loop were not displayed in the knowledge source;</li>
+<li>Chat User (X-Pack): Fixed the issue where the chat user query interface displayed unnecessary information.</li>
+<li>API Documentation (X-Pack): revised several inaccurate API documentation descriptions.</li>
+</ul>
+</div>
+<h3 id="v231">v2.3.1<a class="headerlink" href="#v231" title="Permanent link">¶</a></h3>
+<p>November 13, 2025</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Vulnerability Fixes</p>
+<ul>
+<li>Security Vulnerability: Fixed the vulnerability where Python code in tools could access local services (<a href="https://github.com/1Panel-dev/MaxKB/security/advisories/GHSA-9287-g7px-9rp4">CVE-2025-64511</a>).</li>
+<li>Security Vulnerability: Fixed the vulnerability where Python code in tools could obtain system configuration information (<a href="https://github.com/1Panel-dev/MaxKB/security/advisories/GHSA-qwvm-x4xh-g2qq">CVE-2025-64703</a>).</li>
+</ul>
+<p>We would like to thank Tencent Xuanwu Lab's XlabAI team (<a href="https://github.com/XlabAITeam">@XlabAITeam</a>) for discovering and promptly reporting the above vulnerabilities to the MaxKB open-source community.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>System: Through code refactoring and architecture optimization, significantly reduced CPU and memory usage, comprehensively improved system resource utilization, stability, and concurrent processing capability, delivering a lighter and more efficient running experience;</li>
+<li>System: Optimized so that after a user logs in, their name is displayed in the top-right corner;</li>
+<li>Application: Users granted the "View" permission can now view the "Settings" page of an application.</li>
+<li>Folders: Folders in the application, knowledge base, and tool lists support moving and drag-and-drop moving;</li>
+<li>Folders: Folders in the application, knowledge base, and tool lists are no longer limited by level;</li>
+<li>User Management: the maximum length of the username and name is adjusted to 64 characters;</li>
+<li>Chat User (X-Pack): The maximum length for usernames and names has been adjusted to 64 characters.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed the issue where multiple form collection nodes were displayed during a chat when a form collection node existed in the loop body;</li>
+<li>Application: Fixed the issue where the output directly displayed the "context" error message during a chat when a form collection node existed in the loop body;</li>
+<li>Application: Fixed the issue where the output parameters of the loop node became "None" when a form collection node existed in the loop body;</li>
+<li>Application: Fixed an issue where the last folder was not displayed when adding a tool node.</li>
+<li>Knowledge Base: fixed the issue where document vectorization occasionally failed;</li>
+<li>Knowledge Base: fixed the issue where the association relationship between segments and questions was not deleted when deleting a document;</li>
+<li>Resource Authorization: Fixed an issue where the folder automatically collapsed when authorizing resources under it.</li>
+<li>Q&amp;A Page: Fixed an issue where chat users could not use WeCom scan login when using the Safari browser.</li>
+</ul>
+</div>
+<h3 id="v230">v2.3.0<a class="headerlink" href="#v230" title="Permanent link">¶</a></h3>
+<p>November 3, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Application: Added the "Document Tag Retrieval" node to Advanced Orchestration apps.</li>
+<li>Application: Added the "Video Understanding" node to Advanced Orchestration apps.</li>
+<li>Application: Added the "Variable Split" node to Advanced Orchestration apps.</li>
+<li>Application: Added the "Variable Aggregation" node to Advanced Orchestration apps.</li>
+<li>Application: Added the "Parameter Extraction" node to Advanced Orchestration apps.</li>
+<li>Application: Added a "Video" file type option to File Upload Settings.</li>
+<li>Application: Added "startwith" and "endwith" conditions to the Judger node.</li>
+<li>Application: Added the Conversation History {history} parameter to the output parameters of the AI Chat node;</li>
+<li>Application: The retrieval scope of the Knowledge Base Retrieval node now supports two methods: manually selecting a knowledge base or referencing a variable.</li>
+<li>Knowledge Base: Added the "Tag Management" feature;</li>
+<li>Knowledge Base: Documents in the Knowledge Base added the "Tag Settings" feature;</li>
+<li>Knowledge Base: General Knowledge Base added the "Replace Original Document" feature;</li>
+<li>Resource Authorization: Supports authorizing folder resources by user.</li>
+<li>Resource Authorization: Supports folder-level resource authorization for applications, knowledge bases, and tools in a workspace.</li>
+<li>System Management (X-Pack): Operation Log now supports clearing policies, helping administrators manage log data efficiently.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Application: Uploaded files support video file types;</li>
+<li>Application: The file selection parameter of the Image Understanding, Image-to-Video, and Video Understanding nodes now supports setting a URL address.</li>
+<li>Application: The Variable Assignment node can now be used as an End node.</li>
+<li>Application: The workflow orchestration page now supports batch node selection.</li>
+<li>Application: Added a description field to API parameters.</li>
+<li>Application: Adjusted the maximum value of the "Per-client question limit" option in "Access Limits" to 10 million times/day.</li>
+<li>Application: The multi-select component in the Form Collection node now supports custom input.</li>
+<li>Application: The root directory now displays all applications in the current workspace and supports global search.</li>
+<li>Application (X-Pack): After integrating with WeCom, Feishu, or DingTalk, apps support password-free login for users;</li>
+<li>Tool: The root directory displays all tools in the current workspace, with global search support;</li>
+<li>Tool: Custom-type parameters support variable resolution;</li>
+<li>Role: adjusted the "About" permission to the Regular User role;</li>
+<li>Model: embedding models support setting model parameters;</li>
+<li>Knowledge Base: The root directory displays all Knowledge Bases under the current workspace and supports global search.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed the issue where tool nodes in the loop body were not exported during application export;</li>
+<li>Application: Fixed the issue where nodes after the form collection node in the loop body could not output loop variables;</li>
+<li>Application: Fixed the issue where modifying the second parameter in the MCP Call node cleared the first parameter;</li>
+<li>Application: Fixed the issue where Tokens displayed as 0 during a chat when the Zhipu large language model was used with the tool feature enabled in the AI Chat node;</li>
+<li>Application (X-Pack): Fixed the issue where the history setting option in Display Settings did not take effect;</li>
+<li>Q&amp;A Page: Fixed an issue where the uploaded file was lost when clicking "Get Another Answer" after asking a question by uploading a file on the Q&amp;A page;</li>
+<li>Q&amp;A Page: Fixed an issue where adjusting the conversation window size while asking a question on the Q&amp;A page caused conversation records to be lost.</li>
+</ul>
+</div>
+<h3 id="v221">v2.2.1<a class="headerlink" href="#v221" title="Permanent link">¶</a></h3>
+<p>October 11, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Tool: Added a parameter hint description field to input parameters;</li>
+<li>Tool: Clicking the panel of a tool added from the tool store opens the tool details;</li>
+<li>Model: The Alibaba Cloud Bailian provider's vision model supports qwen-vl-ocr.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed an issue where dragging the MCP Call node displayed abnormally when adding a component.</li>
+<li>Application: Fixed the issue where different branches of a conditional node could not connect to the same subsequent node;</li>
+<li>Application: Fixed an issue where adding multiple loop nodes could occasionally result in redundant standalone loop bodies.</li>
+<li>Application: Fixed the issue where the icon of the preceding node was displayed incorrectly in the Select Variable dropdown;</li>
+<li>Application: Fixed the issue where the conditional node reported an error when checking whether a variable was empty;</li>
+<li>Application: Fixed an issue where copying the Knowledge Base Retrieval node after selecting a knowledge base caused missing parameters.</li>
+<li>Tool: Fixed the issue where tools in the tool store did not display descriptions;</li>
+<li>Tool: Fixed the issue where repeatedly clicking the Create button when creating a tool created multiple tools;</li>
+<li>System: Fixed an issue where the prompt message for a verification code error was not correctly internationalized;</li>
+<li>System: Fixed an issue where built-in roles did not take effect after switching the language to English.</li>
+</ul>
+</div>
+<h3 id="v220">v2.2.0<a class="headerlink" href="#v220" title="Permanent link">¶</a></h3>
+<p>September 30, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Tool: Added the tool store;</li>
+<li>Workflow: Added a loop node;</li>
+<li>Workflow: Added an intent recognition node;</li>
+<li>Workflow: Added text-to-video and image-to-video nodes;</li>
+<li>Application: Added support for MCP and tool calls to Simple Applications.</li>
+<li>Application: Added support for prompt generation to Simple Applications.</li>
+<li>Application: Added an "Output MCP/Tool execution process" toggle setting to applications.</li>
+<li>Application: Added bool as a supported data type when assigning values in the Variable Assignment node.</li>
+<li>Knowledge Base: Supports parameter configuration for the model that handles the question generation task;</li>
+<li>Model: The Alibaba Cloud Bailian provider now supports text-to-video and image-to-video models;</li>
+<li>Model: The Volcano Engine provider now supports text-to-video and image-to-video models;</li>
+<li>Model: Speech recognition models support model parameter settings;</li>
+<li>Login: upgraded the login verification code to an authentication mechanism with user isolation.</li>
+<li>Login Authentication: added the default login method setting (X-Pack);</li>
+<li>Chat User: Added a setting to enable verification code validation after a specified number of failed login attempts (X-Pack).</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Application: Optimized the display style of Add Component for advanced orchestration applications;</li>
+<li>Application: Optimized the descriptions of the system prompt and user prompt;</li>
+<li>Knowledge Base: The question list supports the "Show 1,000 items" option setting;</li>
+<li>Q&amp;A Page: Added the "Back to Bottom" quick action;</li>
+<li>Resource Management: The resource list filter now supports filtering by type (X-Pack).</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Model: fixed the issue where the parameter settings of the SiliconFlow provider's speech synthesis model did not take effect;</li>
+<li>Application: Fixed the issue where the reasoning process was not returned when chatting via the application API;</li>
+<li>Application: Fixed an issue where the display order of login methods in Access Limits was not sorted by category.</li>
+<li>Application: Fixed an issue where the "Per-client question count limit" option in Access Limits did not take effect.</li>
+<li>Knowledge Base: Fixed an issue where exporting a Knowledge Base would time out when the Knowledge Base contains a large amount of data;</li>
+<li>Q&amp;A Page: Fixed an issue where the send button was not displayed in some iOS browsers;</li>
+<li>Q&amp;A Page: Fixed an issue where refreshing the browser on the Q&amp;A page opened the application list page after the application configured the question API parameter;</li>
+<li>Q&amp;A Page: Fixed an issue where the font style of the thinking process was incorrect.</li>
+</ul>
+</div>
+<h3 id="v212">v2.1.2<a class="headerlink" href="#v212" title="Permanent link">¶</a></h3>
+<p>September 23, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed an error when executing a newly created "MCP Call" node.</li>
+<li>Knowledge Base: Fixed an issue where the "Maximum files per upload" setting in Knowledge Base settings did not take effect.</li>
+</ul>
+</div>
+<h3 id="v211">v2.1.1<a class="headerlink" href="#v211" title="Permanent link">¶</a></h3>
+<p>September 11, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Application: The MCP settings of the AI Chat node support selecting multiple MCP tools.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Tool: Fixed the vulnerability that allowed tools to execute arbitrary system commands;</li>
+<li>Tool: Fixed the abnormal style display on the MCP editing page;</li>
+<li>Application: Fixed the issue where multiple session variables could not be added in the basic information node;</li>
+<li>Application: Fixed the issue where the timezone of the global variable Current Time was incorrect;</li>
+<li>Application: Fixed the issue where pressing Enter in the User Input Title settings dialog opened a new web page;</li>
+<li>Knowledge Base: fixed the issue where exporting a knowledge base did not export the image content in the knowledge base;</li>
+<li>Knowledge Base: fixed the issue where the file name of the exported knowledge base was not the knowledge base name;</li>
+<li>Role Management (X-Pack): fixed the issue where the internationalized display of the Role Management feature was incorrect.</li>
+</ul>
+</div>
+<h3 id="v210">v2.1.0<a class="headerlink" href="#v210" title="Permanent link">¶</a></h3>
+<p>September 4, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Tool: Added MCP tool management;</li>
+<li>Application: Added tool settings to the AI Chat node; after users select custom tools, the model can decide on its own whether to call the configured tools;</li>
+<li>Application: The parameters of the Form Collection node now support referencing variables.</li>
+<li>Application: Added multi-line text box, file upload, and single-line multi-select components to the Form Collection node.</li>
+<li>Application (X-Pack): App integration supports connecting WeCom intelligent robots, enabling users to efficiently link AI capabilities with the WeCom office ecosystem;</li>
+<li>Application (X-Pack): Added a Show Conversation History setting option in Display Settings;</li>
+<li>Q&amp;A Page: Supports exporting the current conversation records to PDF and PNG image formats;</li>
+<li>Knowledge Base: Added the "Allow download in knowledge sources" setting option for documents in General Knowledge Base and Feishu Knowledge Base;</li>
+<li>Resource Authorization: Added a resource-dimension authorization feature that supports authorizing core resources such as applications, knowledge bases, tools, and models to specified users.</li>
+<li>Resource Authorization: When authorizing resources by user in System Management, supports setting different permissions for each resource.</li>
+<li>Model: the vLLM provider adds support for rerank models and speech recognition models;</li>
+<li>Model: The Tencent Hunyuan provider now supports speech recognition models;</li>
+<li>Model: The iFlytek Spark provider's speech recognition model now supports the Chinese speech large model;</li>
+<li>Model: The Alibaba Cloud Bailian provider's speech recognition model now supports qwen-omni-turbo, qwen2.5-omni-7b, and ASR models;</li>
+<li>Model: The Baidu Qianfan large model provider now supports the connection method with API version V2.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Application: Added the ability to query the Chat Log list by user.</li>
+<li>Application (X-Pack): After integrating with Feishu, AI replies are presented in Markdown format;</li>
+<li>Q&amp;A Page: A new conversation is automatically created by default when entering the Q&amp;A page;</li>
+<li>Q&amp;A Page: Optimized the issue where a default question was not automatically generated when uploading a file or an image;</li>
+<li>Tool: Added a confirmation prompt when clicking the Close or Cancel button while creating or editing a tool;</li>
+<li>Login: after a user logs in with the default password, the password must be changed before continuing to use it.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed an issue where the MCP node in Advanced Orchestration apps was not internationalized.</li>
+<li>Application: Fixed an issue where session variable values could not be read when using session variables after the Form Collection node.</li>
+<li>Q&amp;A Page (X-Pack): Fixed an issue where the custom application Logo was not displayed in the browser tab;</li>
+<li>Q&amp;A Page (X-Pack): Fixed an issue where the existing authentication information still took effect when switching the application's authentication method in the "Access Restriction" feature;</li>
+<li>Q&amp;A Page: Fixed an issue where the content display style was disordered when clicking the "Collapse" button in the left navigation area;</li>
+<li>Q&amp;A Page: Fixed an issue where a missing-parameter message was prompted when chat users asked a question after re-logging in;</li>
+<li>Q&amp;A Page: Fixed an issue where the conversation record area did not display records when viewing history data;</li>
+<li>Q&amp;A Page: Fixed an issue where uploading an empty file caused an extraction exception;</li>
+<li>Q&amp;A Page: Fixed an issue where the label was displayed abnormally when the content of quick questions was too long;</li>
+<li>Knowledge Base: Fixed an issue where input fields on the Hit Testing interface displayed incompletely when the system had no License authorization;</li>
+<li>Knowledge Base: fixed the issue where clicking the "Back" button had no secondary confirmation when uploading a document to the knowledge base;</li>
+<li>Knowledge Base: fixed the issue where the query results were incorrect when searching by segment content in the knowledge base segment details;</li>
+<li>Knowledge Base: fixed the issue where the same segment could be associated with the same question multiple times;</li>
+<li>Knowledge Base: Fixed an issue where the "Number of Related Segments" count in the question list was incorrect;</li>
+<li>Model: fixed the issue where models in the "All Models" list were not displayed in descending order of creation time;</li>
+<li>Resource Authorization: Fixed an issue where users with only knowledge base view permission could add segments to chat logs.</li>
+<li>Folders: Fixed the issue where clicking the Back button in the resource details of applications and knowledge bases always returned to the root directory;</li>
+<li>Chat User (X-Pack): Fixed the issue where user passwords were not synced when synchronizing system users.</li>
+<li>Chat User (X-Pack): Fixed the issue where a new chat user could be created successfully even without setting a user group.</li>
+</ul>
+</div>
+<h3 id="v202">v2.0.2<a class="headerlink" href="#v202" title="Permanent link">¶</a></h3>
+<p>August 7, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">New Features <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:"/></p>
+<ul>
+<li>Application: Added the session variable feature to Advanced Orchestration apps.</li>
+<li>Chat User (X-Pack): Support QR code login for chat users.</li>
+<li>Chat User (X-Pack): Support syncing LDAP and WeCom users.</li>
+<li>Resource Management (X-Pack): Supports unified management of workspace-related resources.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Feature Optimizations <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:"/></p>
+<ul>
+<li>Chat User (X-Pack): Support querying by user source and status.</li>
+<li>Knowledge Base: Improved Knowledge Base retrieval performance for complex scenarios with large amounts of data;</li>
+<li>Knowledge Base: Chat users now support filtering by user source;</li>
+<li>Application: Adjusted the file upload limits for Advanced Orchestration apps: up to 100 files can be uploaded per conversation, and a single file can be up to 1000 MB.</li>
+<li>Application: Added support for querying by application publish status.</li>
+<li>Application: Chat Users now supports querying by user source.</li>
+<li>Q&amp;A Page: Automatically fills in the question field after uploading a file;</li>
+<li>Q&amp;A Page: Optimized the login interaction experience in floating-window mode and mobile mode;</li>
+<li>User Management: supports querying by user source and status;</li>
+<li>System: Optimized the system UI styles.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Knowledge Base: fixed the issue where hit testing reported an error in full-text search mode;</li>
+<li>Knowledge Base: fixed the issue where some content on the offline document upload page was displayed incorrectly in internationalization;</li>
+<li>Knowledge Base: fixed the issue where the scroll range of the scrollbar on the segmentation rules page for uploading offline documents was incorrect;</li>
+<li>Application (X-Pack): Fixed the issue where AI replies were not displayed in Markdown style during conversations on the DingTalk platform where the app was integrated;</li>
+<li>Application: Fixed an error when executing the MCP Call node in some cases.</li>
+<li>Application: Fixed an issue where connecting two identical nodes multiple times caused duplicate execution.</li>
+<li>Application: Fixed the issue where parameters were displayed incorrectly after modifying model parameters;</li>
+<li>Application: Fixed an issue where applications in the unpublished state were not filtered when adding an application sub-node.</li>
+<li>Q&amp;A Page: Fixed an issue where the URL was not displayed when the uploaded file name contained the "&amp;nbsp" character;</li>
+<li>Q&amp;A Page: Fixed an issue where images in AI replies could not be clicked to enlarge during user conversations;</li>
+<li>Q&amp;A Page: Fixed an issue where AI replies were misaligned when displayed as table data;</li>
+<li>Q&amp;A Page (X-Pack): Fixed an issue where an error occurred when opening the Q&amp;A page when the License was not authorized;</li>
+<li>Shared Models (X-Pack): Fixed the error that occurred when deleting a shared model.</li>
+</ul>
+</div>
+<h3 id="v201">v2.0.1<a class="headerlink" href="#v201" title="Permanent link">¶</a></h3>
+<p>July 18, 2025</p>
+<div class="admonition abstract">
+<p class="admonition-title">Question Fix <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:"/></p>
+<ul>
+<li>Application: Fixed the issue where, when only Show Knowledge Sources was enabled without execution details in Display Settings, the cited segments of knowledge sources were displayed incorrectly during a chat;</li>
+<li>Application: Fixed the issue where the Multi-path Recall node reported an error during a chat when the reranked content was empty;</li>
+<li>Tool: Fixed the issue where the Create Tool interface lacked the Debug feature for users with the Regular User role after logging in;</li>
+<li>Q&amp;A Page: Fixed an issue where audio files in AI replies could not be played by dragging;</li>
+<li>User Management: fixed the issue where an error was reported when editing a user;</li>
+<li>Shared Tools: Fixed the issue where adding tools from the Tool Store failed. (X-Pack)</li>
+</ul>
+</div>
+<h3 id="v200">v2.0.0<a class="headerlink" href="#v200" title="Permanent link">¶</a></h3>
+<p>July 17, 2025</p>
+<table>
+<tr>
+<td align="middle" bgcolor="#4B60FC" style="font-weight:bold;color: white;width: 150px">Module</td>
+<td align="middle" bgcolor="#4B60FC" style="font-weight:bold;color: white;width: 150px">Feature Item</td>
+<td align="middle" bgcolor="#4B60FC" style="font-weight:bold;color: white;width: 750px">Feature Description</td>
+</tr>
+<tr>
+<td rowspan="21">Application</td>
+<td rowspan="4">Application Management</td>
+<td>Supports creating simple applications and advanced orchestration applications</td>
+</tr>
+<tr>
+<td>Supports classifying and managing applications with multi-level directories</td>
+</tr>
+<tr>
+<td>Supports controlling application access behavior, such as allowing public access or disabling public access</td>
+</tr>
+<tr>
+<td>Supports importing and exporting applications</td>
+</tr>
+<tr>
+<td rowspan="10">Advanced Orchestration</td>
+<td>Supports creating simple applications and advanced orchestration applications</td>
+</tr>
+<tr>
+<td>Workflow orchestration applications support nodes such as AI chat, knowledge base retrieval, question optimization, judgment, specified reply, document content summarization, text-to-speech, speech-to-text, image understanding, image generation, form collection, and MCP.</td>
+</tr>
+<tr>
+<td>Supports uploading files such as text, images, and audio when asking questions</td>
+</tr>
+<tr>
+<td>Supports referencing tools within a workflow</td>
+</tr>
+<tr>
+<td>Supports nesting other applications within a workflow</td>
+</tr>
+<tr>
+<td>Supports multiple outputs, multiple inputs, and parallel execution</td>
+</tr>
+<tr>
+<td>Supports global variables</td>
+</tr>
+<tr>
+<td>Supports auto-save and restoring historical versions</td>
+</tr>
+<tr>
+<td>Supports auto-send and auto-play for voice input</td>
+</tr>
+<tr>
+<td>Supports customizing the label of the thinking process and configuring whether to output the thinking process</td>
+</tr>
+<tr>
+<td rowspan="1">Q&amp;A Embedding</td>
+<td>Supports embedding Q&amp;A in third-party applications</td>
+</tr>
+<tr>
+<td rowspan="2">Access Restrictions</td>
+<td>Supports limiting the number of daily questions by client</td>
+</tr>
+<tr>
+<td>Supports embedding a third-party access whitelist setting</td>
+</tr>
+<tr>
+<td rowspan="2">Display Settings</td>
+<td>Supports displaying knowledge sources when asking questions</td>
+</tr>
+<tr>
+<td>Supports the language setting of the Q&amp;A page in Settings</td>
+</tr>
+<tr>
+<td rowspan="2">Statistics Dashboard</td>
+<td>Supports statistics by time of user count, question count, total Tokens, and user satisfaction</td>
+</tr>
+<tr>
+<td>Supports trend statistics for user count, question count, total Tokens, and user satisfaction metrics</td>
+</tr>
+<tr>
+<td rowspan="12">Knowledge Base</td>
+<td rowspan="1">Knowledge Base Management</td>
+<td>Supports general-purpose file knowledge bases and Web site document knowledge bases</td>
+</tr>
+<tr>
+<td rowspan="6">Document Management</td>
+<td>Supports uploading text file documents, including Markdown, TXT, DOCX, PDF, HTML, XLSX, XLS, and CSV formats</td>
+</tr>
+<tr>
+<td>Supports uploading QA pairs and provides QA pair templates</td>
+</tr>
+<tr>
+<td>Supports uploading and exporting text files and offline image ZIP archives</td>
+</tr>
+<tr>
+<td>Supports adjusting the enabled status of knowledge base documents, enabling or disabling documents</td>
+</tr>
+<tr>
+<td>Supports the command processing modes for knowledge base documents, such as model optimization and direct answering</td>
+</tr>
+<tr>
+<td>Supports exporting documents from a knowledge base</td>
+</tr>
+<tr>
+<td rowspan="3">Document Segmentation</td>
+<td>Supports intelligent document segmentation and advanced segmentation methods</td>
+</tr>
+<tr>
+<td>Supports custom regex segmentation</td>
+</tr>
+<tr>
+<td>Supports migrating knowledge base document segments</td>
+</tr>
+<tr>
+<td rowspan="2">Question Management</td>
+<td>Supports associating questions with document segments</td>
+</tr>
+<tr>
+<td>Supports automatically generating associated questions for a knowledge base</td>
+</tr>
+<tr>
+<td rowspan="4">Tool</td>
+<td rowspan="4">Tool Management</td>
+<td>Supports customizing tools through Python functions</td>
+</tr>
+<tr>
+<td>Supports importing and creating from the Tool Store</td>
+</tr>
+<tr>
+<td>Supports multi-level directory classification management for tools</td>
+</tr>
+<tr>
+<td>Supports exporting and importing tools</td>
+</tr>
+<tr>
+<td rowspan="4">Model</td>
+<td rowspan="4">Model Provider Integration</td>
+<td>Supports integration with mainstream large models, including local private large models (Llama 3 / Qwen 2, etc.), domestic public large models (Tongyi Qianwen / Zhipu AI / Baidu Qianfan / Kimi / DeepSeek, etc.), and foreign public large models (OpenAI / Azure OpenAI / Gemini, etc.)</td>
+</tr>
+<tr>
+<td>Supports large language models, embedding models, rerank models, speech recognition, speech synthesis, image understanding, and image generation models</td>
+</tr>
+<tr>
+<td>Supports custom model parameter settings</td>
+</tr>
+<tr>
+<td>Supports model permissions</td>
+</tr>
+<tr>
+<td rowspan="20">System Management</td>
+<td rowspan="1">System Language</td>
+<td>Supports three languages: Simplified Chinese, Traditional Chinese, and English</td>
+</tr>
+<tr>
+<td rowspan="3">User Management</td>
+<td>Supports user creation/deletion, enable/disable, and password modification</td>
+</tr>
+<tr>
+<td>Supports LDAP, CAS, OIDC, and OAuth2 integration (X-Pack)</td>
+</tr>
+<tr>
+<td>Supports QR-code login via WeCom, DingTalk, and Feishu (X-Pack)</td>
+</tr>
+<tr>
+<td rowspan="1">Workspace</td>
+<td>Supports independent management of users and resources by workspace (X-Pack)</td>
+</tr>
+<tr>
+<td rowspan="2">Role Management</td>
+<td>Supports the built-in roles of system administrator, workspace administrator, and regular user</td>
+</tr>
+<tr>
+<td>Supports customizing roles and associating permission controls and user members (X-Pack)</td>
+</tr>
+<tr>
+<td rowspan="1">Resource Management</td>
+<td>Supports viewing all system resources such as applications, knowledge bases, tools, and models (X-Pack)</td>
+</tr>
+<tr>
+<td rowspan="1">Resource Authorization</td>
+<td>Supports authorization of all system resources such as applications, knowledge bases, tools, and models by role or custom authorization</td>
+</tr>
+<tr>
+<td rowspan="1">Shared Resources</td>
+<td>Supports creating and managing shared resources such as knowledge bases, tools, and models (X-Pack)</td>
+</tr>
+<tr>
+<td rowspan="3">Chat User</td>
+<td>Supports creating and syncing chat users (X-Pack)</td>
+</tr>
+<tr>
+<td>Supports creating chat user groups and managing members (X-Pack)</td>
+</tr>
+<tr>
+<td>Supports login authentication for chat users via LDAP, CAS, OIDC, OAuth2, and other methods (X-Pack)</td>
+</tr>
+<tr>
+<td rowspan="3">System Settings</td>
+<td>Supports email integration</td>
+</tr>
+<tr>
+<td>Supports customizing the system Logo, login Logo, theme colors, login background image, system name, welcome message, and system help link (X-Pack)</td>
+</tr>
+<tr>
+<td>Supports login authentication via LDAP, CAS, OIDC, OAuth2, QR-code login, and other methods (X-Pack)</td>
+</tr>
+<tr>
+<td rowspan="1">Operation Log</td>
+<td>Supports viewing the operation details of all users (X-Pack)</td>
+</tr>
+</table>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to Top</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">Copyright © 2014-2026 <a href="https://www.fit2cloud.com">FIT2CLOUD Information Technology Co., Ltd.</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">ICP License: 浙ICP备14038283号-9</a></div>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/1Panel-dev/MaxKB" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:support@fit2cloud.com" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+</a>
+<a class="md-social__link" href="tel://400-052-0755" rel="noopener" target="_blank" title="400-052-0755">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160.2 25c-7.9-18.9-28.5-28.9-48.1-23.6l-5.5 1.5C42 20.5-13.2 83.1 2.9 159.3 40 334.3 177.7 472 352.7 509.1 429 525.3 491.5 470 509.1 405.4l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2c-70.3-34.9-126.9-93.3-159.4-165l44.2-36c13.9-11.3 18.6-30.4 11.8-47z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate":null,"base":".","features":["navigation.instant","navigation.tracking","navigation.indexes","navigation.top","search.suggest","search.highlight","search.share","header.autohide","content.tabs.link"],"search":"assets/javascripts/workers/search.2c215733.min.js","tags":null,"translations":{"clipboard.copied":"Copied","clipboard.copy":"Copy","search.result.more.one":"1 more result on this page","search.result.more.other":"{{ count }} more results on this page","search.result.none":"No results found","search.result.one":"1 result for \"{{ query }}\"","search.result.other":"{{ count }} results for \"{{ query }}\"","search.result.placeholder":"Search","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike","warning":false}}</script>
+<script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="js/print-site.js"></script>
+<script>
+
+    var elements = document.getElementsByClassName("lightgallery");
+
+    for(var i=0; i<elements.length; i++) {
+
+       lightGallery(elements[i]);
+
+    }
+
+    </script>
+<script src="lang-toggle.js?v=2"></script><script src="../js/ai-widget.js"></script>
+</body>
+</html>
